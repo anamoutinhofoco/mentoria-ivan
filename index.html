@@ -206,14 +206,741 @@ hr{border:none;border-top:1px solid var(--divider);margin:56px 0}
   </div>
 </div>
 
+<style>
+/* TASKS DASHBOARD */
+.tasks-intro{display:grid;grid-template-columns:62% 38%;border-radius:16px;overflow:hidden;box-shadow:var(--shadow-md);margin-bottom:36px}
+.tasks-intro-left{background:var(--white);padding:36px 48px}
+.tasks-intro-right{background:var(--navy2);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;padding:36px 32px;position:relative;overflow:hidden}
+.tasks-intro-right::before{content:'';position:absolute;top:-40px;right:-40px;width:130px;height:130px;border-radius:50%;background:linear-gradient(135deg,var(--blue2),var(--blue4));opacity:.38}
+.tasks-legend{display:flex;flex-direction:column;gap:8px;position:relative;z-index:1;width:100%}
+.tasks-legend-item{display:flex;align-items:center;gap:10px;font-size:12px;font-weight:700;color:rgba(255,255,255,.75)}
+.tasks-legend-dot{width:10px;height:10px;border-radius:50%;flex-shrink:0}
+
+.tasks-board{display:flex;flex-direction:column;gap:14px;margin-bottom:56px}
+.task-row{background:var(--white);border-radius:12px;box-shadow:var(--shadow);border:1px solid var(--divider);overflow:hidden;display:grid;grid-template-columns:56px 1fr}
+.task-order{display:flex;align-items:center;justify-content:center;font-family:'Nunito',sans-serif;font-weight:900;font-size:22px;background:var(--navy2);color:rgba(255,255,255,.25);position:relative;overflow:hidden}
+.task-order::after{content:'';position:absolute;top:-16px;right:-16px;width:48px;height:48px;border-radius:50%;background:linear-gradient(135deg,var(--blue2),var(--blue4));opacity:.28}
+.task-order span{position:relative;z-index:1}
+.task-content{padding:18px 24px;display:grid;grid-template-columns:1fr 160px 200px 160px;gap:12px;align-items:start}
+.task-main{}
+.task-name{font-family:'Nunito',sans-serif;font-weight:800;font-size:15px;color:var(--navy);margin-bottom:6px;line-height:1.3}
+.task-desc{font-size:12.5px;color:rgba(0,32,85,.6);line-height:1.5}
+.task-col-label{font-size:9.5px;font-weight:800;letter-spacing:.13em;text-transform:uppercase;color:rgba(0,32,85,.38);margin-bottom:5px}
+.task-col-value{font-size:13px;font-weight:700;color:var(--navy);line-height:1.4}
+.task-col-value.blue{color:var(--blue)}
+.task-priority{display:inline-flex;align-items:center;gap:5px;font-size:10px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;padding:3px 9px;border-radius:5px;margin-top:6px}
+.p1{background:#FFEBEE;color:#C62828}
+.p2{background:#FFF3E0;color:#E65100}
+.p3{background:#E3F2FD;color:#1565C0}
+.p4{background:#E8F5E9;color:#2E7D32}
+.p5{background:#F3E5F5;color:#6A1B9A}
+
+/* WHATSAPP SCRIPTS */
+.wpp-day{margin-bottom:40px}
+.wpp-day-header{display:flex;align-items:center;gap:14px;margin-bottom:14px}
+.wpp-day-num{font-family:'Nunito',sans-serif;font-weight:900;font-size:13px;color:var(--white);background:var(--navy2);padding:5px 12px;border-radius:7px;white-space:nowrap}
+.wpp-day-date{font-family:'Nunito',sans-serif;font-weight:800;font-size:15px;color:var(--navy)}
+.wpp-day-line{flex:1;height:1px;background:var(--divider)}
+
+.wpp-msg{background:var(--white);border-radius:12px;box-shadow:var(--shadow);border:1px solid var(--divider);overflow:hidden;margin-bottom:12px}
+.wpp-msg-head{display:flex;align-items:center;gap:12px;padding:12px 20px;background:#F0FDF4;border-bottom:1px solid var(--divider)}
+.wpp-msg-head.warn{background:#FFFBEB}
+.wpp-msg-head.hot{background:#FFF0F0}
+.wpp-time{font-family:'Nunito',sans-serif;font-weight:900;font-size:14px;color:#15803D}
+.wpp-time.warn{color:#92400E}
+.wpp-time.hot{color:#991B1B}
+.wpp-tag{font-size:10px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;padding:3px 9px;border-radius:5px;margin-left:auto}
+.wt-ins{background:#DCFCE7;color:#166534}
+.wt-urg{background:#FEF9C3;color:#854D0E}
+.wt-hot{background:#FEE2E2;color:#991B1B}
+.wt-post{background:#EDE9FE;color:#5B21B6}
+.wpp-body{padding:16px 20px;font-size:13.5px;color:rgba(0,32,85,.82);line-height:1.7;white-space:pre-line}
+.wpp-note{padding:8px 20px;background:var(--badge-bg);font-size:11.5px;font-weight:600;color:var(--blue);border-top:1px solid var(--divider)}
+.wpp-note::before{content:'💡 '}
+</style>
+
 <div class="wrap">
+
+<!-- ══ TELA INICIAL: TAREFAS ══ -->
+<div class="tasks-intro">
+  <div class="tasks-intro-left">
+    <span class="badge">Tela Inicial</span>
+    <h2 class="sec-title">Painel de Tarefas do Lançamento</h2>
+    <p class="sec-desc">7 frentes de trabalho ordenadas por prioridade de execução · Calendário inicia em 11/05/2026</p>
+  </div>
+  <div class="tasks-intro-right">
+    <div style="font-size:10px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.5);margin-bottom:2px;position:relative;z-index:1">Legenda de prioridade</div>
+    <div class="tasks-legend">
+      <div class="tasks-legend-item"><div class="tasks-legend-dot" style="background:#EF9A9A"></div>1º · Executar imediatamente</div>
+      <div class="tasks-legend-item"><div class="tasks-legend-dot" style="background:#FFCC80"></div>2º · Semana 1, início</div>
+      <div class="tasks-legend-item"><div class="tasks-legend-dot" style="background:#90CAF9"></div>3º · Semana 1, meio</div>
+      <div class="tasks-legend-item"><div class="tasks-legend-dot" style="background:#A5D6A7"></div>4º · Semana 1, fim (verificar)</div>
+      <div class="tasks-legend-item"><div class="tasks-legend-dot" style="background:#CE93D8"></div>5º · Semana 2, antes da live</div>
+    </div>
+  </div>
+</div>
+
+<div class="tasks-board">
+
+  <div class="task-row">
+    <div class="task-order"><span>1</span></div>
+    <div class="task-content">
+      <div class="task-main">
+        <div class="task-name">Definição de Oferta e Produto</div>
+        <div class="task-desc">Alinhar todos os detalhes da oferta: ticket, âncora, garantia, formato, entregáveis e posicionamento final da Mentoria 1 Milhão em 1 Dia.</div>
+        <div class="task-priority p1">1º · Imediato</div>
+      </div>
+      <div>
+        <div class="task-col-label">Responsável</div>
+        <div class="task-col-value blue">Meireles</div>
+      </div>
+      <div>
+        <div class="task-col-label">Como Fazer</div>
+        <div class="task-col-value">Reunião de alinhamento com Ivan</div>
+      </div>
+      <div>
+        <div class="task-col-label">Onde / Canal</div>
+        <div class="task-col-value">Abrir chamado</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="task-row">
+    <div class="task-order"><span>2</span></div>
+    <div class="task-content">
+      <div class="task-main">
+        <div class="task-name">Roteiro / Copy Completo</div>
+        <div class="task-desc">Roteiros orgânicos (14 dias), scripts de anúncios, mensagens de disparo WhatsApp e e-mail marketing do lançamento.</div>
+        <div class="task-priority p2">2º · Semana 1 início</div>
+      </div>
+      <div>
+        <div class="task-col-label">Responsável</div>
+        <div class="task-col-value blue">Marcos · Ana · Gustavo</div>
+      </div>
+      <div>
+        <div class="task-col-label">Como Fazer</div>
+        <div class="task-col-value">Usar este documento como base</div>
+      </div>
+      <div>
+        <div class="task-col-label">Onde / Canal</div>
+        <div class="task-col-value">—</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="task-row">
+    <div class="task-order"><span>2</span></div>
+    <div class="task-content">
+      <div class="task-main">
+        <div class="task-name">Identidade Visual do Evento</div>
+        <div class="task-desc">Criação de toda a identidade visual da Clínica de 7 Dígitos: logo, arte para stories, thumbs de vídeo, arte da live e criativos pagos.</div>
+        <div class="task-priority p2">2º · Semana 1 início</div>
+      </div>
+      <div>
+        <div class="task-col-label">Responsável</div>
+        <div class="task-col-value blue">Gustavo</div>
+      </div>
+      <div>
+        <div class="task-col-label">Como Fazer</div>
+        <div class="task-col-value">Colocar no chamado</div>
+      </div>
+      <div>
+        <div class="task-col-label">Onde / Canal</div>
+        <div class="task-col-value">—</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="task-row">
+    <div class="task-order"><span>3</span></div>
+    <div class="task-content">
+      <div class="task-main">
+        <div class="task-name">Construção da Landing Page</div>
+        <div class="task-desc">LP de captura para inscrição gratuita na Clínica de 7 Dígitos. Deve estar no ar antes do dia 5 do calendário (15/05), quando começa o CTA para a live.</div>
+        <div class="task-priority p3">3º · Semana 1 meio</div>
+      </div>
+      <div>
+        <div class="task-col-label">Responsável</div>
+        <div class="task-col-value blue">Ana M.</div>
+      </div>
+      <div>
+        <div class="task-col-label">Como Fazer</div>
+        <div class="task-col-value">—</div>
+      </div>
+      <div>
+        <div class="task-col-label">Onde / Canal</div>
+        <div class="task-col-value">—</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="task-row">
+    <div class="task-order"><span>3</span></div>
+    <div class="task-content">
+      <div class="task-main">
+        <div class="task-name">Configuração Técnica</div>
+        <div class="task-desc">Plataforma de pagamentos, pixel de conversão, grupo de compradores no WhatsApp, plataforma de live e página de vendas da Mentoria 1 Milhão em 1 Dia.</div>
+        <div class="task-priority p3">3º · Semana 1 meio</div>
+      </div>
+      <div>
+        <div class="task-col-label">Responsável</div>
+        <div class="task-col-value blue">Marcos</div>
+      </div>
+      <div>
+        <div class="task-col-label">Como Fazer</div>
+        <div class="task-col-value">Kiwify · Comunidade WhatsApp</div>
+      </div>
+      <div>
+        <div class="task-col-label">Onde / Canal</div>
+        <div class="task-col-value">—</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="task-row">
+    <div class="task-order"><span>4</span></div>
+    <div class="task-content">
+      <div class="task-main">
+        <div class="task-name">Campanha de Lançamento (Tráfego Pago)</div>
+        <div class="task-desc">Configuração das campanhas pagas de conversão e remarketing da Mentoria 1 Milhão em 1 Dia. Ativar somente após a live (dia 11 do calendário = 21/05).</div>
+        <div class="task-priority p4">4º · Verificar se terá</div>
+      </div>
+      <div>
+        <div class="task-col-label">Responsável</div>
+        <div class="task-col-value blue">Ana M.</div>
+      </div>
+      <div>
+        <div class="task-col-label">Como Fazer</div>
+        <div class="task-col-value">—</div>
+      </div>
+      <div>
+        <div class="task-col-label">Onde / Canal</div>
+        <div class="task-col-value">—</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="task-row">
+    <div class="task-order"><span>5</span></div>
+    <div class="task-content">
+      <div class="task-main">
+        <div class="task-name">Suporte Operacional</div>
+        <div class="task-desc">Gestão do grupo de inscritos, setup de gravação da live, automação de mensagens pós-compra, suporte durante a live e onboarding dos novos alunos.</div>
+        <div class="task-priority p5">5º · Antes da live</div>
+      </div>
+      <div>
+        <div class="task-col-label">Responsável</div>
+        <div class="task-col-value blue">Marcos</div>
+      </div>
+      <div>
+        <div class="task-col-label">Como Fazer</div>
+        <div class="task-col-value">—</div>
+      </div>
+      <div>
+        <div class="task-col-label">Onde / Canal</div>
+        <div class="task-col-value">—</div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<hr>
+
+<!-- ══ SCRIPTS WHATSAPP ══ -->
+<div class="sec-head">
+  <div class="sec-head-left">
+    <span class="badge">Scripts · WhatsApp</span>
+    <h2 class="sec-title">Mensagens de Disparo — Grupo</h2>
+    <p class="sec-desc">Scripts completos com dia e horário · Calendário começa em 11/05/2026 · Live em 21/05/2026</p>
+  </div>
+  <div class="sec-head-right"><div class="sec-num">WPP</div></div>
+</div>
+
+<!-- DIA 1 — 11/05 -->
+<div class="wpp-day">
+  <div class="wpp-day-header">
+    <div class="wpp-day-num">Dia 1 · 11/05 · Seg</div>
+    <div class="wpp-day-date">Primeira mensagem — boas-vindas ao grupo</div>
+    <div class="wpp-day-line"></div>
+  </div>
+  <div class="wpp-msg">
+    <div class="wpp-msg-head">
+      <span class="wpp-time">09h00</span>
+      <span class="wpp-tag wt-ins">Boas-vindas</span>
+    </div>
+    <div class="wpp-body">👋 Olá! Bem-vindo ao grupo da *Clínica de 7 Dígitos*.
+
+Nos próximos dias vou trazer aqui conteúdo direto sobre o que realmente trava o crescimento de clínicas e empresas de saúde — e como resolver isso de forma estruturada.
+
+A live gratuita acontece no dia *21 de maio*. Até lá, fique de olho nas mensagens aqui e no meu Instagram [@perfil] onde posto um vídeo por dia.
+
+Qualquer dúvida, é só mandar mensagem. 🙏
+
+— Dr. Ivan</div>
+    <div class="wpp-note">Primeira mensagem do grupo. Tom: acolhedor e direto. Não vender nada ainda.</div>
+  </div>
+</div>
+
+<!-- DIA 2 — 12/05 -->
+<div class="wpp-day">
+  <div class="wpp-day-header">
+    <div class="wpp-day-num">Dia 2 · 12/05 · Ter</div>
+    <div class="wpp-day-date">Provocação — reforço do Reel do dia</div>
+    <div class="wpp-day-line"></div>
+  </div>
+  <div class="wpp-msg">
+    <div class="wpp-msg-head">
+      <span class="wpp-time">10h00</span>
+      <span class="wpp-tag wt-ins">Conteúdo</span>
+    </div>
+    <div class="wpp-body">📊 Uma pergunta rápida:
+
+Você sabe exatamente quanto a sua clínica *fatura* por mês.
+
+Mas você sabe quanto *sobra*?
+
+Não é a mesma coisa — e a diferença entre esses dois números está em três lugares que quase ninguém monitora.
+
+Postei um vídeo sobre isso hoje no Instagram. Vale 2 minutos do seu tempo.
+
+👉 [@perfil]</div>
+    <div class="wpp-note">Reforça o Reel 02 do dia. Sem link de produto.</div>
+  </div>
+</div>
+
+<!-- DIA 3 — 13/05 -->
+<div class="wpp-day">
+  <div class="wpp-day-header">
+    <div class="wpp-day-num">Dia 3 · 13/05 · Qua</div>
+    <div class="wpp-day-date">Pergunta de engajamento</div>
+    <div class="wpp-day-line"></div>
+  </div>
+  <div class="wpp-msg">
+    <div class="wpp-msg-head">
+      <span class="wpp-time">09h30</span>
+      <span class="wpp-tag wt-ins">Engajamento</span>
+    </div>
+    <div class="wpp-body">🤔 Responde aqui com honestidade:
+
+Se você ficasse *30 dias afastado* da sua clínica agora — o que aconteceria?
+
+A) Continuaria funcionando normalmente
+B) Funcionaria, mas com problemas
+C) Pararia
+
+Sem julgamento. Estou perguntando porque a resposta diz muito sobre o estágio do negócio — e é exatamente sobre isso que vou falar na live do dia 21.
+
+— Dr. Ivan</div>
+    <div class="wpp-note">Pergunta de engajamento que ativa o conflito central do lançamento. Usar as respostas como prova social na live.</div>
+  </div>
+</div>
+
+<!-- DIA 4 — 14/05 -->
+<div class="wpp-day">
+  <div class="wpp-day-header">
+    <div class="wpp-day-num">Dia 4 · 14/05 · Qui</div>
+    <div class="wpp-day-date">Conteúdo de valor — dado real</div>
+    <div class="wpp-day-line"></div>
+  </div>
+  <div class="wpp-msg">
+    <div class="wpp-msg-head">
+      <span class="wpp-time">10h00</span>
+      <span class="wpp-tag wt-ins">Conteúdo</span>
+    </div>
+    <div class="wpp-body">💡 Um dado que poucos falam:
+
+Cada contratação errada em uma clínica custa, em média, *3 a 6 meses de salário* — somando rescisão, perda de produtividade e tempo do gestor.
+
+Na saúde, isso vai além do financeiro: uma contratação errada contamina diretamente a experiência do paciente.
+
+O problema quase sempre não é falta de sorte na contratação. É falta de *processo*.
+
+Amanhã trago um vídeo sobre o modelo que mais tem me preocupado no mercado de saúde hoje. Fique ligado.
+
+— Dr. Ivan</div>
+    <div class="wpp-note">Reforça o Reel 04. Termina com gancho para o dia seguinte — o Reel mais importante da semana 1.</div>
+  </div>
+</div>
+
+<!-- DIA 5 — 15/05 -->
+<div class="wpp-day">
+  <div class="wpp-day-header">
+    <div class="wpp-day-num">Dia 5 · 15/05 · Sex</div>
+    <div class="wpp-day-date">Primeiro CTA para inscrição na live</div>
+    <div class="wpp-day-line"></div>
+  </div>
+  <div class="wpp-msg">
+    <div class="wpp-msg-head">
+      <span class="wpp-time">09h00</span>
+      <span class="wpp-tag wt-ins">CTA · Live</span>
+    </div>
+    <div class="wpp-body">🎯 Postei hoje o vídeo mais importante dessa semana no Instagram.
+
+Ele fala sobre algo que eu mesmo já fiz — e que a maioria dos profissionais de saúde acha impossível:
+
+*Faturar R$ 1 milhão em um único dia.*
+
+Não é sorte. Não é viralização. É sistema.
+
+Na live do dia *21 de maio*, vou abrir os bastidores desse modelo completo — ao vivo, gratuitamente, para quem está nesse grupo.
+
+Se você ainda não garantiu sua vaga oficial:
+👉 [LINK DE INSCRIÇÃO]
+
+— Dr. Ivan</div>
+    <div class="wpp-note">Primeiro CTA direto para inscrição. Reforça o Reel 05 (R$ 1M em 1 dia). Link de inscrição na LP.</div>
+  </div>
+</div>
+
+<!-- DIA 6 — 16/05 -->
+<div class="wpp-day">
+  <div class="wpp-day-header">
+    <div class="wpp-day-num">Dia 6 · 16/05 · Sáb</div>
+    <div class="wpp-day-date">Conteúdo + reforço de inscrição</div>
+    <div class="wpp-day-line"></div>
+  </div>
+  <div class="wpp-msg">
+    <div class="wpp-msg-head">
+      <span class="wpp-time">10h00</span>
+      <span class="wpp-tag wt-ins">Conteúdo · CTA</span>
+    </div>
+    <div class="wpp-body">🏥 Existe uma diferença fundamental entre ter uma *clínica* e ter uma *empresa de saúde*.
+
+Clínica é operação. Empresa é sistema.
+
+Uma clínica que depende do dono para funcionar vale quase zero se o dono sair. Uma empresa de saúde estruturada pode ser vendida, expandida, franqueada.
+
+Na live do dia 21 mostro o mapa completo de como fazer essa transição — independente do tamanho da sua operação hoje.
+
+Garante sua vaga gratuita:
+👉 [LINK DE INSCRIÇÃO]
+
+— Dr. Ivan</div>
+    <div class="wpp-note">Sábado tem alto engajamento. Tom mais reflexivo — fim de semana é quando o profissional "para e pensa".</div>
+  </div>
+</div>
+
+<!-- DIA 7 — 17/05 -->
+<div class="wpp-day">
+  <div class="wpp-day-header">
+    <div class="wpp-day-num">Dia 7 · 17/05 · Dom</div>
+    <div class="wpp-day-date">Anúncio oficial da live</div>
+    <div class="wpp-day-line"></div>
+  </div>
+  <div class="wpp-msg">
+    <div class="wpp-msg-head">
+      <span class="wpp-time">19h00</span>
+      <span class="wpp-tag wt-ins">Anúncio</span>
+    </div>
+    <div class="wpp-body">📣 Aviso oficial para o grupo:
+
+Na *quinta-feira, dia 21 de maio, às [HORÁRIO]*, acontece a *Clínica de 7 Dígitos* — meu evento gratuito ao vivo.
+
+Vou mostrar:
+→ Os 5 gargalos que travam qualquer clínica
+→ O sistema dos 5 pilares que permite criar uma operação escalável
+→ Como profissionais de saúde com autoridade real podem faturar R$ 1M em 1 dia de lançamento
+
+Não é curso. Não é webinar de vendas. É o mapa completo — ao vivo, com perguntas, com exemplos reais.
+
+Se você ainda não se inscreveu formalmente:
+👉 [LINK DE INSCRIÇÃO]
+
+Semana que vem posto um vídeo por dia com conteúdo direto. Fique de olho.
+
+— Dr. Ivan</div>
+    <div class="wpp-note">Domingo à noite — alto engajamento. Mensagem mais longa e completa, resumindo tudo para quem não viu os posts da semana.</div>
+  </div>
+</div>
+
+<!-- DIA 8 — 18/05 -->
+<div class="wpp-day">
+  <div class="wpp-day-header">
+    <div class="wpp-day-num">Dia 8 · 18/05 · Seg</div>
+    <div class="wpp-day-date">Abertura da semana da live</div>
+    <div class="wpp-day-line"></div>
+  </div>
+  <div class="wpp-msg">
+    <div class="wpp-msg-head">
+      <span class="wpp-time">08h30</span>
+      <span class="wpp-tag wt-urg">Semana da live</span>
+    </div>
+    <div class="wpp-body">🚀 Semana da *Clínica de 7 Dígitos*.
+
+A live é *quinta, dia 21*. Essa semana posto um vídeo por dia com o conteúdo base que você precisa para aproveitar a live no máximo.
+
+Hoje: o sistema que me permitiu faturar R$ 1 milhão em 1 dia na saúde — e os 5 pilares que fazem esse resultado ser previsível, não sorte.
+
+Já está no Instagram 👉 [@perfil]
+
+Sua vaga na live:
+👉 [LINK DE INSCRIÇÃO]
+
+— Dr. Ivan</div>
+    <div class="wpp-note">Abertura de semana. Tom de energia e antecipação. Reforça a live como ápice da jornada.</div>
+  </div>
+</div>
+
+<!-- DIA 9 — 19/05 -->
+<div class="wpp-day">
+  <div class="wpp-day-header">
+    <div class="wpp-day-num">Dia 9 · 19/05 · Ter</div>
+    <div class="wpp-day-date">Dado concreto + urgência de inscrição</div>
+    <div class="wpp-day-line"></div>
+  </div>
+  <div class="wpp-msg">
+    <div class="wpp-msg-head">
+      <span class="wpp-time">09h00</span>
+      <span class="wpp-tag wt-urg">Urgência</span>
+    </div>
+    <div class="wpp-body">📈 Pergunta direta:
+
+Uma clínica que fatura *R$ 300 mil com 35% de margem* ou uma que fatura *R$ 700 mil com 8% de margem* — qual é mais lucrativa?
+
+A resposta é óbvia quando você vê assim. Mas a maioria das clínicas não tem visibilidade sobre esses números — e por isso toma decisões no escuro.
+
+Na live de *amanhã* mostro como construir esse mapa financeiro na prática.
+
+Se você ainda não garantiu sua vaga:
+👉 [LINK DE INSCRIÇÃO]
+
+A live é *amanhã, quinta-feira, às [HORÁRIO]*. ⏰
+
+— Dr. Ivan</div>
+    <div class="wpp-note">Urgência real de "amanhã". Dado concreto que ativa raciocínio financeiro.</div>
+  </div>
+</div>
+
+<!-- DIA 10 — 20/05 -->
+<div class="wpp-day">
+  <div class="wpp-day-header">
+    <div class="wpp-day-num">Dia 10 · 20/05 · Qua</div>
+    <div class="wpp-day-date">Véspera da live — duas mensagens</div>
+    <div class="wpp-day-line"></div>
+  </div>
+  <div class="wpp-msg">
+    <div class="wpp-msg-head">
+      <span class="wpp-time">08h00</span>
+      <span class="wpp-tag wt-urg">Véspera</span>
+    </div>
+    <div class="wpp-body">⏰ *Amanhã* é a Clínica de 7 Dígitos.
+
+Estou finalizando o material, os exemplos, os exercícios práticos.
+
+Para você aproveitar ao máximo:
+→ Assiste aos vídeos que postei essa semana no Instagram
+→ Anota um problema real do seu negócio que você quer resolver
+→ Chega com uma pergunta específica
+
+Quem chega preparado sai com clareza de ação — não só de conteúdo.
+
+A live é *amanhã, quinta-feira, 21/05, às [HORÁRIO]*.
+
+Sua vaga: 👉 [LINK DE INSCRIÇÃO]
+
+— Dr. Ivan</div>
+    <div class="wpp-note">Manhã da véspera. Tom: preparado e focado. Instrui o participante sobre como chegar.</div>
+  </div>
+  <div class="wpp-msg">
+    <div class="wpp-msg-head warn">
+      <span class="wpp-time warn">20h00</span>
+      <span class="wpp-tag wt-urg">Último aviso</span>
+    </div>
+    <div class="wpp-body">🔔 Último lembrete antes da live de amanhã.
+
+*Clínica de 7 Dígitos*
+📅 Amanhã — quinta-feira, 21/05
+⏰ [HORÁRIO]
+📍 [PLATAFORMA / LINK DA LIVE]
+
+Se alguém do grupo ainda não se inscreveu:
+👉 [LINK DE INSCRIÇÃO]
+
+Até amanhã. 🙏
+
+— Dr. Ivan</div>
+    <div class="wpp-note">Noite da véspera. Mensagem curta e objetiva — só os dados práticos.</div>
+  </div>
+</div>
+
+<!-- DIA 11 — 21/05 -->
+<div class="wpp-day">
+  <div class="wpp-day-header">
+    <div class="wpp-day-num">Dia 11 · 21/05 · Qui</div>
+    <div class="wpp-day-date">Dia da live — três mensagens</div>
+    <div class="wpp-day-line"></div>
+  </div>
+  <div class="wpp-msg">
+    <div class="wpp-msg-head">
+      <span class="wpp-time">08h00</span>
+      <span class="wpp-tag wt-hot">Dia da live</span>
+    </div>
+    <div class="wpp-body">🎙️ *Hoje é o dia.*
+
+Clínica de 7 Dígitos acontece hoje, às *[HORÁRIO]*.
+
+Acorda, toma seu café, separa um caderno. Hoje vai ter clareza.
+
+Link da live: 👉 [LINK DIRETO DA LIVE]
+
+— Dr. Ivan</div>
+    <div class="wpp-note">Manhã do dia. Curto e energético.</div>
+  </div>
+  <div class="wpp-msg">
+    <div class="wpp-msg-head hot">
+      <span class="wpp-time hot">1h antes</span>
+      <span class="wpp-tag wt-hot">Chamada</span>
+    </div>
+    <div class="wpp-body">⚡ *Em 1 hora começa.*
+
+Clínica de 7 Dígitos — ao vivo, agora.
+
+Entra pelo link e garante seu lugar:
+👉 [LINK DIRETO DA LIVE]
+
+— Dr. Ivan</div>
+    <div class="wpp-note">Enviar exatamente 1h antes do horário da live.</div>
+  </div>
+  <div class="wpp-msg">
+    <div class="wpp-msg-head hot">
+      <span class="wpp-time hot">Pós-live</span>
+      <span class="wpp-tag wt-hot">Abertura de carrinho</span>
+    </div>
+    <div class="wpp-body">✅ A Clínica de 7 Dígitos acabou.
+
+Para quem esteve ao vivo — obrigado pela presença e pelas perguntas. Isso foi nível outro.
+
+Para quem não conseguiu assistir — a gravação fica disponível por [X horas/dias].
+
+As vagas da *Mentoria 1 Milhão em 1 Dia* estão abertas a partir de agora.
+
+*O que está incluído:*
+→ 12 meses de acompanhamento direto comigo
+→ 12 encontros ao vivo de 3h
+→ Financeiro, jurídico, gestão, marketing e tecnologia
+→ Garantia de 7 dias — sem risco
+
+*Condição de lançamento:* R$ 1.780 à vista (PIX) ou 12x no cartão.
+As vagas fecham no domingo, *24/05*.
+
+Acessa aqui: 👉 [LINK DA PÁGINA DE VENDAS]
+
+— Dr. Ivan</div>
+    <div class="wpp-note">Enviar imediatamente após o encerramento da live. É o momento de maior intenção de compra de todo o lançamento.</div>
+  </div>
+</div>
+
+<!-- DIA 12 — 22/05 -->
+<div class="wpp-day">
+  <div class="wpp-day-header">
+    <div class="wpp-day-num">Dia 12 · 22/05 · Sex</div>
+    <div class="wpp-day-date">Pós-live · Prova social</div>
+    <div class="wpp-day-line"></div>
+  </div>
+  <div class="wpp-msg">
+    <div class="wpp-msg-head">
+      <span class="wpp-time">10h00</span>
+      <span class="wpp-tag wt-post">Pós-live</span>
+    </div>
+    <div class="wpp-body">👥 Primeiras horas da *Mentoria 1 Milhão em 1 Dia*.
+
+Já estou recebendo mensagens de profissionais que entraram logo após a live. Médicos, dentistas, fisioterapeutas — perfis completamente diferentes, com o mesmo problema: clínica funcionando, mas sem estrutura para escalar.
+
+Se você assistiu à Clínica de 7 Dígitos e ficou com dúvidas sobre a mentoria, pode mandar mensagem aqui.
+
+As vagas fecham *domingo, 24/05*. 
+
+👉 [LINK DA PÁGINA DE VENDAS]
+
+— Dr. Ivan</div>
+    <div class="wpp-note">Tom de proximidade. Convida para tirar dúvidas. Insere urgência real de data.</div>
+  </div>
+</div>
+
+<!-- DIA 13 — 23/05 -->
+<div class="wpp-day">
+  <div class="wpp-day-header">
+    <div class="wpp-day-num">Dia 13 · 23/05 · Sáb</div>
+    <div class="wpp-day-date">Penúltimo dia — remoção de objeção</div>
+    <div class="wpp-day-line"></div>
+  </div>
+  <div class="wpp-msg">
+    <div class="wpp-msg-head warn">
+      <span class="wpp-time warn">10h00</span>
+      <span class="wpp-tag wt-urg">Objeção</span>
+    </div>
+    <div class="wpp-body">🤔 Se o que está te segurando é o risco de investir e não funcionar — preciso te dizer uma coisa.
+
+A *Mentoria 1 Milhão em 1 Dia* tem garantia de *7 dias*.
+
+Você entra, assiste à primeira aula ao vivo comigo. Se não fizer sentido para o seu negócio — você pede devolução e eu devolvo 100%. Sem burocracia, sem questionamento.
+
+*O risco é meu. A decisão é sua.*
+
+As vagas fecham *amanhã, domingo 24/05*.
+
+👉 [LINK DA PÁGINA DE VENDAS]
+
+— Dr. Ivan</div>
+    <div class="wpp-note">Foca na objeção de risco. Tom seguro e direto. Urgência de "amanhã é o último dia".</div>
+  </div>
+</div>
+
+<!-- DIA 14 — 24/05 -->
+<div class="wpp-day">
+  <div class="wpp-day-header">
+    <div class="wpp-day-num">Dia 14 · 24/05 · Dom</div>
+    <div class="wpp-day-date">Encerramento — duas mensagens</div>
+    <div class="wpp-day-line"></div>
+  </div>
+  <div class="wpp-msg">
+    <div class="wpp-msg-head warn">
+      <span class="wpp-time warn">10h00</span>
+      <span class="wpp-tag wt-urg">Último dia</span>
+    </div>
+    <div class="wpp-body">📅 Hoje é o *último dia*.
+
+As vagas da *Mentoria 1 Milhão em 1 Dia* fecham hoje à meia-noite.
+
+Vou ser transparente: essa oferta específica — com esse preço e essa condição — não vai voltar. Quando a próxima turma abrir, será diferente.
+
+Não é pressão. É como o modelo funciona.
+
+Se você assistiu à Clínica de 7 Dígitos e reconheceu o problema no seu negócio — você já tem informação suficiente para decidir.
+
+👉 [LINK DA PÁGINA DE VENDAS]
+
+— Dr. Ivan</div>
+    <div class="wpp-note">Manhã do último dia. Tom de transparência — sem alarme artificial.</div>
+  </div>
+  <div class="wpp-msg">
+    <div class="wpp-msg-head hot">
+      <span class="wpp-time hot">20h00</span>
+      <span class="wpp-tag wt-hot">Encerramento</span>
+    </div>
+    <div class="wpp-body">⏳ *Em 4 horas as vagas fecham.*
+
+Mentoria 1 Milhão em 1 Dia.
+Carrinho encerra hoje, 24/05, à meia-noite.
+
+*Faturar R$ 1 milhão em 1 dia na saúde não é sorte. É sistema. E sistema começa com uma decisão.*
+
+👉 [LINK DA PÁGINA DE VENDAS]
+
+— Dr. Ivan</div>
+    <div class="wpp-note">Última mensagem do lançamento. Curta, direta, com a frase de identidade do produto. Enviar às 20h do último dia.</div>
+  </div>
+</div>
+
+<hr>
 
 <!-- VISÃO GERAL -->
 <div class="sec-head">
   <div class="sec-head-left">
     <span class="badge">Visão Geral</span>
     <h2 class="sec-title">Calendário de 14 Dias</h2>
-    <p class="sec-desc">1 roteiro por dia · Semana 1 aquece e converte para a live · Semana 2 lança e fecha a mentoria</p>
+    <p class="sec-desc">1 roteiro por dia · Começa em 11/05/2026 · Live em 21/05/2026 · Carrinho fecha em 24/05/2026</p>
   </div>
   <div class="sec-head-right"><div class="sec-num">00</div></div>
 </div>
@@ -280,43 +1007,43 @@ hr{border:none;border-top:1px solid var(--divider);margin:56px 0}
     </div>
     <div class="tl-days">
       <div class="tl-day">
-        <div class="tl-day-label">Seg</div>
+        <div class="tl-day-label">Seg 18/05</div>
         <div class="tl-day-num">08</div>
         <div class="tl-day-tag tag-launch">Vídeo · Meio</div>
         <div class="tl-day-text">O sistema dos 5 pilares</div>
       </div>
       <div class="tl-day">
-        <div class="tl-day-label">Ter</div>
+        <div class="tl-day-label">Ter 19/05</div>
         <div class="tl-day-num">09</div>
         <div class="tl-day-tag tag-launch">Vídeo · Meio</div>
         <div class="tl-day-text">Clínica lucrativa vs ocupada</div>
       </div>
       <div class="tl-day">
-        <div class="tl-day-label">Qua</div>
+        <div class="tl-day-label">Qua 20/05</div>
         <div class="tl-day-num">10</div>
-        <div class="tl-day-tag tag-launch">Vídeo · Meio</div>
-        <div class="tl-day-text">Marketing médico ético</div>
+        <div class="tl-day-tag tag-launch">Vídeo · Véspera</div>
+        <div class="tl-day-text">Estou pronto — e você?</div>
       </div>
       <div class="tl-day live-day">
-        <div class="tl-day-label">Qui</div>
+        <div class="tl-day-label">Qui 21/05</div>
         <div class="tl-day-num">11</div>
         <div class="tl-day-tag tag-live">⚡ Live</div>
         <div class="tl-day-text">Clínica de 7 Dígitos + abertura de carrinho</div>
       </div>
       <div class="tl-day paid-day">
-        <div class="tl-day-label">Sex</div>
+        <div class="tl-day-label">Sex 22/05</div>
         <div class="tl-day-num">12</div>
         <div class="tl-day-tag tag-post">Pós · Fundo</div>
-        <div class="tl-day-text">Você já sabe o que precisa + Pago ativa</div>
+        <div class="tl-day-text">O que aconteceu na live + Pago ativa</div>
       </div>
       <div class="tl-day paid-day">
-        <div class="tl-day-label">Sáb</div>
+        <div class="tl-day-label">Sáb 23/05</div>
         <div class="tl-day-num">13</div>
         <div class="tl-day-tag tag-post">Pós · Fundo</div>
         <div class="tl-day-text">Prova social + Para quem é</div>
       </div>
       <div class="tl-day paid-day">
-        <div class="tl-day-label">Dom</div>
+        <div class="tl-day-label">Dom 24/05</div>
         <div class="tl-day-num">14</div>
         <div class="tl-day-tag tag-post">Encerramento</div>
         <div class="tl-day-text">Últimas horas · Carrinho fecha</div>
