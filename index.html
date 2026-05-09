@@ -3,175 +3,238 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Roteiros de Lançamento · 14 Dias · Dr. Ivan Rollemberg</title>
+<title>Lançamento 14 Dias · Dr. Ivan Rollemberg</title>
 <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@700;800;900&family=Nunito+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{
-  --bg:#EAEAEA;--white:#FFFFFF;--navy:#002055;--navy2:#003580;
+  --bg:#EAEAEA;--white:#fff;--navy:#002055;--navy2:#003580;
   --blue:#1565C0;--blue2:#1976D2;--blue3:#2196F3;--blue4:#0057D9;
-  --badge-bg:#EBF2FF;--badge-text:#1565C0;
-  --divider:rgba(0,53,128,0.12);
-  --shadow:0 2px 12px rgba(0,53,128,0.06);
-  --shadow-md:0 6px 28px rgba(0,53,128,0.11);
-  --orange:#E65100;--orange-bg:#FFF3E0;
-  --green:#1B5E20;--green-bg:#E8F5E9;
-  --purple:#4A148C;--purple-bg:#F3E5F5;
+  --bb:#EBF2FF;--bt:#1565C0;--div:rgba(0,53,128,0.12);
+  --sh:0 2px 12px rgba(0,53,128,0.06);--shm:0 6px 28px rgba(0,53,128,0.11);
+  --or:#E65100;--orb:#FFF3E0;--gr:#1B5E20;--grb:#E8F5E9;
+  --pu:#4A148C;--pub:#F3E5F5;
 }
 body{font-family:'Nunito Sans',sans-serif;background:var(--bg);color:var(--navy);font-size:15px;line-height:1.6}
 
 /* COVER */
 .cover{display:grid;grid-template-columns:62% 38%;min-height:100vh;overflow:hidden}
-.cover-left{background:var(--bg);padding:96px 64px 80px 80px;display:flex;flex-direction:column;justify-content:center;position:relative}
-.cover-left::before{content:'';position:absolute;top:-14px;left:-14px;width:88px;height:88px;background:var(--white);z-index:2}
-.cover-left::after{content:'';position:absolute;top:0;left:0;width:60px;height:60px;background:var(--bg);z-index:3}
-.cover-right{background:var(--navy2);display:flex;flex-direction:column;align-items:center;justify-content:center;padding:56px 44px;position:relative;overflow:hidden}
-.cover-right::before{content:'';position:absolute;top:-70px;right:-70px;width:220px;height:220px;border-radius:50%;background:linear-gradient(135deg,var(--blue2),var(--blue4));opacity:.5}
-.cover-right::after{content:'';position:absolute;bottom:-80px;right:-80px;width:240px;height:240px;border-radius:50%;border:2.5px solid rgba(33,150,243,.3);background:transparent}
-.cover-bar{position:absolute;bottom:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--blue),transparent)}
-.cover-eyebrow{font-weight:800;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--blue);background:var(--badge-bg);display:inline-block;padding:5px 12px;border-radius:6px;margin-bottom:30px}
-.cover-title{font-family:'Nunito',sans-serif;font-weight:900;font-size:clamp(28px,3.4vw,48px);color:var(--navy);line-height:1.1;margin-bottom:14px}
-.cover-title span{color:var(--blue)}
-.cover-sub{font-weight:600;font-size:16px;color:var(--blue2);margin-bottom:36px;line-height:1.55}
-.cover-meta{font-size:12.5px;color:rgba(0,32,85,.5);font-weight:600;letter-spacing:.05em}
-.cover-brand{font-family:'Nunito',sans-serif;font-weight:900;font-size:20px;color:var(--white);text-align:center;margin-bottom:10px;letter-spacing:.03em;position:relative;z-index:1}
-.cover-tagline{font-size:11.5px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.55);text-align:center;position:relative;z-index:1;margin-bottom:40px}
-.cover-products{display:flex;flex-direction:column;gap:12px;width:100%;position:relative;z-index:1}
-.c-pill{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.14);border-radius:8px;padding:12px 16px}
-.c-pill-label{font-size:9.5px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--blue3);margin-bottom:4px}
-.c-pill-name{font-family:'Nunito',sans-serif;font-weight:800;font-size:13.5px;color:var(--white);line-height:1.3}
+.cvl{background:var(--bg);padding:96px 64px 80px 80px;display:flex;flex-direction:column;justify-content:center;position:relative}
+.cvl::before{content:'';position:absolute;top:-14px;left:-14px;width:88px;height:88px;background:var(--white);z-index:2}
+.cvl::after{content:'';position:absolute;top:0;left:0;width:60px;height:60px;background:var(--bg);z-index:3}
+.cvr{background:var(--navy2);display:flex;flex-direction:column;align-items:center;justify-content:center;padding:56px 44px;position:relative;overflow:hidden}
+.cvr::before{content:'';position:absolute;top:-70px;right:-70px;width:220px;height:220px;border-radius:50%;background:linear-gradient(135deg,var(--blue2),var(--blue4));opacity:.5}
+.cvr::after{content:'';position:absolute;bottom:-80px;right:-80px;width:240px;height:240px;border-radius:50%;border:2.5px solid rgba(33,150,243,.3)}
+.cvbar{position:absolute;bottom:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--blue),transparent)}
+.cvey{font-weight:800;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--blue);background:var(--bb);display:inline-block;padding:5px 12px;border-radius:6px;margin-bottom:28px}
+.cvh{font-family:'Nunito',sans-serif;font-weight:900;font-size:clamp(28px,3.2vw,46px);color:var(--navy);line-height:1.1;margin-bottom:12px}
+.cvh span{color:var(--blue)}
+.cvs{font-weight:600;font-size:15px;color:var(--blue2);margin-bottom:32px;line-height:1.55}
+.cvm{font-size:12px;color:rgba(0,32,85,.48);font-weight:600}
+.cvbrand{font-family:'Nunito',sans-serif;font-weight:900;font-size:19px;color:#fff;text-align:center;margin-bottom:8px;position:relative;z-index:1}
+.cvtag{font-size:10.5px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.5);text-align:center;position:relative;z-index:1;margin-bottom:36px}
+.cvpills{display:flex;flex-direction:column;gap:11px;width:100%;position:relative;z-index:1}
+.cvpill{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.14);border-radius:8px;padding:11px 15px}
+.cvpl{font-size:9px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--blue3);margin-bottom:3px}
+.cvpn{font-family:'Nunito',sans-serif;font-weight:800;font-size:13px;color:#fff;line-height:1.3}
 
-/* WRAP */
-.wrap{max-width:1200px;margin:0 auto;padding:72px 56px}
+/* STICKY TABS */
+.tabwrap{position:sticky;top:0;z-index:200;background:var(--white);box-shadow:var(--shm)}
+.tabs{display:flex;max-width:1200px;margin:0 auto}
+.tab{flex:1;padding:16px 8px 14px;font-family:'Nunito Sans',sans-serif;font-weight:800;font-size:11px;letter-spacing:.07em;text-transform:uppercase;color:rgba(0,32,85,.4);border:none;background:transparent;cursor:pointer;border-bottom:3px solid transparent;display:flex;flex-direction:column;align-items:center;gap:3px;transition:all .18s}
+.tab .ti{font-size:17px}
+.tab:hover{color:var(--blue);background:var(--bb)}
+.tab.on{color:var(--blue);border-bottom-color:var(--blue);background:var(--bb)}
+.tab:not(:last-child){border-right:1px solid var(--div)}
+
+/* PANELS */
+.panel{display:none;padding:52px 0}
+.panel.on{display:block}
+.w{max-width:1200px;margin:0 auto;padding:0 52px}
 
 /* SEC HEAD */
-.sec-head{display:grid;grid-template-columns:63% 37%;border-radius:16px;overflow:hidden;box-shadow:var(--shadow-md);margin-bottom:44px}
-.sec-head-left{background:var(--white);padding:36px 48px}
-.sec-head-right{background:var(--navy2);display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
-.sec-head-right::before{content:'';position:absolute;top:-40px;right:-40px;width:130px;height:130px;border-radius:50%;background:linear-gradient(135deg,var(--blue2),var(--blue4));opacity:.38}
-.sec-num{font-family:'Nunito',sans-serif;font-weight:900;font-size:72px;color:rgba(255,255,255,.16);line-height:1;position:relative;z-index:1}
-.badge{display:inline-block;background:var(--badge-bg);color:var(--badge-text);font-weight:800;font-size:10px;letter-spacing:.15em;text-transform:uppercase;padding:4px 10px;border-radius:6px;margin-bottom:10px}
-.sec-title{font-family:'Nunito',sans-serif;font-weight:900;font-size:27px;color:var(--navy);line-height:1.2;margin-bottom:6px}
-.sec-desc{font-size:13.5px;color:rgba(0,32,85,.6);font-weight:400}
+.sh{display:grid;grid-template-columns:63% 37%;border-radius:16px;overflow:hidden;box-shadow:var(--shm);margin-bottom:36px}
+.shl{background:var(--white);padding:30px 44px}
+.shr{background:var(--navy2);display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
+.shr::before{content:'';position:absolute;top:-36px;right:-36px;width:110px;height:110px;border-radius:50%;background:linear-gradient(135deg,var(--blue2),var(--blue4));opacity:.38}
+.sn{font-family:'Nunito',sans-serif;font-weight:900;font-size:60px;color:rgba(255,255,255,.15);line-height:1;position:relative;z-index:1}
+.badge{display:inline-block;background:var(--bb);color:var(--bt);font-weight:800;font-size:10px;letter-spacing:.15em;text-transform:uppercase;padding:4px 10px;border-radius:6px;margin-bottom:8px}
+.stitle{font-family:'Nunito',sans-serif;font-weight:900;font-size:23px;color:var(--navy);line-height:1.2;margin-bottom:5px}
+.sdesc{font-size:13px;color:rgba(0,32,85,.58)}
 
-/* TIMELINE CALENDAR */
-.timeline{display:flex;flex-direction:column;gap:0;margin-bottom:56px;border-radius:16px;overflow:hidden;box-shadow:var(--shadow-md);border:1px solid var(--divider)}
-.tl-week{display:grid;grid-template-columns:200px 1fr}
-.tl-week-label{background:var(--navy2);padding:28px 28px;display:flex;flex-direction:column;justify-content:center;position:relative;overflow:hidden;border-bottom:1px solid rgba(255,255,255,.07)}
-.tl-week-label::after{content:'';position:absolute;top:-24px;right:-24px;width:80px;height:80px;border-radius:50%;background:linear-gradient(135deg,var(--blue2),var(--blue4));opacity:.3}
-.tl-week-n{font-family:'Nunito',sans-serif;font-weight:900;font-size:36px;color:rgba(255,255,255,.18);line-height:1;margin-bottom:4px}
-.tl-week-title{font-family:'Nunito',sans-serif;font-weight:800;font-size:13px;color:var(--white);line-height:1.3;position:relative;z-index:1}
-.tl-week-sub{font-size:10.5px;font-weight:700;color:rgba(255,255,255,.5);letter-spacing:.08em;margin-top:4px;position:relative;z-index:1}
-.tl-days{display:grid;grid-template-columns:repeat(7,1fr);border-bottom:1px solid var(--divider)}
-.tl-days.five{grid-template-columns:repeat(5,1fr)}
-.tl-day{background:var(--white);padding:14px 16px;border-right:1px solid var(--divider);display:flex;flex-direction:column;gap:6px}
-.tl-day:last-child{border-right:none}
-.tl-day.live-day{background:#F0F4FF}
-.tl-day.paid-day{background:#FFF8F5}
-.tl-day-label{font-size:9.5px;font-weight:800;letter-spacing:.13em;text-transform:uppercase;color:rgba(0,32,85,.4)}
-.tl-day-num{font-family:'Nunito',sans-serif;font-weight:900;font-size:22px;color:var(--navy);line-height:1}
-.tl-day-tag{font-size:9px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;padding:2px 7px;border-radius:4px;display:inline-block;width:fit-content}
-.tag-pre{background:#E3F2FD;color:#0D47A1}
-.tag-launch{background:var(--green-bg);color:var(--green)}
-.tag-live{background:#E8EAF6;color:#1A237E}
-.tag-post{background:var(--orange-bg);color:var(--orange)}
-.tag-paid{background:#FCE4EC;color:#880E4F}
-.tl-day-text{font-size:11.5px;color:rgba(0,32,85,.72);line-height:1.4;font-weight:600}
+/* TASK BOARD */
+.tleg{background:var(--white);border-radius:12px;padding:14px 22px;margin-bottom:20px;display:flex;gap:18px;flex-wrap:wrap;box-shadow:var(--sh);border:1px solid var(--div)}
+.li{display:flex;align-items:center;gap:6px;font-size:12px;font-weight:700;color:rgba(0,32,85,.68)}
+.ld{width:8px;height:8px;border-radius:50%;flex-shrink:0}
+.trow{background:var(--white);border-radius:12px;box-shadow:var(--sh);border:1px solid var(--div);overflow:hidden;display:grid;grid-template-columns:50px 1fr;margin-bottom:10px}
+.tord{display:flex;align-items:center;justify-content:center;font-family:'Nunito',sans-serif;font-weight:900;font-size:19px;background:var(--navy2);color:rgba(255,255,255,.2);position:relative;overflow:hidden}
+.tord::after{content:'';position:absolute;top:-12px;right:-12px;width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,var(--blue2),var(--blue4));opacity:.22}
+.tord span{position:relative;z-index:1}
+.tc{padding:14px 20px;display:grid;grid-template-columns:1fr 145px 185px 145px;gap:10px;align-items:start}
+.tn{font-family:'Nunito',sans-serif;font-weight:800;font-size:14px;color:var(--navy);margin-bottom:3px;line-height:1.3}
+.td{font-size:12px;color:rgba(0,32,85,.58);line-height:1.4}
+.tp{display:inline-flex;font-size:9px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;padding:2px 8px;border-radius:4px;margin-top:4px}
+.p1{background:#FFEBEE;color:#C62828}.p2{background:var(--orb);color:var(--or)}
+.p3{background:var(--bb);color:var(--blue)}.p4{background:var(--grb);color:var(--gr)}
+.p5{background:var(--pub);color:var(--pu)}
+.tcl{font-size:9px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:rgba(0,32,85,.35);margin-bottom:3px}
+.tcv{font-size:12.5px;font-weight:700;color:var(--navy);line-height:1.35}
+.tcv.b{color:var(--blue)}
 
-/* DAY CARDS */
-.day-block{margin-bottom:48px}
-.day-header{display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:20px;background:var(--white);border-radius:14px 14px 0 0;padding:20px 28px;border:1px solid var(--divider);border-bottom:none}
-.day-n{font-family:'Nunito',sans-serif;font-weight:900;font-size:48px;color:var(--blue);line-height:1;min-width:60px}
-.day-info{}
-.day-date{font-size:10.5px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:rgba(0,32,85,.45);margin-bottom:3px}
-.day-title{font-family:'Nunito',sans-serif;font-weight:900;font-size:19px;color:var(--navy);line-height:1.2}
-.day-badge{font-size:10px;font-weight:800;letter-spacing:.13em;text-transform:uppercase;padding:5px 12px;border-radius:6px;white-space:nowrap;align-self:flex-start;margin-top:4px}
-.db-pre{background:#E3F2FD;color:#0D47A1}
-.db-launch{background:var(--green-bg);color:var(--green)}
-.db-live{background:#E8EAF6;color:#1A237E}
-.db-post{background:var(--orange-bg);color:var(--orange)}
+/* CALENDAR */
+.cal{display:grid;grid-template-columns:1fr 1fr;border-radius:14px;overflow:hidden;box-shadow:var(--shm);margin-bottom:44px;border:1px solid var(--div)}
+.cw{display:flex;flex-direction:column}
+.cwh{padding:14px 18px;position:relative;overflow:hidden}
+.cwh.w1{background:var(--navy2)}.cwh.w2{background:#1B3A6B}
+.cwh::after{content:'';position:absolute;top:-16px;right:-16px;width:56px;height:56px;border-radius:50%;background:linear-gradient(135deg,var(--blue2),var(--blue4));opacity:.3}
+.cwn{font-family:'Nunito',sans-serif;font-weight:900;font-size:24px;color:rgba(255,255,255,.17);line-height:1}
+.cwt{font-family:'Nunito',sans-serif;font-weight:800;font-size:12.5px;color:#fff;position:relative;z-index:1}
+.cws{font-size:9.5px;font-weight:700;color:rgba(255,255,255,.5);margin-top:2px;position:relative;z-index:1}
+.cdays{background:var(--white);display:grid;grid-template-columns:repeat(7,1fr);border-top:1px solid var(--div);flex:1}
+.cday{padding:9px 10px;border-right:1px solid var(--div)}
+.cday:last-child{border-right:none}
+.cday.ld{background:#F0F4FF}.cday.pd{background:#FFF8F5}
+.cdl{font-size:8px;font-weight:800;letter-spacing:.09em;text-transform:uppercase;color:rgba(0,32,85,.38);margin-bottom:1px}
+.cdn{font-family:'Nunito',sans-serif;font-weight:900;font-size:18px;color:var(--navy);line-height:1;margin-bottom:2px}
+.cdt{font-size:7.5px;font-weight:800;letter-spacing:.07em;text-transform:uppercase;padding:2px 5px;border-radius:3px;display:inline-block}
+.tpre{background:#E3F2FD;color:#0D47A1}.tlaunch{background:var(--grb);color:var(--gr)}
+.tlive{background:#E8EAF6;color:#1A237E}.tpost{background:var(--orb);color:var(--or)}
+.cdtxt{font-size:9px;color:rgba(0,32,85,.62);line-height:1.3;margin-top:2px;font-weight:600}
 
-.day-card{background:var(--white);border-radius:0 0 14px 14px;border:1px solid var(--divider);border-top:3px solid var(--blue);overflow:hidden}
-.day-card.green-top{border-top-color:#2E7D32}
-.day-card.live-top{border-top-color:#3949AB}
-.day-card.orange-top{border-top-color:var(--orange)}
-.day-body{padding:26px 28px;display:flex;flex-direction:column;gap:16px}
+/* ACCORDION */
+.agrp{margin-bottom:36px}
+.agtitle{font-family:'Nunito',sans-serif;font-weight:900;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:rgba(0,32,85,.38);margin-bottom:10px;display:flex;align-items:center;gap:10px}
+.agtitle::after{content:'';flex:1;height:1px;background:var(--div)}
 
-.fl{font-size:10px;font-weight:800;letter-spacing:.13em;text-transform:uppercase;color:var(--blue);display:flex;align-items:center;gap:6px;margin-bottom:5px}
-.fl::before{content:'→';font-weight:800;font-size:11px}
+.aitem{background:var(--white);border-radius:12px;box-shadow:var(--sh);border:1px solid var(--div);overflow:hidden;margin-bottom:8px}
+.ahead{display:flex;align-items:center;gap:12px;padding:14px 20px;cursor:pointer;user-select:none;transition:background .15s}
+.ahead:hover{background:#F5F8FF}
+.ahead.on{background:var(--bb)}
+.anum{font-family:'Nunito',sans-serif;font-weight:900;font-size:24px;line-height:1;min-width:36px;color:var(--blue)}
+.anum.g{color:#2E7D32}.anum.o{color:var(--or)}.anum.lv{color:#3949AB}
+.ainfo{flex:1}
+.adate{font-size:9.5px;font-weight:800;letter-spacing:.11em;text-transform:uppercase;color:rgba(0,32,85,.38);margin-bottom:2px}
+.atitle{font-family:'Nunito',sans-serif;font-weight:800;font-size:14.5px;color:var(--navy);line-height:1.25}
+.abadges{display:flex;gap:5px;flex-wrap:wrap}
+.ab{font-size:9px;font-weight:800;letter-spacing:.09em;text-transform:uppercase;padding:3px 8px;border-radius:4px}
+.abp{background:#E3F2FD;color:#0D47A1}.abl{background:var(--grb);color:var(--gr)}
+.ablv{background:#E8EAF6;color:#1A237E}.abo{background:var(--orb);color:var(--or)}
+.aarr{font-size:13px;color:rgba(0,32,85,.28);transition:transform .22s;flex-shrink:0}
+.ahead.on .aarr{transform:rotate(180deg)}
+.abody{display:none;border-top:1px solid var(--div)}
+.abody.on{display:block}
+.ain{padding:20px 24px;display:flex;flex-direction:column;gap:13px}
+
+.fl{font-size:9.5px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--blue);display:flex;align-items:center;gap:5px;margin-bottom:4px}
+.fl::before{content:'→';font-weight:800;font-size:10px}
+.fl.g{color:var(--gr)}.fl.o{color:var(--or)}
 .ft{font-size:13.5px;color:rgba(0,32,85,.8);line-height:1.6}
 .ft strong{font-weight:700;color:var(--navy)}
-.tip{background:var(--badge-bg);border-left:3px solid var(--blue);border-radius:0 8px 8px 0;padding:9px 14px;font-size:12.5px;font-weight:600;color:var(--blue);line-height:1.5}
+.tip{background:var(--bb);border-left:3px solid var(--blue);border-radius:0 8px 8px 0;padding:8px 13px;font-size:12px;font-weight:600;color:var(--blue);line-height:1.5}
 .tip::before{content:'🎬  '}
-.tip.green-tip{background:var(--green-bg);border-left-color:#2E7D32;color:var(--green)}
-.tip.orange-tip{background:var(--orange-bg);border-left-color:var(--orange);color:var(--orange)}
-.tip.orange-tip::before{content:'📣  '}
-
-/* META ROW */
-.meta-row{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:4px}
-.meta-pill{font-size:10px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;padding:3px 9px;border-radius:5px;background:var(--badge-bg);color:var(--badge-text)}
-.meta-pill.green{background:var(--green-bg);color:var(--green)}
-.meta-pill.orange{background:var(--orange-bg);color:var(--orange)}
-.meta-pill.purple{background:var(--purple-bg);color:var(--purple)}
+.tip.g{background:var(--grb);border-left-color:#2E7D32;color:var(--gr)}
+.tip.o{background:var(--orb);border-left-color:var(--or);color:var(--or)}
+.tip.o::before,.tip.g::before{content:''}
+.mr{display:flex;gap:7px;flex-wrap:wrap;margin-bottom:2px}
+.mp{font-size:9.5px;font-weight:800;letter-spacing:.09em;text-transform:uppercase;padding:2px 7px;border-radius:4px;background:var(--bb);color:var(--bt)}
+.mp.g{background:var(--grb);color:var(--gr)}.mp.o{background:var(--orb);color:var(--or)}
+.mp.p{background:var(--pub);color:var(--pu)}.mp.y{background:#FFF9C4;color:#F57F17}
 
 /* LIVE BLOCKS */
-.live-list{display:flex;flex-direction:column;gap:12px}
-.live-item{display:grid;grid-template-columns:150px 1fr;border-radius:10px;overflow:hidden;box-shadow:var(--shadow);border:1px solid var(--divider)}
-.live-left{background:var(--navy2);padding:18px 20px;display:flex;flex-direction:column;justify-content:center;position:relative;overflow:hidden}
-.live-left::after{content:'';position:absolute;top:-18px;right:-18px;width:60px;height:60px;border-radius:50%;background:linear-gradient(135deg,var(--blue2),var(--blue4));opacity:.28}
-.live-n{font-family:'Nunito',sans-serif;font-weight:900;font-size:28px;color:rgba(255,255,255,.18);line-height:1;margin-bottom:2px}
-.live-t{font-size:10.5px;font-weight:700;color:var(--blue3);letter-spacing:.06em}
-.live-right{background:var(--white);padding:18px 24px}
-.live-title{font-family:'Nunito',sans-serif;font-weight:800;font-size:14px;color:var(--navy);margin-bottom:4px}
-.live-desc{font-size:12.5px;color:rgba(0,32,85,.7);line-height:1.5}
+.llist{display:flex;flex-direction:column;gap:9px;margin-top:4px}
+.litem{display:grid;grid-template-columns:120px 1fr;border-radius:9px;overflow:hidden;border:1px solid var(--div)}
+.ll{background:var(--navy2);padding:14px 16px;display:flex;flex-direction:column;justify-content:center;position:relative;overflow:hidden}
+.ll::after{content:'';position:absolute;top:-12px;right:-12px;width:42px;height:42px;border-radius:50%;background:linear-gradient(135deg,var(--blue2),var(--blue4));opacity:.22}
+.ln{font-family:'Nunito',sans-serif;font-weight:900;font-size:24px;color:rgba(255,255,255,.17);line-height:1;margin-bottom:1px}
+.lt{font-size:9.5px;font-weight:700;color:var(--blue3);letter-spacing:.06em}
+.lr{background:var(--white);padding:14px 18px}
+.ltitle{font-family:'Nunito',sans-serif;font-weight:800;font-size:13px;color:var(--navy);margin-bottom:3px}
+.ldesc{font-size:12px;color:rgba(0,32,85,.68);line-height:1.5}
 
-/* PAID SECTION */
-.paid-header{background:linear-gradient(90deg,#4A1500,#8B2500);border-radius:14px 14px 0 0;padding:20px 28px;display:flex;align-items:center;gap:14px}
-.paid-icon{font-size:22px}
-.paid-header-title{font-family:'Nunito',sans-serif;font-weight:800;font-size:16px;color:var(--white)}
-.paid-header-sub{font-size:12px;color:rgba(255,255,255,.6);font-weight:600;margin-top:2px}
-.paid-body{background:var(--white);border:1px solid var(--divider);border-top:none;border-radius:0 0 14px 14px;padding:0}
-.paid-cards{display:grid;grid-template-columns:1fr 1fr;gap:0;border-bottom:1px solid var(--divider)}
-.paid-card{padding:22px 26px;border-right:1px solid var(--divider)}
-.paid-card:last-child{border-right:none}
-.paid-card-label{font-size:10px;font-weight:800;letter-spacing:.13em;text-transform:uppercase;color:var(--orange);margin-bottom:8px;display:flex;align-items:center;gap:5px}
-.paid-card-label::before{content:'→'}
-.paid-card-title{font-family:'Nunito',sans-serif;font-weight:800;font-size:14px;color:var(--navy);margin-bottom:10px;line-height:1.3}
-.paid-rows{display:flex;flex-direction:column;gap:8px}
-.paid-row{display:grid;grid-template-columns:90px 1fr;gap:10px}
-.paid-row-label{font-size:10px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--orange);padding-top:2px}
-.paid-row-text{font-size:13px;color:rgba(0,32,85,.8);line-height:1.5}
-.paid-note{padding:16px 26px;font-size:12.5px;color:rgba(0,32,85,.55);font-weight:600;border-top:1px solid var(--divider)}
+/* WPP */
+.wsec{margin-bottom:32px}
+.wsec-title{font-family:'Nunito',sans-serif;font-weight:900;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:rgba(0,32,85,.38);margin-bottom:10px;display:flex;align-items:center;gap:10px}
+.wsec-title::after{content:'';flex:1;height:1px;background:var(--div)}
 
-/* ERRORS */
-.err-table{width:100%;border-collapse:collapse;border-radius:12px;overflow:hidden;box-shadow:var(--shadow);margin-bottom:52px}
-.err-table thead tr{background:var(--blue)}
-.err-table thead th{padding:12px 20px;text-align:left;font-size:10.5px;font-weight:800;letter-spacing:.13em;text-transform:uppercase;color:var(--white)}
-.err-table tbody tr:nth-child(odd){background:var(--white)}
-.err-table tbody tr:nth-child(even){background:#F4F7FB}
-.err-table td{padding:13px 20px;font-size:13.5px;color:rgba(0,32,85,.8);border-bottom:1px solid var(--divider);line-height:1.5;vertical-align:top}
-.err-table td:first-child{font-weight:700;color:var(--navy);font-size:13px;white-space:nowrap}
+.witem{background:var(--white);border-radius:12px;box-shadow:var(--sh);border:1px solid var(--div);overflow:hidden;margin-bottom:8px}
+.whead{display:flex;align-items:center;gap:10px;padding:12px 18px;cursor:pointer;user-select:none;transition:background .15s}
+.whead:hover{background:#F5F8FF}
+.whead.on{background:#F0FDF4}
+.whead.on.wa{background:#FFFBEB}
+.whead.on.wh{background:#FFF0F0}
+.wtime{font-family:'Nunito',sans-serif;font-weight:900;font-size:14px;color:#15803D;min-width:58px}
+.wtime.wa{color:#92400E}.wtime.wh{color:#991B1B}
+.wdl{font-family:'Nunito',sans-serif;font-weight:800;font-size:13px;color:var(--navy);flex:1}
+.wdesc{font-size:11.5px;color:rgba(0,32,85,.45);font-weight:600}
+.wtag{font-size:9px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;padding:3px 8px;border-radius:4px;white-space:nowrap}
+.wt1{background:#DCFCE7;color:#166534}.wt2{background:#FEF9C3;color:#854D0E}
+.wt3{background:#FEE2E2;color:#991B1B}.wt4{background:#EDE9FE;color:#5B21B6}
+.warr{font-size:12px;color:rgba(0,32,85,.26);transition:transform .22s;flex-shrink:0}
+.whead.on .warr{transform:rotate(180deg)}
+.wbody{display:none;border-top:1px solid var(--div);padding:16px 18px;font-size:13.5px;color:rgba(0,32,85,.82);line-height:1.75;white-space:pre-line;background:#FAFFFE}
+.wbody.on{display:block}
+.wbody.wa{background:#FFFEF5}.wbody.wh{background:#FFF9F9}
+.wnote{padding:8px 18px;background:var(--bb);font-size:11px;font-weight:600;color:var(--blue);border-top:1px solid var(--div)}
+.wnote::before{content:'💡 '}
+
+/* PAID */
+.pcard{background:var(--white);border-radius:12px;box-shadow:var(--sh);border:1px solid var(--div);overflow:hidden;margin-bottom:8px}
+.phead{display:flex;align-items:center;gap:11px;padding:13px 20px;cursor:pointer;background:linear-gradient(90deg,#4A1500,#7B2200);transition:opacity .15s}
+.phead:hover{opacity:.9}
+.plabel{font-size:9.5px;font-weight:800;letter-spacing:.11em;text-transform:uppercase;color:rgba(255,255,255,.5);flex-shrink:0}
+.ptitle{font-family:'Nunito',sans-serif;font-weight:800;font-size:14px;color:#fff;flex:1}
+.parr{font-size:12px;color:rgba(255,255,255,.38);transition:transform .22s}
+.phead.on .parr{transform:rotate(180deg)}
+.pbody{display:none;padding:18px 22px;flex-direction:column;gap:10px}
+.pbody.on{display:flex}
+.pr{display:grid;grid-template-columns:90px 1fr;gap:10px}
+.prl{font-size:9.5px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--or);padding-top:2px}
+.prv{font-size:13.5px;color:rgba(0,32,85,.8);line-height:1.55}
+
+/* STATIC */
+.scard{background:var(--white);border-radius:10px;overflow:hidden;margin-bottom:8px;display:grid;grid-template-columns:7px 1fr;border:1px solid var(--div);box-shadow:var(--sh)}
+.ss{background:linear-gradient(180deg,var(--or),#BF360C)}
+.sc{padding:15px 20px;display:flex;flex-direction:column;gap:9px}
+.stname{font-family:'Nunito',sans-serif;font-weight:800;font-size:13.5px;color:var(--navy)}
+
+/* CALLOUT */
+.callout{background:var(--navy2);border-radius:12px;padding:18px 26px;margin-bottom:24px;display:flex;align-items:center;gap:14px;position:relative;overflow:hidden}
+.callout::after{content:'';position:absolute;right:-28px;top:-28px;width:90px;height:90px;border-radius:50%;background:linear-gradient(135deg,var(--blue2),var(--blue4));opacity:.3}
+.clic{font-size:22px;flex-shrink:0;position:relative;z-index:1}
+.cltxt{position:relative;z-index:1}
+.clti{font-family:'Nunito',sans-serif;font-weight:800;font-size:14.5px;color:#fff;margin-bottom:3px}
+.clde{font-size:12.5px;color:rgba(255,255,255,.68);font-weight:600;line-height:1.5}
+.callout.oc{background:linear-gradient(90deg,#4A1500,#7B2200)}
+
+/* ERR TABLE */
+.etable{width:100%;border-collapse:collapse;border-radius:12px;overflow:hidden;box-shadow:var(--sh);margin-bottom:40px}
+.etable thead tr{background:var(--blue)}
+.etable thead th{padding:11px 18px;text-align:left;font-size:10px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:#fff}
+.etable tbody tr:nth-child(odd){background:var(--white)}
+.etable tbody tr:nth-child(even){background:#F4F7FB}
+.etable td{padding:11px 18px;font-size:13px;color:rgba(0,32,85,.8);border-bottom:1px solid var(--div);line-height:1.5;vertical-align:top}
+.etable td:first-child{font-weight:700;color:var(--navy);font-size:12.5px;white-space:nowrap}
 
 /* FOOTER */
-.footer{display:grid;grid-template-columns:62% 38%;border-radius:16px;overflow:hidden;box-shadow:var(--shadow-md)}
-.footer-left{background:var(--white);padding:28px 48px;display:flex;align-items:center}
-.footer-name{font-family:'Nunito',sans-serif;font-weight:900;font-size:15px;color:var(--navy)}
-.footer-sub{font-size:12px;color:rgba(0,32,85,.5);font-weight:600;margin-top:2px}
-.footer-right{background:var(--navy2);padding:28px 40px;display:flex;align-items:center;justify-content:center}
-.footer-conf{font-size:10.5px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.4)}
+.footer{display:grid;grid-template-columns:62% 38%;border-radius:14px;overflow:hidden;box-shadow:var(--shm);margin-top:52px}
+.fl2{background:var(--white);padding:22px 44px;display:flex;align-items:center}
+.fn{font-family:'Nunito',sans-serif;font-weight:900;font-size:14px;color:var(--navy)}
+.fs{font-size:11.5px;color:rgba(0,32,85,.48);font-weight:600;margin-top:2px}
+.fr{background:var(--navy2);padding:22px 36px;display:flex;align-items:center;justify-content:center}
+.fc{font-size:10px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.36)}
 
-hr{border:none;border-top:1px solid var(--divider);margin:56px 0}
+hr{border:none;border-top:1px solid var(--div);margin:40px 0}
 
 @media(max-width:780px){
-  .cover,.sec-head,.footer{grid-template-columns:1fr}
-  .wrap{padding:40px 24px}
-  .tl-week{grid-template-columns:1fr}
-  .tl-days,.tl-days.five{grid-template-columns:1fr 1fr}
-  .day-header{grid-template-columns:auto 1fr}
-  .day-badge{display:none}
-  .paid-cards{grid-template-columns:1fr}
-  .live-item{grid-template-columns:1fr}
-  .cover-left{padding:60px 28px 40px}
+  .cover,.sh,.footer,.cal{grid-template-columns:1fr}
+  .tabs-wrap,.w{padding:0 16px}
+  .tab{font-size:9.5px;padding:12px 4px}
+  .tc{grid-template-columns:1fr;gap:5px}
+  .cdays{grid-template-columns:repeat(4,1fr)}
+  .cvl{padding:56px 22px 36px}
+  .scard{grid-template-columns:1fr}
+  .ss{height:6px}
+  .pr{grid-template-columns:1fr}
 }
 </style>
 </head>
@@ -179,297 +242,174 @@ hr{border:none;border-top:1px solid var(--divider);margin:56px 0}
 
 <!-- COVER -->
 <div class="cover">
-  <div class="cover-left">
-    <span class="cover-eyebrow">Documento Confidencial · Uso Interno</span>
-    <h1 class="cover-title">14 Dias.<br>1 Roteiro<br><span>Por Dia.</span></h1>
-    <p class="cover-sub">
-      Semana 1: Pré-lançamento orgânico<br>
-      Semana 2: Lançamento + live + pós<br>
-      Tráfego pago apenas para conversão da mentoria
-    </p>
-    <p class="cover-meta">Dr. Ivan Rollemberg · Clínica de 7 Dígitos · Mentoria 1 Milhão em 1 Dia</p>
+  <div class="cvl">
+    <span class="cvey">Documento Confidencial · Uso Interno</span>
+    <h1 class="cvh">14 Dias.<br>1 Roteiro<br><span>Por Dia.</span></h1>
+    <p class="cvs">Semana 1 · Pré-lançamento orgânico<br>Semana 2 · Lançamento + live + pós<br>Tráfego pago apenas para conversão da mentoria</p>
+    <p class="cvm">Dr. Ivan Rollemberg · Clínica de 7 Dígitos · Mentoria 1 Milhão em 1 Dia<br>11/05/2026 → 27/05/2026 · Live: 21/05/2026</p>
   </div>
-  <div class="cover-right">
-    <div class="cover-brand">DR. IVAN ROLLEMBERG</div>
-    <div class="cover-tagline">Empresário &amp; Mentor · Saúde &amp; Negócios</div>
-    <div class="cover-products">
-      <div class="c-pill">
-        <div class="c-pill-label">Evento Gratuito · Orgânico</div>
-        <div class="c-pill-name">Clínica de 7 Dígitos</div>
-      </div>
-      <div class="c-pill">
-        <div class="c-pill-label">Produto Principal · Orgânico + Pago</div>
-        <div class="c-pill-name">Mentoria 1 Milhão em 1 Dia</div>
-      </div>
+  <div class="cvr">
+    <div class="cvbrand">DR. IVAN ROLLEMBERG</div>
+    <div class="cvtag">Empresário &amp; Mentor · Saúde &amp; Negócios</div>
+    <div class="cvpills">
+      <div class="cvpill"><div class="cvpl">Evento Gratuito · Orgânico</div><div class="cvpn">Clínica de 7 Dígitos</div></div>
+      <div class="cvpill"><div class="cvpl">Produto Principal · Orgânico + Pago</div><div class="cvpn">Mentoria 1 Milhão em 1 Dia</div></div>
     </div>
-    <div class="cover-bar"></div>
+    <div class="cvbar"></div>
   </div>
 </div>
 
-<style>
-/* TASKS DASHBOARD */
-.tasks-intro{display:grid;grid-template-columns:62% 38%;border-radius:16px;overflow:hidden;box-shadow:var(--shadow-md);margin-bottom:36px}
-.tasks-intro-left{background:var(--white);padding:36px 48px}
-.tasks-intro-right{background:var(--navy2);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;padding:36px 32px;position:relative;overflow:hidden}
-.tasks-intro-right::before{content:'';position:absolute;top:-40px;right:-40px;width:130px;height:130px;border-radius:50%;background:linear-gradient(135deg,var(--blue2),var(--blue4));opacity:.38}
-.tasks-legend{display:flex;flex-direction:column;gap:8px;position:relative;z-index:1;width:100%}
-.tasks-legend-item{display:flex;align-items:center;gap:10px;font-size:12px;font-weight:700;color:rgba(255,255,255,.75)}
-.tasks-legend-dot{width:10px;height:10px;border-radius:50%;flex-shrink:0}
-
-.tasks-board{display:flex;flex-direction:column;gap:14px;margin-bottom:56px}
-.task-row{background:var(--white);border-radius:12px;box-shadow:var(--shadow);border:1px solid var(--divider);overflow:hidden;display:grid;grid-template-columns:56px 1fr}
-.task-order{display:flex;align-items:center;justify-content:center;font-family:'Nunito',sans-serif;font-weight:900;font-size:22px;background:var(--navy2);color:rgba(255,255,255,.25);position:relative;overflow:hidden}
-.task-order::after{content:'';position:absolute;top:-16px;right:-16px;width:48px;height:48px;border-radius:50%;background:linear-gradient(135deg,var(--blue2),var(--blue4));opacity:.28}
-.task-order span{position:relative;z-index:1}
-.task-content{padding:18px 24px;display:grid;grid-template-columns:1fr 160px 200px 160px;gap:12px;align-items:start}
-.task-main{}
-.task-name{font-family:'Nunito',sans-serif;font-weight:800;font-size:15px;color:var(--navy);margin-bottom:6px;line-height:1.3}
-.task-desc{font-size:12.5px;color:rgba(0,32,85,.6);line-height:1.5}
-.task-col-label{font-size:9.5px;font-weight:800;letter-spacing:.13em;text-transform:uppercase;color:rgba(0,32,85,.38);margin-bottom:5px}
-.task-col-value{font-size:13px;font-weight:700;color:var(--navy);line-height:1.4}
-.task-col-value.blue{color:var(--blue)}
-.task-priority{display:inline-flex;align-items:center;gap:5px;font-size:10px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;padding:3px 9px;border-radius:5px;margin-top:6px}
-.p1{background:#FFEBEE;color:#C62828}
-.p2{background:#FFF3E0;color:#E65100}
-.p3{background:#E3F2FD;color:#1565C0}
-.p4{background:#E8F5E9;color:#2E7D32}
-.p5{background:#F3E5F5;color:#6A1B9A}
-
-/* WHATSAPP SCRIPTS */
-.wpp-day{margin-bottom:40px}
-.wpp-day-header{display:flex;align-items:center;gap:14px;margin-bottom:14px}
-.wpp-day-num{font-family:'Nunito',sans-serif;font-weight:900;font-size:13px;color:var(--white);background:var(--navy2);padding:5px 12px;border-radius:7px;white-space:nowrap}
-.wpp-day-date{font-family:'Nunito',sans-serif;font-weight:800;font-size:15px;color:var(--navy)}
-.wpp-day-line{flex:1;height:1px;background:var(--divider)}
-
-.wpp-msg{background:var(--white);border-radius:12px;box-shadow:var(--shadow);border:1px solid var(--divider);overflow:hidden;margin-bottom:12px}
-.wpp-msg-head{display:flex;align-items:center;gap:12px;padding:12px 20px;background:#F0FDF4;border-bottom:1px solid var(--divider)}
-.wpp-msg-head.warn{background:#FFFBEB}
-.wpp-msg-head.hot{background:#FFF0F0}
-.wpp-time{font-family:'Nunito',sans-serif;font-weight:900;font-size:14px;color:#15803D}
-.wpp-time.warn{color:#92400E}
-.wpp-time.hot{color:#991B1B}
-.wpp-tag{font-size:10px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;padding:3px 9px;border-radius:5px;margin-left:auto}
-.wt-ins{background:#DCFCE7;color:#166534}
-.wt-urg{background:#FEF9C3;color:#854D0E}
-.wt-hot{background:#FEE2E2;color:#991B1B}
-.wt-post{background:#EDE9FE;color:#5B21B6}
-.wpp-body{padding:16px 20px;font-size:13.5px;color:rgba(0,32,85,.82);line-height:1.7;white-space:pre-line}
-.wpp-note{padding:8px 20px;background:var(--badge-bg);font-size:11.5px;font-weight:600;color:var(--blue);border-top:1px solid var(--divider)}
-.wpp-note::before{content:'💡 '}
-</style>
-
-<div class="wrap">
-
-<!-- ══ TELA INICIAL: TAREFAS ══ -->
-<div class="tasks-intro">
-  <div class="tasks-intro-left">
-    <span class="badge">Tela Inicial</span>
-    <h2 class="sec-title">Painel de Tarefas do Lançamento</h2>
-    <p class="sec-desc">7 frentes de trabalho ordenadas por prioridade de execução · Calendário inicia em 11/05/2026</p>
-  </div>
-  <div class="tasks-intro-right">
-    <div style="font-size:10px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.5);margin-bottom:2px;position:relative;z-index:1">Legenda de prioridade</div>
-    <div class="tasks-legend">
-      <div class="tasks-legend-item"><div class="tasks-legend-dot" style="background:#EF9A9A"></div>1º · Executar imediatamente</div>
-      <div class="tasks-legend-item"><div class="tasks-legend-dot" style="background:#FFCC80"></div>2º · Semana 1, início</div>
-      <div class="tasks-legend-item"><div class="tasks-legend-dot" style="background:#90CAF9"></div>3º · Semana 1, meio</div>
-      <div class="tasks-legend-item"><div class="tasks-legend-dot" style="background:#A5D6A7"></div>4º · Semana 1, fim (verificar)</div>
-      <div class="tasks-legend-item"><div class="tasks-legend-dot" style="background:#CE93D8"></div>5º · Semana 2, antes da live</div>
-    </div>
+<!-- TABS -->
+<div class="tabwrap">
+  <div class="tabs">
+    <button class="tab on" onclick="goTab('tarefas',this)"><span class="ti">📋</span>Tarefas</button>
+    <button class="tab" onclick="goTab('calendario',this)"><span class="ti">📅</span>Calendário</button>
+    <button class="tab" onclick="goTab('reels',this)"><span class="ti">🎬</span>Roteiros · Reels</button>
+    <button class="tab" onclick="goTab('live',this)"><span class="ti">⚡</span>Script · Live</button>
+    <button class="tab" onclick="goTab('wpp',this)"><span class="ti">💬</span>WhatsApp</button>
+    <button class="tab" onclick="goTab('pago',this)"><span class="ti">📣</span>Tráfego Pago</button>
+    <button class="tab" onclick="goTab('erros',this)"><span class="ti">⚠️</span>Erros</button>
   </div>
 </div>
 
-<div class="tasks-board">
+<!-- ═══ TAREFAS ═══ -->
+<div id="p-tarefas" class="panel on">
+<div class="w">
+  <div class="sh"><div class="shl"><span class="badge">Tela Inicial</span><h2 class="stitle">Painel de Tarefas</h2><p class="sdesc">7 frentes ordenadas por prioridade · 11/05 → 27/05/2026 · Live 21/05</p></div><div class="shr"><div class="sn">01</div></div></div>
 
-  <div class="task-row">
-    <div class="task-order"><span>1</span></div>
-    <div class="task-content">
-      <div class="task-main">
-        <div class="task-name">Definição de Oferta e Produto</div>
-        <div class="task-desc">Alinhar todos os detalhes da oferta: ticket, âncora, garantia, formato, entregáveis e posicionamento final da Mentoria 1 Milhão em 1 Dia.</div>
-        <div class="task-priority p1">1º · Imediato</div>
+  <div class="tleg">
+    <div class="li"><div class="ld" style="background:#EF9A9A"></div>1º Executar imediatamente</div>
+    <div class="li"><div class="ld" style="background:#FFCC80"></div>2º Semana 1, início</div>
+    <div class="li"><div class="ld" style="background:#90CAF9"></div>3º Semana 1, meio</div>
+    <div class="li"><div class="ld" style="background:#A5D6A7"></div>4º Verificar se terá</div>
+    <div class="li"><div class="ld" style="background:#CE93D8"></div>5º Antes da live</div>
+  </div>
+
+  <div class="trow"><div class="tord"><span>1</span></div><div class="tc"><div><div class="tn">Definição de Oferta e Produto</div><div class="td">Alinhar ticket, âncora, garantia, formato, entregáveis e posicionamento final da Mentoria 1 Milhão em 1 Dia.</div><span class="tp p1">1º · Imediato</span></div><div><div class="tcl">Responsável</div><div class="tcv b">Meireles</div></div><div><div class="tcl">Como Fazer</div><div class="tcv">Reunião de alinhamento com Ivan</div></div><div><div class="tcl">Onde / Canal</div><div class="tcv">Abrir chamado</div></div></div></div>
+
+  <div class="trow"><div class="tord"><span>2</span></div><div class="tc"><div><div class="tn">Roteiro / Copy Completo</div><div class="td">Roteiros orgânicos (14 dias), scripts de anúncios, mensagens de disparo WhatsApp e e-mail marketing.</div><span class="tp p2">2º · Semana 1 início</span></div><div><div class="tcl">Responsável</div><div class="tcv b">Marcos · Ana · Gustavo</div></div><div><div class="tcl">Como Fazer</div><div class="tcv">Usar este documento como base</div></div><div><div class="tcl">Onde / Canal</div><div class="tcv">—</div></div></div></div>
+
+  <div class="trow"><div class="tord"><span>2</span></div><div class="tc"><div><div class="tn">Identidade Visual do Evento</div><div class="td">ID visual completa da Clínica de 7 Dígitos: logo, arte para stories, thumbs de vídeo, arte da live e criativos pagos.</div><span class="tp p2">2º · Semana 1 início</span></div><div><div class="tcl">Responsável</div><div class="tcv b">Gustavo</div></div><div><div class="tcl">Como Fazer</div><div class="tcv">Colocar no chamado</div></div><div><div class="tcl">Onde / Canal</div><div class="tcv">—</div></div></div></div>
+
+  <div class="trow"><div class="tord"><span>3</span></div><div class="tc"><div><div class="tn">Construção da Landing Page</div><div class="td">LP de captura para inscrição gratuita na Clínica de 7 Dígitos. Deve estar no ar antes do dia 5 (15/05).</div><span class="tp p3">3º · Semana 1 meio</span></div><div><div class="tcl">Responsável</div><div class="tcv b">Ana M.</div></div><div><div class="tcl">Como Fazer</div><div class="tcv">—</div></div><div><div class="tcl">Onde / Canal</div><div class="tcv">—</div></div></div></div>
+
+  <div class="trow"><div class="tord"><span>3</span></div><div class="tc"><div><div class="tn">Configuração Técnica</div><div class="td">Plataforma de pagamentos, pixel de conversão, grupo de compradores no WhatsApp, plataforma de live e página de vendas.</div><span class="tp p3">3º · Semana 1 meio</span></div><div><div class="tcl">Responsável</div><div class="tcv b">Marcos</div></div><div><div class="tcl">Como Fazer</div><div class="tcv">Kiwify · Comunidade WhatsApp</div></div><div><div class="tcl">Onde / Canal</div><div class="tcv">—</div></div></div></div>
+
+  <div class="trow"><div class="tord"><span>4</span></div><div class="tc"><div><div class="tn">Campanha de Lançamento (Tráfego Pago)</div><div class="td">Configuração das campanhas de conversão e remarketing da Mentoria 1 Milhão em 1 Dia. Ativar somente após a live (21/05).</div><span class="tp p4">4º · Verificar se terá</span></div><div><div class="tcl">Responsável</div><div class="tcv b">Ana M.</div></div><div><div class="tcl">Como Fazer</div><div class="tcv">—</div></div><div><div class="tcl">Onde / Canal</div><div class="tcv">—</div></div></div></div>
+
+  <div class="trow"><div class="tord"><span>5</span></div><div class="tc"><div><div class="tn">Suporte Operacional</div><div class="td">Gestão do grupo de inscritos, setup de gravação da live, automação de mensagens pós-compra, suporte durante a live e onboarding dos alunos.</div><span class="tp p5">5º · Antes da live</span></div><div><div class="tcl">Responsável</div><div class="tcv b">Marcos</div></div><div><div class="tcl">Como Fazer</div><div class="tcv">—</div></div><div><div class="tcl">Onde / Canal</div><div class="tcv">—</div></div></div></div>
+</div>
+</div>
+
+<!-- ═══ CALENDÁRIO ═══ -->
+<div id="p-calendario" class="panel">
+<div class="w">
+  <div class="sh"><div class="shl"><span class="badge">Calendário</span><h2 class="stitle">14 Dias · Visão Geral</h2><p class="sdesc">11/05 a 27/05/2026 · Live 21/05 · Carrinho fecha 27/05 · 1 publicação por dia</p></div><div class="shr"><div class="sn">02</div></div></div>
+  <div class="cal">
+    <div class="cw">
+      <div class="cwh w1"><div class="cwn">S1</div><div class="cwt">Pré-Lançamento · 11–17/05</div><div class="cws">Orgânico · Quebra de crença · Sem CTA de produto nos dias 1–4</div></div>
+      <div class="cdays">
+        <div class="cday"><div class="cdl">Seg 11/05</div><div class="cdn">01</div><div class="cdt tpre">Reel</div><div class="cdtxt">Agenda cheia não é sucesso</div></div>
+        <div class="cday"><div class="cdl">Ter 12/05</div><div class="cdn">02</div><div class="cdt tpre">Reel</div><div class="cdtxt">Faturamento é vaidade</div></div>
+        <div class="cday"><div class="cdl">Qua 13/05</div><div class="cdn">03</div><div class="cdt tpre">Reel</div><div class="cdtxt">Dependência de indicação</div></div>
+        <div class="cday"><div class="cdl">Qui 14/05</div><div class="cdn">04</div><div class="cdt tpre">Reel</div><div class="cdtxt">Funcionário mais caro</div></div>
+        <div class="cday"><div class="cdl">Sex 15/05</div><div class="cdn">05</div><div class="cdt tpre">Reel ★</div><div class="cdtxt">R$ 1M em 1 dia · 1º CTA live</div></div>
+        <div class="cday"><div class="cdl">Sáb 16/05</div><div class="cdn">06</div><div class="cdt tpre">Reel</div><div class="cdtxt">Clínica vs empresa</div></div>
+        <div class="cday"><div class="cdl">Dom 17/05</div><div class="cdn">07</div><div class="cdt tpre">Reel</div><div class="cdtxt">Anúncio da live</div></div>
       </div>
-      <div>
-        <div class="task-col-label">Responsável</div>
-        <div class="task-col-value blue">Meireles</div>
-      </div>
-      <div>
-        <div class="task-col-label">Como Fazer</div>
-        <div class="task-col-value">Reunião de alinhamento com Ivan</div>
-      </div>
-      <div>
-        <div class="task-col-label">Onde / Canal</div>
-        <div class="task-col-value">Abrir chamado</div>
+    </div>
+    <div class="cw">
+      <div class="cwh w2"><div class="cwn">S2</div><div class="cwt">Lançamento · 18–27/05</div><div class="cws">Live 21/05 · Carrinho abre · Pós-live · Pago ativa 22/05</div></div>
+      <div class="cdays">
+        <div class="cday"><div class="cdl">Seg 18/05</div><div class="cdn">08</div><div class="cdt tlaunch">Vídeo</div><div class="cdtxt">Sistema dos 5 pilares</div></div>
+        <div class="cday"><div class="cdl">Ter 19/05</div><div class="cdn">09</div><div class="cdt tlaunch">Vídeo</div><div class="cdtxt">Clínica lucrativa</div></div>
+        <div class="cday"><div class="cdl">Qua 20/05</div><div class="cdn">10</div><div class="cdt tlaunch">Vídeo</div><div class="cdtxt">Véspera — estou pronto</div></div>
+        <div class="cday ld"><div class="cdl">Qui 21/05</div><div class="cdn">11</div><div class="cdt tlive">⚡ Live</div><div class="cdtxt">Clínica 7D · Carrinho abre</div></div>
+        <div class="cday pd"><div class="cdl">Sex 22/05</div><div class="cdn">12</div><div class="cdt tpost">Pós</div><div class="cdtxt">Resumo · Pago ativa</div></div>
+        <div class="cday pd"><div class="cdl">Sáb 23/05</div><div class="cdn">13</div><div class="cdt tpost">Pós</div><div class="cdtxt">Prova social</div></div>
+        <div class="cday pd"><div class="cdl">Qua 27/05</div><div class="cdn">14</div><div class="cdt tpost">Encerra</div><div class="cdtxt">Carrinho fecha</div></div>
       </div>
     </div>
   </div>
+</div>
+</div>
 
-  <div class="task-row">
-    <div class="task-order"><span>2</span></div>
-    <div class="task-content">
-      <div class="task-main">
-        <div class="task-name">Roteiro / Copy Completo</div>
-        <div class="task-desc">Roteiros orgânicos (14 dias), scripts de anúncios, mensagens de disparo WhatsApp e e-mail marketing do lançamento.</div>
-        <div class="task-priority p2">2º · Semana 1 início</div>
-      </div>
-      <div>
-        <div class="task-col-label">Responsável</div>
-        <div class="task-col-value blue">Marcos · Ana · Gustavo</div>
-      </div>
-      <div>
-        <div class="task-col-label">Como Fazer</div>
-        <div class="task-col-value">Usar este documento como base</div>
-      </div>
-      <div>
-        <div class="task-col-label">Onde / Canal</div>
-        <div class="task-col-value">—</div>
-      </div>
-    </div>
+<!-- ═══ REELS ═══ -->
+<div id="p-reels" class="panel">
+<div class="w">
+  <div class="sh"><div class="shl"><span class="badge">Roteiros · Orgânico</span><h2 class="stitle">14 Roteiros · 1 Por Dia</h2><p class="sdesc">Clique para expandir o roteiro completo de cada dia · Semana 1: Reels 30–60s · Semana 2: Vídeos 1,5–3 min</p></div><div class="shr"><div class="sn">03</div></div></div>
+
+  <div class="agrp">
+    <div class="agtitle">Semana 1 · 11–17/05 · Pré-Lançamento · Sem CTA de produto nos dias 1–4</div>
+
+    <div class="aitem"><div class="ahead" onclick="acc(this)"><div class="anum">01</div><div class="ainfo"><div class="adate">Segunda, 11/05 · Reel 30–60s</div><div class="atitle">Agenda Cheia Não É Sucesso — É Armadilha</div></div><div class="abadges"><span class="ab abp">Topo · Sem CTA</span></div><div class="aarr">▼</div></div><div class="abody"><div class="ain"><div class="mr"><span class="mp">Crença #1</span><span class="mp p">Movimento ≠ resultado</span></div><div><div class="fl">Quebra de Padrão (0–3s)</div><div class="ft">"Sua agenda está lotada. Você está exausto. E o lucro não aparece. Isso não é sucesso — é armadilha."</div></div><div><div class="fl">Conflito</div><div class="ft">A maioria dos profissionais de saúde confunde movimento com resultado. Agenda cheia significa alta demanda — não que você está ganhando bem. Sem controle de margens, você trabalha mais para lucrar menos.</div></div><div><div class="fl">Mudança de Perspectiva</div><div class="ft">Clínica de sucesso não é a que tem mais atendimentos. É a que tem <strong>margem, previsibilidade e um sistema que funciona com ou sem você presente.</strong></div></div><div><div class="fl">Encerramento Aberto</div><div class="ft">"Nos próximos dias vou mostrar a diferença entre uma clínica ocupada e uma clínica lucrativa."</div></div><div class="tip">Tom: direto, sem agressividade. Pausa de 1s após abertura. Escritório executivo ou estúdio clean. Sem jaleco. Sem CTA.</div></div></div></div>
+
+    <div class="aitem"><div class="ahead" onclick="acc(this)"><div class="anum">02</div><div class="ainfo"><div class="adate">Terça, 12/05 · Reel 30–60s</div><div class="atitle">Faturamento É Vaidade. Lucro É Sanidade.</div></div><div class="abadges"><span class="ab abp">Topo · Sem CTA</span></div><div class="aarr">▼</div></div><div class="abody"><div class="ain"><div class="mr"><span class="mp">Crença #2</span><span class="mp p">Faturamento ≠ lucro</span></div><div><div class="fl">Quebra de Padrão (0–3s)</div><div class="ft">"Você sabe exatamente quanto a sua clínica fatura. A maioria não sabe quanto sobra."</div></div><div><div class="fl">Conflito</div><div class="ft">A diferença está em três lugares que quase ninguém monitora: <strong>custo real por procedimento, inadimplência silenciosa e pró-labore disfarçado.</strong> Você pode faturar R$ 100k e ter R$ 8k de lucro real — sem perceber.</div></div><div><div class="fl">Mudança de Perspectiva</div><div class="ft">Gestão financeira em clínica não é sobre cortar gastos. É sobre ter visibilidade total do que entra, do que sai e de onde está o lucro real.</div></div><div><div class="fl">Encerramento Aberto</div><div class="ft">"Se você nunca calculou sua margem real por procedimento, esse número vai te surpreender."</div></div><div class="tip">Tom: clínico e objetivo. Pode usar bloco como prop visual. Pausa após cada dado. Sem CTA.</div></div></div></div>
+
+    <div class="aitem"><div class="ahead" onclick="acc(this)"><div class="anum">03</div><div class="ainfo"><div class="adate">Quarta, 13/05 · Reel 30–60s</div><div class="atitle">Dependência de Indicação É Fragilidade, Não Estratégia</div></div><div class="abadges"><span class="ab abp">Topo · Sem CTA</span></div><div class="aarr">▼</div></div><div class="abody"><div class="ain"><div class="mr"><span class="mp">Crença #3</span><span class="mp p">Indicação ≠ estratégia</span></div><div><div class="fl">Quebra de Padrão (0–3s)</div><div class="ft">"Se a sua clínica para de crescer no mês em que ninguém te indica — você não tem um negócio. Você tem um emprego caro."</div></div><div><div class="fl">Tensão</div><div class="ft">Você constrói anos de reputação excelente — e toda ela fica presa no boca a boca. Enquanto isso, profissionais tecnicamente inferiores <strong>constroem audiência e uma máquina de aquisição que funciona 24h.</strong></div></div><div><div class="fl">Mudança de Perspectiva</div><div class="ft">Indicação mais sistema de aquisição previsível é o modelo que permite crescimento real. Um não substitui o outro — se complementam.</div></div><div><div class="fl">Encerramento Aberto</div><div class="ft">"Vou mostrar como construir esse sistema sem abrir mão da sua credibilidade."</div></div><div class="tip">Tom: assertivo. Pausa após "emprego caro." Ambiente de autoridade empresarial. Sem CTA.</div></div></div></div>
+
+    <div class="aitem"><div class="ahead" onclick="acc(this)"><div class="anum">04</div><div class="ainfo"><div class="adate">Quinta, 14/05 · Reel 30–60s</div><div class="atitle">Você É o Funcionário Mais Caro da Sua Clínica</div></div><div class="abadges"><span class="ab abp">Topo · Sem CTA</span></div><div class="aarr">▼</div></div><div class="abody"><div class="ain"><div class="mr"><span class="mp">Crença #4</span><span class="mp p">Presença ≠ liderança</span></div><div><div class="fl">Quebra de Padrão (0–3s)</div><div class="ft">"Se você sair da sua clínica por 30 dias, ela para. Você não é dono — você é o funcionário mais caro do negócio."</div></div><div><div class="fl">Conflito</div><div class="ft">Quanto mais indispensável você se torna, <strong>menos escalável é a operação.</strong> E um negócio não escalável tem teto — de faturamento, de lucro e de qualidade de vida.</div></div><div><div class="fl">Mudança de Perspectiva</div><div class="ft">Construir um negócio que funciona sem você não é abandono — é o maior nível de competência empresarial. É o que separa quem tem uma clínica de quem tem uma empresa de saúde.</div></div><div><div class="fl">Encerramento Aberto</div><div class="ft">"Nos próximos vídeos vou mostrar como sair desse ciclo."</div></div><div class="tip">Tom: provocativo mas empático. Pausa após "funcionário mais caro." Olhar direto para câmera. Sem CTA.</div></div></div></div>
+
+    <div class="aitem"><div class="ahead" onclick="acc(this)"><div class="anum">05</div><div class="ainfo"><div class="adate">Sexta, 15/05 · Reel 30–60s ★ Alta prioridade</div><div class="atitle">O Dia em Que Faturei R$ 1 Milhão</div></div><div class="abadges"><span class="ab abp">Topo · 1º CTA para live</span><span class="ab" style="background:#FFF9C4;color:#F57F17">★ Maior alcance</span></div><div class="aarr">▼</div></div><div class="abody"><div class="ain"><div class="mr"><span class="mp">Crença #5</span><span class="mp p">Receita linear ≠ único modelo</span><span class="mp y">★ Publicar sexta · pico fim de semana</span></div><div><div class="fl">Quebra de Padrão (0–3s)</div><div class="ft">"Existe um modelo de negócio na saúde que permite faturar R$ 1 milhão em um único dia. Eu já fiz isso. Vou te mostrar como funciona."</div></div><div><div class="fl">Inversão de Crença</div><div class="ft">Não é sorte. É um sistema — posicionamento, audiência, oferta e lançamento concentrados em uma janela. <strong>Você já tem o ativo mais valioso: conhecimento e credibilidade.</strong> O que falta é a estrutura.</div></div><div><div class="fl">Primeiro CTA para a Live</div><div class="ft">"Na semana que vem faço uma live gratuita onde vou abrir os bastidores desse sistema completo. Chama Clínica de 7 Dígitos. Link na bio para garantir sua vaga — é gratuito."</div></div><div class="tip">Tom: autoridade máxima. Postura ereta, dicção precisa. Pausa longa após abertura. Maior impacto do pré-lançamento.</div></div></div></div>
+
+    <div class="aitem"><div class="ahead" onclick="acc(this)"><div class="anum">06</div><div class="ainfo"><div class="adate">Sábado, 16/05 · Reel 30–60s</div><div class="atitle">A Diferença Entre Clínica e Empresa de Saúde</div></div><div class="abadges"><span class="ab abp">Topo · CTA para live</span></div><div class="aarr">▼</div></div><div class="abody"><div class="ain"><div class="mr"><span class="mp">Crença #6</span><span class="mp p">Operação ≠ sistema</span></div><div><div class="fl">Quebra de Padrão (0–3s)</div><div class="ft">"Clínica é operação. Empresa é sistema. E a diferença entre as duas determina quanto você ganha, como você cresce e o que acontece quando você quer parar."</div></div><div><div class="fl">Conflito</div><div class="ft">O valor patrimonial de uma clínica que depende do dono tende a zero se o dono sair. Uma empresa de saúde estruturada <strong>pode ser vendida, expandida ou franqueada.</strong> São ativos completamente diferentes.</div></div><div><div class="fl">As 5 Transformações</div><div class="ft">Financeira · Jurídica · Gestão · Marketing · Operações. Cada uma precisa de estrutura — não de improviso.</div></div><div><div class="fl">CTA para a Live</div><div class="ft">"Na Clínica de 7 Dígitos mostro esse mapa completo ao vivo, gratuitamente. Link na bio."</div></div><div class="tip">Tom: estratégico e elevado. Maior deslocamento de identidade da semana 1. Sábado tem alto engajamento.</div></div></div></div>
+
+    <div class="aitem"><div class="ahead" onclick="acc(this)"><div class="anum">07</div><div class="ainfo"><div class="adate">Domingo, 17/05 · Reel 30–60s</div><div class="atitle">Por Que Vou Fazer Essa Live — e O Que Você Vai Ver</div></div><div class="abadges"><span class="ab abp">Anúncio da Live · CTA direto</span></div><div class="aarr">▼</div></div><div class="abody"><div class="ain"><div class="mr"><span class="mp">Anúncio oficial</span><span class="mp p">CTA direto · Inscrição gratuita</span></div><div><div class="fl">Abertura</div><div class="ft">"Na semana que vem faço algo que nunca fiz antes — um evento ao vivo, gratuito, onde vou abrir os bastidores do modelo que me permitiu faturar R$ 1 milhão em 1 dia na saúde."</div></div><div><div class="fl">O Que Você Vai Ver</div><div class="ft">Os <strong>5 gargalos</strong> que travam o crescimento de qualquer clínica, o <strong>sistema dos 5 pilares</strong> para criar uma operação escalável — e como profissionais de saúde com autoridade real podem gerar R$ 1 milhão em uma única janela de lançamento.</div></div><div><div class="fl">Posicionamento</div><div class="ft">Não é curso. Não é webinar de vendas disfarçado. É o mapa completo — ao vivo, com perguntas, com exemplos reais. <strong>Gratuito.</strong></div></div><div><div class="fl">CTA Direto</div><div class="ft">"Clínica de 7 Dígitos — dia 21/05, às [HORÁRIO]. Link na bio para garantir sua vaga agora."</div></div><div class="tip">Tom: próximo e genuíno. Publicar domingo — captura inscrições ao longo de toda a segunda-feira.</div></div></div></div>
   </div>
 
-  <div class="task-row">
-    <div class="task-order"><span>2</span></div>
-    <div class="task-content">
-      <div class="task-main">
-        <div class="task-name">Identidade Visual do Evento</div>
-        <div class="task-desc">Criação de toda a identidade visual da Clínica de 7 Dígitos: logo, arte para stories, thumbs de vídeo, arte da live e criativos pagos.</div>
-        <div class="task-priority p2">2º · Semana 1 início</div>
-      </div>
-      <div>
-        <div class="task-col-label">Responsável</div>
-        <div class="task-col-value blue">Gustavo</div>
-      </div>
-      <div>
-        <div class="task-col-label">Como Fazer</div>
-        <div class="task-col-value">Colocar no chamado</div>
-      </div>
-      <div>
-        <div class="task-col-label">Onde / Canal</div>
-        <div class="task-col-value">—</div>
-      </div>
-    </div>
-  </div>
+  <div class="agrp">
+    <div class="agtitle">Semana 2 · 18–27/05 · Lançamento · Meio e Fundo de Funil · Live 21/05</div>
 
-  <div class="task-row">
-    <div class="task-order"><span>3</span></div>
-    <div class="task-content">
-      <div class="task-main">
-        <div class="task-name">Construção da Landing Page</div>
-        <div class="task-desc">LP de captura para inscrição gratuita na Clínica de 7 Dígitos. Deve estar no ar antes do dia 5 do calendário (15/05), quando começa o CTA para a live.</div>
-        <div class="task-priority p3">3º · Semana 1 meio</div>
-      </div>
-      <div>
-        <div class="task-col-label">Responsável</div>
-        <div class="task-col-value blue">Ana M.</div>
-      </div>
-      <div>
-        <div class="task-col-label">Como Fazer</div>
-        <div class="task-col-value">—</div>
-      </div>
-      <div>
-        <div class="task-col-label">Onde / Canal</div>
-        <div class="task-col-value">—</div>
-      </div>
-    </div>
-  </div>
+    <div class="aitem"><div class="ahead" onclick="acc(this)"><div class="anum g">08</div><div class="ainfo"><div class="adate">Segunda, 18/05 · Vídeo 2–3 min</div><div class="atitle">O Sistema Que Permite Faturar R$ 1M em 1 Dia</div></div><div class="abadges"><span class="ab abl">Meio de Funil · CTA live</span></div><div class="aarr">▼</div></div><div class="abody"><div class="ain"><div class="mr"><span class="mp g">Aprofundamento do método</span><span class="mp p">Autoridade técnica</span></div><div><div class="fl g">Abertura</div><div class="ft">"Quando digo que é possível faturar R$ 1 milhão em um único dia na saúde, a primeira reação é ceticismo. Mas eu já fiz isso."</div></div><div><div class="fl g">Os 5 Pilares</div><div class="ft"><strong>1.</strong> Audiência qualificada · <strong>2.</strong> Posicionamento de autoridade · <strong>3.</strong> Oferta de alto valor · <strong>4.</strong> Funil de aquecimento · <strong>5.</strong> Evento de conversão. Quando calibrados, o resultado é previsível — não é golpe de sorte.</div></div><div><div class="fl g">Microcompromisso</div><div class="ft">"Se você tem conhecimento e credibilidade — e você tem — o que falta não é talento. É o sistema."</div></div><div><div class="fl g">CTA</div><div class="ft">Na Clínica de 7 Dígitos, <strong>dia 21/05 às [HORÁRIO]</strong>, apresento esse sistema completo ao vivo. Inscrição gratuita — link na bio.</div></div><div class="tip g">Duração: 2,5–3 min. Tom: autoridade de quem já fez — não teoria. Pode usar quadro com os 5 pilares.</div></div></div></div>
 
-  <div class="task-row">
-    <div class="task-order"><span>3</span></div>
-    <div class="task-content">
-      <div class="task-main">
-        <div class="task-name">Configuração Técnica</div>
-        <div class="task-desc">Plataforma de pagamentos, pixel de conversão, grupo de compradores no WhatsApp, plataforma de live e página de vendas da Mentoria 1 Milhão em 1 Dia.</div>
-        <div class="task-priority p3">3º · Semana 1 meio</div>
-      </div>
-      <div>
-        <div class="task-col-label">Responsável</div>
-        <div class="task-col-value blue">Marcos</div>
-      </div>
-      <div>
-        <div class="task-col-label">Como Fazer</div>
-        <div class="task-col-value">Kiwify · Comunidade WhatsApp</div>
-      </div>
-      <div>
-        <div class="task-col-label">Onde / Canal</div>
-        <div class="task-col-value">—</div>
-      </div>
-    </div>
-  </div>
+    <div class="aitem"><div class="ahead" onclick="acc(this)"><div class="anum g">09</div><div class="ainfo"><div class="adate">Terça, 19/05 · Vídeo 2–3 min</div><div class="atitle">Clínica Lucrativa Não É a Que Mais Atende</div></div><div class="abadges"><span class="ab abl">Meio de Funil · CTA live</span></div><div class="aarr">▼</div></div><div class="abody"><div class="ain"><div class="mr"><span class="mp g">Dados e precisão</span><span class="mp p">Margem > faturamento</span></div><div><div class="fl g">Abertura</div><div class="ft">Depois de mentorar mais de 150 empresas da saúde, identifiquei um padrão consistente: as clínicas com maior faturamento raramente são as mais lucrativas.</div></div><div><div class="fl g">Conflito com Dados</div><div class="ft">Uma clínica que fatura <strong>R$ 300k com 35% de margem</strong> é mais saudável do que uma que fatura <strong>R$ 700k com 8%.</strong> A diferença: precificação estratégica, controle de custos e mix de serviços.</div></div><div><div class="fl g">Microcompromisso</div><div class="ft">"Você não precisa de mais pacientes. Você precisa de mais clareza sobre o que cada paciente representa para o seu resultado."</div></div><div><div class="fl g">CTA</div><div class="ft">Na live de amanhã mostro como construir esse mapa financeiro com exemplos práticos. Link na bio — último dia para inscrição.</div></div><div class="tip g">Duração: 2–2,5 min. Tom: gestor e professor. Pode usar números em papel. CTA com urgência de "amanhã".</div></div></div></div>
 
-  <div class="task-row">
-    <div class="task-order"><span>4</span></div>
-    <div class="task-content">
-      <div class="task-main">
-        <div class="task-name">Campanha de Lançamento (Tráfego Pago)</div>
-        <div class="task-desc">Configuração das campanhas pagas de conversão e remarketing da Mentoria 1 Milhão em 1 Dia. Ativar somente após a live (dia 11 do calendário = 21/05).</div>
-        <div class="task-priority p4">4º · Verificar se terá</div>
-      </div>
-      <div>
-        <div class="task-col-label">Responsável</div>
-        <div class="task-col-value blue">Ana M.</div>
-      </div>
-      <div>
-        <div class="task-col-label">Como Fazer</div>
-        <div class="task-col-value">—</div>
-      </div>
-      <div>
-        <div class="task-col-label">Onde / Canal</div>
-        <div class="task-col-value">—</div>
-      </div>
-    </div>
-  </div>
+    <div class="aitem"><div class="ahead" onclick="acc(this)"><div class="anum g">10</div><div class="ainfo"><div class="adate">Quarta, 20/05 · Vídeo 1,5–2 min</div><div class="atitle">Estou Pronto Para a Live de Amanhã — E Você?</div></div><div class="abadges"><span class="ab abl">Véspera da Live · Urgência real</span></div><div class="aarr">▼</div></div><div class="abody"><div class="ain"><div class="mr"><span class="mp g">Véspera · 20/05</span><span class="mp p">Última chamada de inscrição</span></div><div><div class="fl g">Abertura</div><div class="ft">"Amanhã acontece a Clínica de 7 Dígitos. Estou preparando o material, os exemplos, os exercícios. Quero que você chegue pronto — não apenas presente."</div></div><div><div class="fl g">O Que Esperar</div><div class="ft">Os 5 gargalos que travam qualquer clínica, o sistema dos 5 pilares e um exercício guiado para identificar onde está o seu maior travamento hoje. Com perguntas ao vivo e exemplos reais por especialidade.</div></div><div><div class="fl g">Como Chegar Preparado</div><div class="ft">Assiste aos vídeos dessa semana. Anota um problema real do seu negócio. <strong>Chega com uma pergunta específica.</strong> Quem chega preparado sai com clareza de ação — não só de conteúdo.</div></div><div><div class="fl g">CTA Final</div><div class="ft">"Se você ainda não garantiu sua vaga — link na bio. É gratuito. É amanhã. Não tem como não ir."</div></div><div class="tip g">Duração: 1,5–2 min. Publicar no início da tarde para capturar inscrições de último momento.</div></div></div></div>
 
-  <div class="task-row">
-    <div class="task-order"><span>5</span></div>
-    <div class="task-content">
-      <div class="task-main">
-        <div class="task-name">Suporte Operacional</div>
-        <div class="task-desc">Gestão do grupo de inscritos, setup de gravação da live, automação de mensagens pós-compra, suporte durante a live e onboarding dos novos alunos.</div>
-        <div class="task-priority p5">5º · Antes da live</div>
-      </div>
-      <div>
-        <div class="task-col-label">Responsável</div>
-        <div class="task-col-value blue">Marcos</div>
-      </div>
-      <div>
-        <div class="task-col-label">Como Fazer</div>
-        <div class="task-col-value">—</div>
-      </div>
-      <div>
-        <div class="task-col-label">Onde / Canal</div>
-        <div class="task-col-value">—</div>
-      </div>
-    </div>
+    <div class="aitem"><div class="ahead" onclick="acc(this)"><div class="anum o">12</div><div class="ainfo"><div class="adate">Sexta, 22/05 · Vídeo 1,5–2 min · Pago ativa hoje</div><div class="atitle">O Que Aconteceu na Clínica de 7 Dígitos</div></div><div class="abadges"><span class="ab abo">Pós-Live · Fundo</span><span class="ab" style="background:#FCE4EC;color:#880E4F">📣 Pago ativa</span></div><div class="aarr">▼</div></div><div class="abody"><div class="ain"><div class="mr"><span class="mp o">Pós-live · Dia 1</span></div><div><div class="fl o">Abertura</div><div class="ft">"A Clínica de 7 Dígitos aconteceu. [X] profissionais ao vivo. Vou te contar o que rolou — e o que ainda dá para fazer quem não foi."</div></div><div><div class="fl o">Recapitulação</div><div class="ft">Os 3 principais insights da live. Reações reais de participantes — prints, comentários. Reforçar o método e os 5 pilares sem entregar o conteúdo completo.</div></div><div><div class="fl o">Clareza da Solução</div><div class="ft">A <strong>Mentoria 1 Milhão em 1 Dia</strong> está com vagas abertas por mais [X dias]. 12 meses, 12 encontros ao vivo de 3h com o Dr. Ivan. Garantia de 7 dias — devolução de 100% se não fizer sentido.</div></div><div><div class="fl o">CTA</div><div class="ft">"Link na bio para quem quer o acompanhamento completo."</div></div><div class="tip o">Tom: pós-evento, energia de entrega. Publicar pela manhã. Ativar campanhas pagas simultaneamente.</div></div></div></div>
+
+    <div class="aitem"><div class="ahead" onclick="acc(this)"><div class="anum o">13</div><div class="ainfo"><div class="adate">Sábado, 23/05 · Vídeo 1,5–2 min</div><div class="atitle">Prova Social + Para Quem É a Mentoria</div></div><div class="abadges"><span class="ab abo">Pós-Live · Fundo</span></div><div class="aarr">▼</div></div><div class="abody"><div class="ain"><div class="mr"><span class="mp o">Pós-live · Dia 2</span><span class="mp p">Prova social + qualificação</span></div><div><div class="fl o">Abertura — Prova Social</div><div class="ft">"Primeiras horas da Mentoria 1 Milhão em 1 Dia — e já estou recebendo isso." [Mostrar prints/depoimentos reais com permissão — médico, dentista, fisioterapeuta.]</div></div><div><div class="fl o">É Para Você Se</div><div class="ft">→ Você tem clínica funcionando e quer crescer com método<br>→ O faturamento não reflete o esforço que coloca<br>→ Quer sistema de aquisição sem depender de indicação<br>→ Quer saber como faturar R$ 1M em uma janela de lançamento</div></div><div><div class="fl o">Não É Para Você Se</div><div class="ft">→ Você busca fórmula mágica sem implementação<br>→ Não está disposto a rever processos<br>→ Quer resultado sem mudança de comportamento</div></div><div><div class="fl o">CTA</div><div class="ft">"Se você se reconheceu no primeiro grupo — o link está na bio. As vagas fecham em 27/05."</div></div><div class="tip o">Tom: genuíno e direto. A clareza sobre "para quem não é" aumenta a conversão de quem é.</div></div></div></div>
+
+    <div class="aitem"><div class="ahead" onclick="acc(this)"><div class="anum o">14</div><div class="ainfo"><div class="adate">Domingo, 27/05 · Vídeo 1,5–2 min · Publicar às 18h</div><div class="atitle">Últimas Horas — O Carrinho Fecha Hoje</div></div><div class="abadges"><span class="ab abo">Encerramento · Urgência Real</span></div><div class="aarr">▼</div></div><div class="abody"><div class="ain"><div class="mr"><span class="mp o">Último dia · 27/05 · Publicar 18h</span></div><div><div class="fl o">Abertura</div><div class="ft">"Em algumas horas, as vagas da Mentoria 1 Milhão em 1 Dia fecham. Não vou reabrir tão cedo — e quando reabrir, o preço será diferente."</div></div><div><div class="fl o">Recapitulação da Oferta</div><div class="ft">12 meses com Dr. Ivan. 12 encontros ao vivo de 3h. Financeiro, jurídico, gestão, marketing e tecnologia. <strong>R$ 1.780 à vista ou 12x. Garantia de 7 dias — o risco é meu.</strong></div></div><div><div class="fl o">Elevação de Identidade</div><div class="ft">"Faturar R$ 1 milhão em 1 dia na saúde não é sorte. É sistema. <strong>E sistema começa com uma decisão.</strong>"</div></div><div><div class="fl o">Encerramento</div><div class="ft">"A decisão é sua. O link está na bio. Mas essa condição não estará disponível amanhã."</div></div><div class="tip o">Tom: firme, sem pressão artificial. Frase final dita devagar — pausa antes de "E sistema começa com uma decisão."</div></div></div></div>
   </div>
 
 </div>
-
-<hr>
-
-<!-- ══ SCRIPTS WHATSAPP ══ -->
-<div class="sec-head">
-  <div class="sec-head-left">
-    <span class="badge">Scripts · WhatsApp</span>
-    <h2 class="sec-title">Mensagens de Disparo — Grupo</h2>
-    <p class="sec-desc">Scripts completos com dia e horário · Calendário começa em 11/05/2026 · Live em 21/05/2026</p>
-  </div>
-  <div class="sec-head-right"><div class="sec-num">WPP</div></div>
 </div>
 
-<!-- DIA 1 — 11/05 -->
-<div class="wpp-day">
-  <div class="wpp-day-header">
-    <div class="wpp-day-num">Dia 1 · 11/05 · Seg</div>
-    <div class="wpp-day-date">Primeira mensagem — boas-vindas ao grupo</div>
-    <div class="wpp-day-line"></div>
-  </div>
-  <div class="wpp-msg">
-    <div class="wpp-msg-head">
-      <span class="wpp-time">09h00</span>
-      <span class="wpp-tag wt-ins">Boas-vindas</span>
+<!-- ═══ LIVE ═══ -->
+<div id="p-live" class="panel">
+<div class="w">
+  <div class="sh"><div class="shl"><span class="badge">Script · Live</span><h2 class="stitle">Clínica de 7 Dígitos · 21/05/2026</h2><p class="sdesc">Estrutura completa da live gratuita · 90–120 min · Cada bloco expansível com roteiro detalhado</p></div><div class="shr"><div class="sn">04</div></div></div>
+
+  <div class="callout" style="margin-bottom:28px">
+    <div class="clic">📌</div>
+    <div class="cltxt">
+      <div class="clti">Regra de Ouro da Live</div>
+      <div class="clde">A Clínica de 7 Dígitos é o evento gratuito. A Mentoria 1 Milhão em 1 Dia é o produto pago. Os nomes nunca se cruzam até o Bloco 5 — quando o carrinho abre. Antes disso, qualquer menção à mentoria destrói a percepção de conteúdo da live.</div>
     </div>
-    <div class="wpp-body">👋 Olá! Bem-vindo ao grupo da *Clínica de 7 Dígitos*.
+  </div>
+
+  <div class="aitem"><div class="ahead" onclick="acc(this)"><div class="anum lv">B1</div><div class="ainfo"><div class="adate">Bloco 1 · 15 minutos · Abertura</div><div class="atitle">Abertura e Quebra de Paradigma</div></div><div class="abadges"><span class="ab ablv">Credibilidade · Prova social</span></div><div class="aarr">▼</div></div><div class="abody"><div class="ain"><div><div class="fl">Objetivo do Bloco</div><div class="ft">Estabelecer autoridade imediata, quebrar a crença de que R$ 1M em 1 dia é impossível para profissionais de saúde e posicionar o Dr. Ivan como empresário — não como médico que virou palestrante.</div></div><div><div class="fl">Abertura (primeiros 2 min)</div><div class="ft">"Antes de começar — vou te mostrar o que acontece quando um profissional de saúde decide parar de tocar o negócio no improviso." Mostrar número de empresas mentoradas, volume gerado, resultado do próprio lançamento de R$ 1M em 1 dia com print ou dado real.</div></div><div><div class="fl">Quebra de Crença</div><div class="ft">"Isso não é exclusivo de infoprodutor. Não é viralização. Não é sorte. É um sistema. E profissionais de saúde têm uma vantagem enorme nesse modelo — porque credibilidade técnica é o ativo mais escasso e mais valorizado pelo mercado."</div></div><div><div class="fl">Posicionamento dos Dois Produtos</div><div class="ft">Deixar claro: "Hoje você vai ver o mapa completo — aqui, gratuitamente. No final da live, para quem quiser ir além, vou apresentar a Mentoria 1 Milhão em 1 Dia. Mas o conteúdo de hoje é completo em si mesmo."</div></div><div class="tip">Tom: autoridade de quem já fez. Não entrar em modo de vendas nos primeiros 15 minutos — em hipótese alguma. A prova social é o gancho, não a promessa.</div></div></div></div>
+
+  <div class="aitem"><div class="ahead" onclick="acc(this)"><div class="anum lv">B2</div><div class="ainfo"><div class="adate">Bloco 2 · 25 minutos · Diagnóstico</div><div class="atitle">Por Que Sua Clínica Tem Teto — Os 5 Gargalos</div></div><div class="abadges"><span class="ab ablv">Aprofundamento de dor</span></div><div class="aarr">▼</div></div><div class="abody"><div class="ain"><div><div class="fl">Objetivo do Bloco</div><div class="ft">Fazer o participante se identificar com pelo menos um gargalo e sentir que o problema dele foi nomeado com precisão — não de forma genérica.</div></div><div><div class="fl">Gargalo 1 · Financeiro sem visibilidade</div><div class="ft">Faturamento sem clareza de margem real. Custo por procedimento não calculado. Pró-labore disfarçado. Ponto de equilíbrio desconhecido. Custo estimado da inação: meses de lucro negativo sem perceber.</div></div><div><div class="fl">Gargalo 2 · Dependência de indicação</div><div class="ft">Ausência de sistema de aquisição previsível. Crescimento dependente de sorte e relação. Um mês sem indicações fortes e a receita cai. Custo: impossibilidade de planejamento real.</div></div><div><div class="fl">Gargalo 3 · Equipe sem autonomia</div><div class="ft">Gestor que resolve o problema de todo mundo. Alta rotatividade. Cultura indefinida. Contratação por urgência. Custo: 3–6 meses de salário por contratação errada + contaminação da experiência do paciente.</div></div><div><div class="fl">Gargalo 4 · Jurídico frágil</div><div class="ft">Contratos inadequados com executores, estrutura societária exposta, marca sem proteção, responsabilidade civil mal definida. Custo: um processo trabalhista pode consumir anos de margem.</div></div><div><div class="fl">Gargalo 5 · Ausência de sistema de marketing</div><div class="ft">Posicionamento indefinido. Conteúdo sem estratégia. Tráfego pago sem funil qualificado. Custo: invisibilidade enquanto profissionais tecnicamente inferiores ocupam a mente do mercado.</div></div><div><div class="fl">Dinâmica ao vivo (5 min)</div><div class="ft">Perguntar no chat: "Qual desses 5 gargalos você reconhece no seu negócio agora?" Usar as respostas para validar o diagnóstico em tempo real.</div></div><div class="tip">Este é o bloco de maior ativação emocional. Ritmo moderado. Dar tempo para o participante se identificar com cada gargalo antes de avançar.</div></div></div></div>
+
+  <div class="aitem"><div class="ahead" onclick="acc(this)"><div class="anum lv">B3</div><div class="ainfo"><div class="adate">Bloco 3 · 30 minutos · Método</div><div class="atitle">O Sistema dos 5 Pilares</div></div><div class="abadges"><span class="ab ablv">Entrega de valor máxima</span></div><div class="aarr">▼</div></div><div class="abody"><div class="ain"><div><div class="fl">Objetivo do Bloco</div><div class="ft">Apresentar o método completo com exemplos reais e resultados documentados. Esse bloco precisa ser o mais valioso da live — entrega genuína que justifica a oferta do final.</div></div><div><div class="fl">Pilar 1 · Audiência qualificada</div><div class="ft">Como construir uma base de seguidores que são potenciais compradores — não apenas fãs. Diferença entre audiência e comunidade qualificada. Estratégia de conteúdo com função comercial.</div></div><div><div class="fl">Pilar 2 · Posicionamento de autoridade</div><div class="ft">Como ser reconhecido como referência — não apenas como bom técnico. Posicionamento de especialidade dentro da especialidade. Como o CFM permite construir autoridade real dentro das diretrizes.</div></div><div><div class="fl">Pilar 3 · Oferta de alto valor</div><div class="ft">Estrutura de uma oferta que permite ticket elevado: transformação prometida, entregáveis claros, garantia que remove risco, âncora de preço. Diferença entre produto e oferta.</div></div><div><div class="fl">Pilar 4 · Funil de aquecimento</div><div class="ft">Como preparar a audiência para comprar antes de abrir o carrinho. Sequência de conteúdo que quebra crenças e eleva a consciência do problema. O papel da live dentro do funil.</div></div><div><div class="fl">Pilar 5 · Evento de conversão</div><div class="ft">Por que o modelo de lançamento concentra faturamento em uma janela. Como criar urgência real. Como estruturar o evento ao vivo para converter sem parecer vendas. Resultado de R$ 1M em 1 dia como exemplo concreto.</div></div><div><div class="fl">Caso real</div><div class="ft">Apresentar um caso documentado de profissional de saúde que aplicou o sistema — com números reais, contexto e linha do tempo. Não nomear sem permissão — proteger identidade se necessário.</div></div><div class="tip">Usar quadro, slides ou recurso visual com os 5 pilares em sequência. O participante precisa sair com o mapa visual na cabeça.</div></div></div></div>
+
+  <div class="aitem"><div class="ahead" onclick="acc(this)"><div class="anum lv">B4</div><div class="ainfo"><div class="adate">Bloco 4 · 20 minutos · Aplicação</div><div class="atitle">Exercício Prático Ao Vivo</div></div><div class="abadges"><span class="ab ablv">Engajamento · Clareza de ação</span></div><div class="aarr">▼</div></div><div class="abody"><div class="ain"><div><div class="fl">Objetivo do Bloco</div><div class="ft">Fazer o participante sair da posição de espectador para a posição de executor — com clareza sobre o próximo passo específico para o negócio dele.</div></div><div><div class="fl">Exercício guiado (10 min)</div><div class="ft">Instrução: "Pega um papel agora. Escreve o número do pilar que você ainda não tem no seu negócio. Só um. O que está mais longe." Dar 2 minutos em silêncio para o participante refletir e escrever.</div></div><div><div class="fl">Discussão ao vivo (10 min)</div><div class="ft">Pedir que digitem no chat. Pegar 3–4 respostas diferentes e discutir ao vivo — "Se você marcou o pilar 2, aqui está o que eu faria primeiro no seu caso." Personalizar por especialidade (médico esteta, dentista, fisioterapeuta) para mostrar que o método é adaptável.</div></div><div><div class="fl">Transição para o Bloco 5</div><div class="ft">"Vocês acabaram de identificar o gargalo principal. Agora vou mostrar como trabalhar cada um desses pilares de forma acompanhada — porque a diferença entre entender o mapa e implementar é a diferença entre assistir e agir."</div></div><div class="tip">Esse bloco cria o maior nível de intenção de compra da live — a pessoa que identificou o próprio gargalo está pronta para ouvir a oferta. Não apressar.</div></div></div></div>
+
+  <div class="aitem"><div class="ahead" onclick="acc(this)"><div class="anum lv">B5</div><div class="ainfo"><div class="adate">Bloco 5 · 10 minutos · Oferta</div><div class="atitle">Abertura de Carrinho — Mentoria 1 Milhão em 1 Dia</div></div><div class="abadges"><span class="ab abo">Carrinho abre aqui</span></div><div class="aarr">▼</div></div><div class="abody"><div class="ain"><div><div class="fl">Transição Limpa</div><div class="ft">"Durante 12 meses trabalho diretamente com você para implementar cada um desses 5 pilares no seu negócio. Isso é a Mentoria 1 Milhão em 1 Dia."</div></div><div><div class="fl">O Que Está Incluído</div><div class="ft">12 meses de acompanhamento. 12 encontros ao vivo de 3h com o Dr. Ivan — não com representantes ou equipe. Módulos de financeiro, jurídico, gestão, marketing e tecnologia. Acesso à comunidade de empresários da saúde.</div></div><div><div class="fl">A Oferta de Lançamento</div><div class="ft"><strong>R$ 1.780 à vista (PIX)</strong> ou até 12x no cartão. Âncora: R$ 5.000. Condição exclusiva para quem está na live — válida até 27/05 à meia-noite.</div></div><div><div class="fl">A Garantia</div><div class="ft">"Você entra. Assiste à primeira aula ao vivo. Se não fizer sentido para o seu negócio — você pede devolução e eu devolvo 100%, sem burocracia, sem questionamento. O risco é meu."</div></div><div><div class="fl">CTA Final</div><div class="ft">"O link está no chat agora. A decisão é sua. Mas essa condição não vai estar disponível amanhã."</div></div><div class="tip">Tom: elevado, sem pressa. Não entrar em modo de vendedor. A transição de conteúdo para oferta deve ser natural — o participante que chegou até aqui está pronto.</div></div></div></div>
+</div>
+</div>
+
+<!-- ═══ WHATSAPP ═══ -->
+<div id="p-wpp" class="panel">
+<div class="w">
+  <div class="sh"><div class="shl"><span class="badge">Scripts · WhatsApp</span><h2 class="stitle">Mensagens de Disparo — Grupo</h2><p class="sdesc">17 mensagens · Dia e horário exatos · Clique para expandir o script completo de cada disparo</p></div><div class="shr"><div class="sn">05</div></div></div>
+
+  <div class="wsec">
+    <div class="wsec-title">Semana 1 · 11–17/05 · Aquecimento · Sem CTA de produto</div>
+
+    <div class="witem"><div class="whead" onclick="wpp(this)"><span class="wtime">09h00</span><div class="wdl">Dia 1 · Seg 11/05</div><span class="wdesc">Boas-vindas ao grupo</span><span class="wtag wt1">Boas-vindas</span><span class="warr">▼</span></div><div class="wbody">👋 Olá! Bem-vindo ao grupo da *Clínica de 7 Dígitos*.
 
 Nos próximos dias vou trazer aqui conteúdo direto sobre o que realmente trava o crescimento de clínicas e empresas de saúde — e como resolver isso de forma estruturada.
 
@@ -477,24 +417,9 @@ A live gratuita acontece no dia *21 de maio*. Até lá, fique de olho nas mensag
 
 Qualquer dúvida, é só mandar mensagem. 🙏
 
-— Dr. Ivan</div>
-    <div class="wpp-note">Primeira mensagem do grupo. Tom: acolhedor e direto. Não vender nada ainda.</div>
-  </div>
-</div>
+— Dr. Ivan</div><div class="wnote">Primeira mensagem do grupo. Tom: acolhedor e direto. Não vender nada ainda.</div></div>
 
-<!-- DIA 2 — 12/05 -->
-<div class="wpp-day">
-  <div class="wpp-day-header">
-    <div class="wpp-day-num">Dia 2 · 12/05 · Ter</div>
-    <div class="wpp-day-date">Provocação — reforço do Reel do dia</div>
-    <div class="wpp-day-line"></div>
-  </div>
-  <div class="wpp-msg">
-    <div class="wpp-msg-head">
-      <span class="wpp-time">10h00</span>
-      <span class="wpp-tag wt-ins">Conteúdo</span>
-    </div>
-    <div class="wpp-body">📊 Uma pergunta rápida:
+    <div class="witem"><div class="whead" onclick="wpp(this)"><span class="wtime">10h00</span><div class="wdl">Dia 2 · Ter 12/05</div><span class="wdesc">Reforço do Reel do dia</span><span class="wtag wt1">Conteúdo</span><span class="warr">▼</span></div><div class="wbody">📊 Uma pergunta rápida:
 
 Você sabe exatamente quanto a sua clínica *fatura* por mês.
 
@@ -504,24 +429,9 @@ Não é a mesma coisa — e a diferença entre esses dois números está em trê
 
 Postei um vídeo sobre isso hoje no Instagram. Vale 2 minutos do seu tempo.
 
-👉 [@perfil]</div>
-    <div class="wpp-note">Reforça o Reel 02 do dia. Sem link de produto.</div>
-  </div>
-</div>
+👉 [@perfil]</div><div class="wnote">Reforça o Reel 02 do dia. Sem link de produto.</div></div>
 
-<!-- DIA 3 — 13/05 -->
-<div class="wpp-day">
-  <div class="wpp-day-header">
-    <div class="wpp-day-num">Dia 3 · 13/05 · Qua</div>
-    <div class="wpp-day-date">Pergunta de engajamento</div>
-    <div class="wpp-day-line"></div>
-  </div>
-  <div class="wpp-msg">
-    <div class="wpp-msg-head">
-      <span class="wpp-time">09h30</span>
-      <span class="wpp-tag wt-ins">Engajamento</span>
-    </div>
-    <div class="wpp-body">🤔 Responde aqui com honestidade:
+    <div class="witem"><div class="whead" onclick="wpp(this)"><span class="wtime">09h30</span><div class="wdl">Dia 3 · Qua 13/05</div><span class="wdesc">Pergunta de engajamento</span><span class="wtag wt1">Engajamento</span><span class="warr">▼</span></div><div class="wbody">🤔 Responde aqui com honestidade:
 
 Se você ficasse *30 dias afastado* da sua clínica agora — o que aconteceria?
 
@@ -531,24 +441,9 @@ C) Pararia
 
 Sem julgamento. Estou perguntando porque a resposta diz muito sobre o estágio do negócio — e é exatamente sobre isso que vou falar na live do dia 21.
 
-— Dr. Ivan</div>
-    <div class="wpp-note">Pergunta de engajamento que ativa o conflito central do lançamento. Usar as respostas como prova social na live.</div>
-  </div>
-</div>
+— Dr. Ivan</div><div class="wnote">Pergunta que ativa o conflito central do lançamento. Usar as respostas como prova social na live.</div></div>
 
-<!-- DIA 4 — 14/05 -->
-<div class="wpp-day">
-  <div class="wpp-day-header">
-    <div class="wpp-day-num">Dia 4 · 14/05 · Qui</div>
-    <div class="wpp-day-date">Conteúdo de valor — dado real</div>
-    <div class="wpp-day-line"></div>
-  </div>
-  <div class="wpp-msg">
-    <div class="wpp-msg-head">
-      <span class="wpp-time">10h00</span>
-      <span class="wpp-tag wt-ins">Conteúdo</span>
-    </div>
-    <div class="wpp-body">💡 Um dado que poucos falam:
+    <div class="witem"><div class="whead" onclick="wpp(this)"><span class="wtime">10h00</span><div class="wdl">Dia 4 · Qui 14/05</div><span class="wdesc">Dado de valor + gancho para amanhã</span><span class="wtag wt1">Conteúdo</span><span class="warr">▼</span></div><div class="wbody">💡 Um dado que poucos falam:
 
 Cada contratação errada em uma clínica custa, em média, *3 a 6 meses de salário* — somando rescisão, perda de produtividade e tempo do gestor.
 
@@ -556,26 +451,11 @@ Na saúde, isso vai além do financeiro: uma contratação errada contamina dire
 
 O problema quase sempre não é falta de sorte na contratação. É falta de *processo*.
 
-Amanhã trago um vídeo sobre o modelo que mais tem me preocupado no mercado de saúde hoje. Fique ligado.
+Amanhã trago o vídeo mais importante dessa semana. Fique ligado.
 
-— Dr. Ivan</div>
-    <div class="wpp-note">Reforça o Reel 04. Termina com gancho para o dia seguinte — o Reel mais importante da semana 1.</div>
-  </div>
-</div>
+— Dr. Ivan</div><div class="wnote">Termina com gancho para o Reel 05 (R$ 1M em 1 dia) — o de maior impacto da semana 1.</div></div>
 
-<!-- DIA 5 — 15/05 -->
-<div class="wpp-day">
-  <div class="wpp-day-header">
-    <div class="wpp-day-num">Dia 5 · 15/05 · Sex</div>
-    <div class="wpp-day-date">Primeiro CTA para inscrição na live</div>
-    <div class="wpp-day-line"></div>
-  </div>
-  <div class="wpp-msg">
-    <div class="wpp-msg-head">
-      <span class="wpp-time">09h00</span>
-      <span class="wpp-tag wt-ins">CTA · Live</span>
-    </div>
-    <div class="wpp-body">🎯 Postei hoje o vídeo mais importante dessa semana no Instagram.
+    <div class="witem"><div class="whead" onclick="wpp(this)"><span class="wtime">09h00</span><div class="wdl">Dia 5 · Sex 15/05</div><span class="wdesc">Primeiro CTA para inscrição na live</span><span class="wtag wt1">CTA · Live</span><span class="warr">▼</span></div><div class="wbody">🎯 Postei hoje o vídeo mais importante dessa semana no Instagram.
 
 Ele fala sobre algo que eu mesmo já fiz — e que a maioria dos profissionais de saúde acha impossível:
 
@@ -588,24 +468,9 @@ Na live do dia *21 de maio*, vou abrir os bastidores desse modelo completo — a
 Se você ainda não garantiu sua vaga oficial:
 👉 [LINK DE INSCRIÇÃO]
 
-— Dr. Ivan</div>
-    <div class="wpp-note">Primeiro CTA direto para inscrição. Reforça o Reel 05 (R$ 1M em 1 dia). Link de inscrição na LP.</div>
-  </div>
-</div>
+— Dr. Ivan</div><div class="wnote">Primeiro CTA direto para inscrição. Reforça o Reel 05. Link da LP.</div></div>
 
-<!-- DIA 6 — 16/05 -->
-<div class="wpp-day">
-  <div class="wpp-day-header">
-    <div class="wpp-day-num">Dia 6 · 16/05 · Sáb</div>
-    <div class="wpp-day-date">Conteúdo + reforço de inscrição</div>
-    <div class="wpp-day-line"></div>
-  </div>
-  <div class="wpp-msg">
-    <div class="wpp-msg-head">
-      <span class="wpp-time">10h00</span>
-      <span class="wpp-tag wt-ins">Conteúdo · CTA</span>
-    </div>
-    <div class="wpp-body">🏥 Existe uma diferença fundamental entre ter uma *clínica* e ter uma *empresa de saúde*.
+    <div class="witem"><div class="whead" onclick="wpp(this)"><span class="wtime">10h00</span><div class="wdl">Dia 6 · Sáb 16/05</div><span class="wdesc">Conteúdo + reforço de inscrição</span><span class="wtag wt1">Conteúdo · CTA</span><span class="warr">▼</span></div><div class="wbody">🏥 Existe uma diferença fundamental entre ter uma *clínica* e ter uma *empresa de saúde*.
 
 Clínica é operação. Empresa é sistema.
 
@@ -616,31 +481,16 @@ Na live do dia 21 mostro o mapa completo de como fazer essa transição — inde
 Garante sua vaga gratuita:
 👉 [LINK DE INSCRIÇÃO]
 
-— Dr. Ivan</div>
-    <div class="wpp-note">Sábado tem alto engajamento. Tom mais reflexivo — fim de semana é quando o profissional "para e pensa".</div>
-  </div>
-</div>
+— Dr. Ivan</div><div class="wnote">Sábado tem alto engajamento. Tom reflexivo — fim de semana é quando o profissional "para e pensa".</div></div>
 
-<!-- DIA 7 — 17/05 -->
-<div class="wpp-day">
-  <div class="wpp-day-header">
-    <div class="wpp-day-num">Dia 7 · 17/05 · Dom</div>
-    <div class="wpp-day-date">Anúncio oficial da live</div>
-    <div class="wpp-day-line"></div>
-  </div>
-  <div class="wpp-msg">
-    <div class="wpp-msg-head">
-      <span class="wpp-time">19h00</span>
-      <span class="wpp-tag wt-ins">Anúncio</span>
-    </div>
-    <div class="wpp-body">📣 Aviso oficial para o grupo:
+    <div class="witem"><div class="whead" onclick="wpp(this)"><span class="wtime">19h00</span><div class="wdl">Dia 7 · Dom 17/05</div><span class="wdesc">Anúncio oficial da live</span><span class="wtag wt1">Anúncio</span><span class="warr">▼</span></div><div class="wbody">📣 Aviso oficial para o grupo:
 
 Na *quinta-feira, dia 21 de maio, às [HORÁRIO]*, acontece a *Clínica de 7 Dígitos* — meu evento gratuito ao vivo.
 
 Vou mostrar:
 → Os 5 gargalos que travam qualquer clínica
-→ O sistema dos 5 pilares que permite criar uma operação escalável
-→ Como profissionais de saúde com autoridade real podem faturar R$ 1M em 1 dia de lançamento
+→ O sistema dos 5 pilares para criar uma operação escalável
+→ Como faturar R$ 1M em 1 dia de lançamento — com método, não sorte
 
 Não é curso. Não é webinar de vendas. É o mapa completo — ao vivo, com perguntas, com exemplos reais.
 
@@ -649,26 +499,15 @@ Se você ainda não se inscreveu formalmente:
 
 Semana que vem posto um vídeo por dia com conteúdo direto. Fique de olho.
 
-— Dr. Ivan</div>
-    <div class="wpp-note">Domingo à noite — alto engajamento. Mensagem mais longa e completa, resumindo tudo para quem não viu os posts da semana.</div>
+— Dr. Ivan</div><div class="wnote">Domingo à noite — alto engajamento. Mensagem completa para quem não acompanhou a semana.</div></div>
   </div>
-</div>
 
-<!-- DIA 8 — 18/05 -->
-<div class="wpp-day">
-  <div class="wpp-day-header">
-    <div class="wpp-day-num">Dia 8 · 18/05 · Seg</div>
-    <div class="wpp-day-date">Abertura da semana da live</div>
-    <div class="wpp-day-line"></div>
-  </div>
-  <div class="wpp-msg">
-    <div class="wpp-msg-head">
-      <span class="wpp-time">08h30</span>
-      <span class="wpp-tag wt-urg">Semana da live</span>
-    </div>
-    <div class="wpp-body">🚀 Semana da *Clínica de 7 Dígitos*.
+  <div class="wsec">
+    <div class="wsec-title">Semana 2 · 18–27/05 · Lançamento · Live 21/05 · Carrinho fecha 27/05</div>
 
-A live é *quinta, dia 21*. Essa semana posto um vídeo por dia com o conteúdo base que você precisa para aproveitar a live no máximo.
+    <div class="witem"><div class="whead wa" onclick="wpp(this)"><span class="wtime wa">08h30</span><div class="wdl">Dia 8 · Seg 18/05</div><span class="wdesc">Abertura da semana da live</span><span class="wtag wt2">Semana da live</span><span class="warr">▼</span></div><div class="wbody wa">🚀 Semana da *Clínica de 7 Dígitos*.
+
+A live é *quinta, dia 21*. Essa semana posto um vídeo por dia com o conteúdo base para você aproveitar a live no máximo.
 
 Hoje: o sistema que me permitiu faturar R$ 1 milhão em 1 dia na saúde — e os 5 pilares que fazem esse resultado ser previsível, não sorte.
 
@@ -677,54 +516,24 @@ Já está no Instagram 👉 [@perfil]
 Sua vaga na live:
 👉 [LINK DE INSCRIÇÃO]
 
-— Dr. Ivan</div>
-    <div class="wpp-note">Abertura de semana. Tom de energia e antecipação. Reforça a live como ápice da jornada.</div>
-  </div>
-</div>
+— Dr. Ivan</div><div class="wnote">Abertura de semana. Tom de energia e antecipação.</div></div>
 
-<!-- DIA 9 — 19/05 -->
-<div class="wpp-day">
-  <div class="wpp-day-header">
-    <div class="wpp-day-num">Dia 9 · 19/05 · Ter</div>
-    <div class="wpp-day-date">Dado concreto + urgência de inscrição</div>
-    <div class="wpp-day-line"></div>
-  </div>
-  <div class="wpp-msg">
-    <div class="wpp-msg-head">
-      <span class="wpp-time">09h00</span>
-      <span class="wpp-tag wt-urg">Urgência</span>
-    </div>
-    <div class="wpp-body">📈 Pergunta direta:
+    <div class="witem"><div class="whead wa" onclick="wpp(this)"><span class="wtime wa">09h00</span><div class="wdl">Dia 9 · Ter 19/05</div><span class="wdesc">Dado concreto + urgência</span><span class="wtag wt2">Urgência</span><span class="warr">▼</span></div><div class="wbody wa">📈 Pergunta direta:
 
 Uma clínica que fatura *R$ 300 mil com 35% de margem* ou uma que fatura *R$ 700 mil com 8% de margem* — qual é mais lucrativa?
 
-A resposta é óbvia quando você vê assim. Mas a maioria das clínicas não tem visibilidade sobre esses números — e por isso toma decisões no escuro.
+A resposta é óbvia quando você vê assim. Mas a maioria das clínicas não tem visibilidade sobre esses números.
 
 Na live de *amanhã* mostro como construir esse mapa financeiro na prática.
 
 Se você ainda não garantiu sua vaga:
 👉 [LINK DE INSCRIÇÃO]
 
-A live é *amanhã, quinta-feira, às [HORÁRIO]*. ⏰
+A live é *quinta-feira, 21/05, às [HORÁRIO]*. ⏰
 
-— Dr. Ivan</div>
-    <div class="wpp-note">Urgência real de "amanhã". Dado concreto que ativa raciocínio financeiro.</div>
-  </div>
-</div>
+— Dr. Ivan</div><div class="wnote">Urgência real de "depois de amanhã". Dado concreto que ativa raciocínio financeiro.</div></div>
 
-<!-- DIA 10 — 20/05 -->
-<div class="wpp-day">
-  <div class="wpp-day-header">
-    <div class="wpp-day-num">Dia 10 · 20/05 · Qua</div>
-    <div class="wpp-day-date">Véspera da live — duas mensagens</div>
-    <div class="wpp-day-line"></div>
-  </div>
-  <div class="wpp-msg">
-    <div class="wpp-msg-head">
-      <span class="wpp-time">08h00</span>
-      <span class="wpp-tag wt-urg">Véspera</span>
-    </div>
-    <div class="wpp-body">⏰ *Amanhã* é a Clínica de 7 Dígitos.
+    <div class="witem"><div class="whead wa" onclick="wpp(this)"><span class="wtime wa">08h00</span><div class="wdl">Dia 10 · Qua 20/05 — MANHÃ</div><span class="wdesc">Véspera da live</span><span class="wtag wt2">Véspera</span><span class="warr">▼</span></div><div class="wbody wa">⏰ *Amanhã* é a Clínica de 7 Dígitos.
 
 Estou finalizando o material, os exemplos, os exercícios práticos.
 
@@ -739,15 +548,9 @@ A live é *amanhã, quinta-feira, 21/05, às [HORÁRIO]*.
 
 Sua vaga: 👉 [LINK DE INSCRIÇÃO]
 
-— Dr. Ivan</div>
-    <div class="wpp-note">Manhã da véspera. Tom: preparado e focado. Instrui o participante sobre como chegar.</div>
-  </div>
-  <div class="wpp-msg">
-    <div class="wpp-msg-head warn">
-      <span class="wpp-time warn">20h00</span>
-      <span class="wpp-tag wt-urg">Último aviso</span>
-    </div>
-    <div class="wpp-body">🔔 Último lembrete antes da live de amanhã.
+— Dr. Ivan</div><div class="wnote">Manhã da véspera. Instrui o participante sobre como chegar preparado.</div></div>
+
+    <div class="witem"><div class="whead wa" onclick="wpp(this)"><span class="wtime wa">20h00</span><div class="wdl">Dia 10 · Qua 20/05 — NOITE</div><span class="wdesc">Último lembrete antes da live</span><span class="wtag wt2">Último aviso</span><span class="warr">▼</span></div><div class="wbody wa">🔔 Último lembrete antes da live de amanhã.
 
 *Clínica de 7 Dígitos*
 📅 Amanhã — quinta-feira, 21/05
@@ -759,24 +562,9 @@ Se alguém do grupo ainda não se inscreveu:
 
 Até amanhã. 🙏
 
-— Dr. Ivan</div>
-    <div class="wpp-note">Noite da véspera. Mensagem curta e objetiva — só os dados práticos.</div>
-  </div>
-</div>
+— Dr. Ivan</div><div class="wnote">Noite da véspera. Curta e objetiva — só os dados práticos.</div></div>
 
-<!-- DIA 11 — 21/05 -->
-<div class="wpp-day">
-  <div class="wpp-day-header">
-    <div class="wpp-day-num">Dia 11 · 21/05 · Qui</div>
-    <div class="wpp-day-date">Dia da live — três mensagens</div>
-    <div class="wpp-day-line"></div>
-  </div>
-  <div class="wpp-msg">
-    <div class="wpp-msg-head">
-      <span class="wpp-time">08h00</span>
-      <span class="wpp-tag wt-hot">Dia da live</span>
-    </div>
-    <div class="wpp-body">🎙️ *Hoje é o dia.*
+    <div class="witem"><div class="whead wh" onclick="wpp(this)"><span class="wtime wh">08h00</span><div class="wdl">Dia 11 · Qui 21/05 — MANHÃ</div><span class="wdesc">Dia da live</span><span class="wtag wt3">Dia da live</span><span class="warr">▼</span></div><div class="wbody wh">🎙️ *Hoje é o dia.*
 
 Clínica de 7 Dígitos acontece hoje, às *[HORÁRIO]*.
 
@@ -784,30 +572,18 @@ Acorda, toma seu café, separa um caderno. Hoje vai ter clareza.
 
 Link da live: 👉 [LINK DIRETO DA LIVE]
 
-— Dr. Ivan</div>
-    <div class="wpp-note">Manhã do dia. Curto e energético.</div>
-  </div>
-  <div class="wpp-msg">
-    <div class="wpp-msg-head hot">
-      <span class="wpp-time hot">1h antes</span>
-      <span class="wpp-tag wt-hot">Chamada</span>
-    </div>
-    <div class="wpp-body">⚡ *Em 1 hora começa.*
+— Dr. Ivan</div><div class="wnote">Manhã do dia. Curto e energético.</div></div>
 
-Clínica de 7 Dígitos — ao vivo, agora.
+    <div class="witem"><div class="whead wh" onclick="wpp(this)"><span class="wtime wh">1h antes</span><div class="wdl">Dia 11 · Qui 21/05 — PRÉ-LIVE</div><span class="wdesc">Enviar exatamente 1h antes do horário</span><span class="wtag wt3">Chamada</span><span class="warr">▼</span></div><div class="wbody wh">⚡ *Em 1 hora começa.*
+
+Clínica de 7 Dígitos — ao vivo agora.
 
 Entra pelo link e garante seu lugar:
 👉 [LINK DIRETO DA LIVE]
 
-— Dr. Ivan</div>
-    <div class="wpp-note">Enviar exatamente 1h antes do horário da live.</div>
-  </div>
-  <div class="wpp-msg">
-    <div class="wpp-msg-head hot">
-      <span class="wpp-time hot">Pós-live</span>
-      <span class="wpp-tag wt-hot">Abertura de carrinho</span>
-    </div>
-    <div class="wpp-body">✅ A Clínica de 7 Dígitos acabou.
+— Dr. Ivan</div><div class="wnote">Enviar exatamente 1h antes do horário da live.</div></div>
+
+    <div class="witem"><div class="whead wh" onclick="wpp(this)"><span class="wtime wh">Pós-live</span><div class="wdl">Dia 11 · Qui 21/05 — PÓS-LIVE</div><span class="wdesc">Enviar imediatamente ao encerrar a live</span><span class="wtag wt3">Carrinho abre</span><span class="warr">▼</span></div><div class="wbody wh">✅ A Clínica de 7 Dígitos acabou.
 
 Para quem esteve ao vivo — obrigado pela presença e pelas perguntas. Isso foi nível outro.
 
@@ -822,55 +598,25 @@ As vagas da *Mentoria 1 Milhão em 1 Dia* estão abertas a partir de agora.
 → Garantia de 7 dias — sem risco
 
 *Condição de lançamento:* R$ 1.780 à vista (PIX) ou 12x no cartão.
-As vagas fecham no domingo, *24/05*.
+As vagas fecham na quarta, *27/05*.
 
 Acessa aqui: 👉 [LINK DA PÁGINA DE VENDAS]
 
-— Dr. Ivan</div>
-    <div class="wpp-note">Enviar imediatamente após o encerramento da live. É o momento de maior intenção de compra de todo o lançamento.</div>
-  </div>
-</div>
+— Dr. Ivan</div><div class="wnote">Enviar imediatamente ao encerrar a live. É o momento de maior intenção de compra de todo o lançamento.</div></div>
 
-<!-- DIA 12 — 22/05 -->
-<div class="wpp-day">
-  <div class="wpp-day-header">
-    <div class="wpp-day-num">Dia 12 · 22/05 · Sex</div>
-    <div class="wpp-day-date">Pós-live · Prova social</div>
-    <div class="wpp-day-line"></div>
-  </div>
-  <div class="wpp-msg">
-    <div class="wpp-msg-head">
-      <span class="wpp-time">10h00</span>
-      <span class="wpp-tag wt-post">Pós-live</span>
-    </div>
-    <div class="wpp-body">👥 Primeiras horas da *Mentoria 1 Milhão em 1 Dia*.
+    <div class="witem"><div class="whead" onclick="wpp(this)"><span class="wtime">10h00</span><div class="wdl">Dia 12 · Sex 22/05</div><span class="wdesc">Pós-live · Prova social</span><span class="wtag wt4">Pós-live</span><span class="warr">▼</span></div><div class="wbody">👥 Primeiras horas da *Mentoria 1 Milhão em 1 Dia*.
 
-Já estou recebendo mensagens de profissionais que entraram logo após a live. Médicos, dentistas, fisioterapeutas — perfis completamente diferentes, com o mesmo problema: clínica funcionando, mas sem estrutura para escalar.
+Já estou recebendo mensagens de profissionais que entraram logo após a live. Médicos, dentistas, fisioterapeutas — perfis diferentes, mesmo problema: clínica funcionando, mas sem estrutura para escalar.
 
 Se você assistiu à Clínica de 7 Dígitos e ficou com dúvidas sobre a mentoria, pode mandar mensagem aqui.
 
-As vagas fecham *domingo, 24/05*. 
+As vagas fecham *quarta-feira, 27/05*.
 
 👉 [LINK DA PÁGINA DE VENDAS]
 
-— Dr. Ivan</div>
-    <div class="wpp-note">Tom de proximidade. Convida para tirar dúvidas. Insere urgência real de data.</div>
-  </div>
-</div>
+— Dr. Ivan</div><div class="wnote">Tom de proximidade. Convida para tirar dúvidas. Urgência real de data.</div></div>
 
-<!-- DIA 13 — 23/05 -->
-<div class="wpp-day">
-  <div class="wpp-day-header">
-    <div class="wpp-day-num">Dia 13 · 23/05 · Sáb</div>
-    <div class="wpp-day-date">Penúltimo dia — remoção de objeção</div>
-    <div class="wpp-day-line"></div>
-  </div>
-  <div class="wpp-msg">
-    <div class="wpp-msg-head warn">
-      <span class="wpp-time warn">10h00</span>
-      <span class="wpp-tag wt-urg">Objeção</span>
-    </div>
-    <div class="wpp-body">🤔 Se o que está te segurando é o risco de investir e não funcionar — preciso te dizer uma coisa.
+    <div class="witem"><div class="whead wa" onclick="wpp(this)"><span class="wtime wa">10h00</span><div class="wdl">Dia 13 · Sáb 23/05</div><span class="wdesc">Penúltimo dia — remoção de objeção</span><span class="wtag wt2">Objeção</span><span class="warr">▼</span></div><div class="wbody wa">🤔 Se o que está te segurando é o risco de investir e não funcionar — preciso te dizer uma coisa.
 
 A *Mentoria 1 Milhão em 1 Dia* tem garantia de *7 dias*.
 
@@ -878,30 +624,15 @@ Você entra, assiste à primeira aula ao vivo comigo. Se não fizer sentido para
 
 *O risco é meu. A decisão é sua.*
 
-As vagas fecham *amanhã, domingo 24/05*.
+As vagas fecham *quarta-feira, 27/05*.
 
 👉 [LINK DA PÁGINA DE VENDAS]
 
-— Dr. Ivan</div>
-    <div class="wpp-note">Foca na objeção de risco. Tom seguro e direto. Urgência de "amanhã é o último dia".</div>
-  </div>
-</div>
+— Dr. Ivan</div><div class="wnote">Foca na objeção de risco. Urgência de "amanhã é o último dia".</div></div>
 
-<!-- DIA 14 — 24/05 -->
-<div class="wpp-day">
-  <div class="wpp-day-header">
-    <div class="wpp-day-num">Dia 14 · 24/05 · Dom</div>
-    <div class="wpp-day-date">Encerramento — duas mensagens</div>
-    <div class="wpp-day-line"></div>
-  </div>
-  <div class="wpp-msg">
-    <div class="wpp-msg-head warn">
-      <span class="wpp-time warn">10h00</span>
-      <span class="wpp-tag wt-urg">Último dia</span>
-    </div>
-    <div class="wpp-body">📅 Hoje é o *último dia*.
+    <div class="witem"><div class="whead wh" onclick="wpp(this)"><span class="wtime wh">10h00</span><div class="wdl">Dia 14 · Qua 27/05 — MANHÃ</div><span class="wdesc">Último dia</span><span class="wtag wt3">Último dia</span><span class="warr">▼</span></div><div class="wbody wh">📅 Hoje é o *último dia*.
 
-As vagas da *Mentoria 1 Milhão em 1 Dia* fecham hoje à meia-noite.
+As vagas da *Mentoria 1 Milhão em 1 Dia* fecham hoje, 27/05, à meia-noite.
 
 Vou ser transparente: essa oferta específica — com esse preço e essa condição — não vai voltar. Quando a próxima turma abrir, será diferente.
 
@@ -911,637 +642,116 @@ Se você assistiu à Clínica de 7 Dígitos e reconheceu o problema no seu negó
 
 👉 [LINK DA PÁGINA DE VENDAS]
 
-— Dr. Ivan</div>
-    <div class="wpp-note">Manhã do último dia. Tom de transparência — sem alarme artificial.</div>
-  </div>
-  <div class="wpp-msg">
-    <div class="wpp-msg-head hot">
-      <span class="wpp-time hot">20h00</span>
-      <span class="wpp-tag wt-hot">Encerramento</span>
-    </div>
-    <div class="wpp-body">⏳ *Em 4 horas as vagas fecham.*
+— Dr. Ivan</div><div class="wnote">Manhã do último dia. Tom de transparência — sem alarme artificial.</div></div>
+
+    <div class="witem"><div class="whead wh" onclick="wpp(this)"><span class="wtime wh">20h00</span><div class="wdl">Dia 14 · Qua 27/05 — ENCERRAMENTO</div><span class="wdesc">Última mensagem do lançamento</span><span class="wtag wt3">Encerramento</span><span class="warr">▼</span></div><div class="wbody wh">⏳ *Em 4 horas as vagas fecham.*
 
 Mentoria 1 Milhão em 1 Dia.
-Carrinho encerra hoje, 24/05, à meia-noite.
+Carrinho encerra hoje, 27/05, à meia-noite.
 
 *Faturar R$ 1 milhão em 1 dia na saúde não é sorte. É sistema. E sistema começa com uma decisão.*
 
 👉 [LINK DA PÁGINA DE VENDAS]
 
-— Dr. Ivan</div>
-    <div class="wpp-note">Última mensagem do lançamento. Curta, direta, com a frase de identidade do produto. Enviar às 20h do último dia.</div>
+— Dr. Ivan</div><div class="wnote">Última mensagem do lançamento. Curta, direta, com a frase de identidade do produto. Publicar às 20h.</div></div>
   </div>
-</div>
-
-<hr>
-
-<!-- VISÃO GERAL -->
-<div class="sec-head">
-  <div class="sec-head-left">
-    <span class="badge">Visão Geral</span>
-    <h2 class="sec-title">Calendário de 14 Dias</h2>
-    <p class="sec-desc">1 roteiro por dia · Começa em 11/05/2026 · Live em 21/05/2026 · Carrinho fecha em 24/05/2026</p>
-  </div>
-  <div class="sec-head-right"><div class="sec-num">00</div></div>
-</div>
-
-<div class="timeline">
-  <!-- SEMANA 1 -->
-  <div class="tl-week">
-    <div class="tl-week-label">
-      <div class="tl-week-n">S1</div>
-      <div class="tl-week-title">Pré-Lançamento</div>
-      <div class="tl-week-sub">Orgânico · Quebra de crença</div>
-    </div>
-    <div class="tl-days">
-      <div class="tl-day">
-        <div class="tl-day-label">Seg</div>
-        <div class="tl-day-num">01</div>
-        <div class="tl-day-tag tag-pre">Reel · Topo</div>
-        <div class="tl-day-text">Agenda cheia não é sucesso</div>
-      </div>
-      <div class="tl-day">
-        <div class="tl-day-label">Ter</div>
-        <div class="tl-day-num">02</div>
-        <div class="tl-day-tag tag-pre">Reel · Topo</div>
-        <div class="tl-day-text">Faturamento é vaidade</div>
-      </div>
-      <div class="tl-day">
-        <div class="tl-day-label">Qua</div>
-        <div class="tl-day-num">03</div>
-        <div class="tl-day-tag tag-pre">Reel · Topo</div>
-        <div class="tl-day-text">Dependência de indicação</div>
-      </div>
-      <div class="tl-day">
-        <div class="tl-day-label">Qui</div>
-        <div class="tl-day-num">04</div>
-        <div class="tl-day-tag tag-pre">Reel · Topo</div>
-        <div class="tl-day-text">Funcionário mais caro</div>
-      </div>
-      <div class="tl-day">
-        <div class="tl-day-label">Sex</div>
-        <div class="tl-day-num">05</div>
-        <div class="tl-day-tag tag-pre">Reel · Topo</div>
-        <div class="tl-day-text">R$ 1M em 1 dia ★</div>
-      </div>
-      <div class="tl-day">
-        <div class="tl-day-label">Sáb</div>
-        <div class="tl-day-num">06</div>
-        <div class="tl-day-tag tag-pre">Reel · Topo</div>
-        <div class="tl-day-text">Clínica vs empresa</div>
-      </div>
-      <div class="tl-day">
-        <div class="tl-day-label">Dom</div>
-        <div class="tl-day-num">07</div>
-        <div class="tl-day-tag tag-pre">Reel + CTA</div>
-        <div class="tl-day-text">Abertura de inscrições · Clínica 7D</div>
-      </div>
-    </div>
-  </div>
-  <!-- SEMANA 2 -->
-  <div class="tl-week">
-    <div class="tl-week-label" style="background:#1B3A6B">
-      <div class="tl-week-n">S2</div>
-      <div class="tl-week-title">Lançamento</div>
-      <div class="tl-week-sub">Live · Pós · Pago</div>
-    </div>
-    <div class="tl-days">
-      <div class="tl-day">
-        <div class="tl-day-label">Seg 18/05</div>
-        <div class="tl-day-num">08</div>
-        <div class="tl-day-tag tag-launch">Vídeo · Meio</div>
-        <div class="tl-day-text">O sistema dos 5 pilares</div>
-      </div>
-      <div class="tl-day">
-        <div class="tl-day-label">Ter 19/05</div>
-        <div class="tl-day-num">09</div>
-        <div class="tl-day-tag tag-launch">Vídeo · Meio</div>
-        <div class="tl-day-text">Clínica lucrativa vs ocupada</div>
-      </div>
-      <div class="tl-day">
-        <div class="tl-day-label">Qua 20/05</div>
-        <div class="tl-day-num">10</div>
-        <div class="tl-day-tag tag-launch">Vídeo · Véspera</div>
-        <div class="tl-day-text">Estou pronto — e você?</div>
-      </div>
-      <div class="tl-day live-day">
-        <div class="tl-day-label">Qui 21/05</div>
-        <div class="tl-day-num">11</div>
-        <div class="tl-day-tag tag-live">⚡ Live</div>
-        <div class="tl-day-text">Clínica de 7 Dígitos + abertura de carrinho</div>
-      </div>
-      <div class="tl-day paid-day">
-        <div class="tl-day-label">Sex 22/05</div>
-        <div class="tl-day-num">12</div>
-        <div class="tl-day-tag tag-post">Pós · Fundo</div>
-        <div class="tl-day-text">O que aconteceu na live + Pago ativa</div>
-      </div>
-      <div class="tl-day paid-day">
-        <div class="tl-day-label">Sáb 23/05</div>
-        <div class="tl-day-num">13</div>
-        <div class="tl-day-tag tag-post">Pós · Fundo</div>
-        <div class="tl-day-text">Prova social + Para quem é</div>
-      </div>
-      <div class="tl-day paid-day">
-        <div class="tl-day-label">Dom 24/05</div>
-        <div class="tl-day-num">14</div>
-        <div class="tl-day-tag tag-post">Encerramento</div>
-        <div class="tl-day-text">Últimas horas · Carrinho fecha</div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<hr>
-
-<!-- SEMANA 1 -->
-<div class="sec-head">
-  <div class="sec-head-left">
-    <span class="badge">Semana 1 · Dias 1–7</span>
-    <h2 class="sec-title">Pré-Lançamento · Orgânico</h2>
-    <p class="sec-desc">7 Reels · 1 por dia · Quebra de crença progressiva · CTA para a live apenas a partir do dia 5</p>
-  </div>
-  <div class="sec-head-right"><div class="sec-num">01</div></div>
-</div>
-
-<!-- DIA 1 -->
-<div class="day-block">
-  <div class="day-header">
-    <div class="day-n">01</div>
-    <div class="day-info">
-      <div class="day-date">Segunda-feira · Semana 1 · Reel 30–60s</div>
-      <div class="day-title">Agenda Cheia Não É Sucesso — É Armadilha</div>
-    </div>
-    <div class="day-badge db-pre">Topo de Funil · Sem CTA</div>
-  </div>
-  <div class="day-card">
-    <div class="day-body">
-      <div class="meta-row"><span class="meta-pill">Quebra de crença #1</span><span class="meta-pill purple">Movimento ≠ resultado</span></div>
-      <div><div class="fl">Quebra de Padrão (0–3s)</div><div class="ft">"Sua agenda está lotada. Você está exausto. E o lucro não aparece. Isso não é sucesso — é armadilha."</div></div>
-      <div><div class="fl">Conflito</div><div class="ft">A maioria dos profissionais de saúde confunde movimento com resultado. Agenda cheia significa alta demanda — não que você está ganhando bem. Sem controle de margens, você trabalha mais para lucrar menos.</div></div>
-      <div><div class="fl">Mudança de Perspectiva</div><div class="ft">Clínica de sucesso não é a que tem mais atendimentos. É a que tem <strong>margem, previsibilidade e um sistema que funciona com ou sem você presente.</strong></div></div>
-      <div><div class="fl">Encerramento Aberto</div><div class="ft">"Nos próximos dias vou mostrar a diferença entre uma clínica ocupada e uma clínica lucrativa."</div></div>
-      <div class="tip">Tom: direto, sem agressividade. Pausa de 1s após abertura. Escritório executivo ou estúdio clean. Sem jaleco. Sem CTA de produto ou live — deixar o gancho narrativo trabalhar.</div>
-    </div>
-  </div>
-</div>
-
-<!-- DIA 2 -->
-<div class="day-block">
-  <div class="day-header">
-    <div class="day-n">02</div>
-    <div class="day-info">
-      <div class="day-date">Terça-feira · Semana 1 · Reel 30–60s</div>
-      <div class="day-title">Faturamento É Vaidade. Lucro É Sanidade.</div>
-    </div>
-    <div class="day-badge db-pre">Topo de Funil · Sem CTA</div>
-  </div>
-  <div class="day-card">
-    <div class="day-body">
-      <div class="meta-row"><span class="meta-pill">Quebra de crença #2</span><span class="meta-pill purple">Faturamento ≠ lucro</span></div>
-      <div><div class="fl">Quebra de Padrão (0–3s)</div><div class="ft">"Você sabe exatamente quanto a sua clínica fatura. A maioria não sabe quanto sobra."</div></div>
-      <div><div class="fl">Conflito</div><div class="ft">A diferença está em três lugares que quase ninguém monitora: <strong>custo real por procedimento, inadimplência silenciosa e pró-labore disfarçado.</strong> Você pode faturar R$ 100k e ter R$ 8k de lucro real — sem perceber.</div></div>
-      <div><div class="fl">Mudança de Perspectiva</div><div class="ft">Gestão financeira em clínica não é sobre cortar gastos. É sobre ter visibilidade total do que entra, do que sai e de onde está o lucro real. Com esse mapa, cada decisão operacional tem base — não é chute.</div></div>
-      <div><div class="fl">Encerramento Aberto</div><div class="ft">"Se você nunca calculou sua margem real por procedimento, esse número vai te surpreender."</div></div>
-      <div class="tip">Tom: clínico e objetivo. Pode usar bloco como prop visual. Pausa após cada dado. Sem CTA.</div>
-    </div>
-  </div>
-</div>
-
-<!-- DIA 3 -->
-<div class="day-block">
-  <div class="day-header">
-    <div class="day-n">03</div>
-    <div class="day-info">
-      <div class="day-date">Quarta-feira · Semana 1 · Reel 30–60s</div>
-      <div class="day-title">Dependência de Indicação É Fragilidade, Não Estratégia</div>
-    </div>
-    <div class="day-badge db-pre">Topo de Funil · Sem CTA</div>
-  </div>
-  <div class="day-card">
-    <div class="day-body">
-      <div class="meta-row"><span class="meta-pill">Quebra de crença #3</span><span class="meta-pill purple">Indicação ≠ estratégia</span></div>
-      <div><div class="fl">Quebra de Padrão (0–3s)</div><div class="ft">"Se a sua clínica para de crescer no mês em que ninguém te indica — você não tem um negócio. Você tem um emprego caro."</div></div>
-      <div><div class="fl">Tensão</div><div class="ft">Você constrói anos de reputação excelente — e toda ela fica presa no boca a boca. Enquanto isso, profissionais tecnicamente inferiores <strong>constroem audiência e uma máquina de aquisição que funciona 24h.</strong></div></div>
-      <div><div class="fl">Mudança de Perspectiva</div><div class="ft">Indicação mais sistema de aquisição previsível é o modelo que permite crescimento real. Um não substitui o outro — se complementam.</div></div>
-      <div><div class="fl">Encerramento Aberto</div><div class="ft">"Vou mostrar como construir esse sistema sem abrir mão da sua credibilidade."</div></div>
-      <div class="tip">Tom: assertivo. Pausa após "emprego caro." Ambiente de autoridade empresarial. Sem CTA.</div>
-    </div>
-  </div>
-</div>
-
-<!-- DIA 4 -->
-<div class="day-block">
-  <div class="day-header">
-    <div class="day-n">04</div>
-    <div class="day-info">
-      <div class="day-date">Quinta-feira · Semana 1 · Reel 30–60s</div>
-      <div class="day-title">Você É o Funcionário Mais Caro da Sua Clínica</div>
-    </div>
-    <div class="day-badge db-pre">Topo de Funil · Sem CTA</div>
-  </div>
-  <div class="day-card">
-    <div class="day-body">
-      <div class="meta-row"><span class="meta-pill">Quebra de crença #4</span><span class="meta-pill purple">Presença ≠ liderança</span></div>
-      <div><div class="fl">Quebra de Padrão (0–3s)</div><div class="ft">"Se você sair da sua clínica por 30 dias, ela para. Você não é dono — você é o funcionário mais caro do negócio."</div></div>
-      <div><div class="fl">Conflito</div><div class="ft">Existe uma diferença fundamental entre trabalhar <em>no</em> negócio e trabalhar <em>pelo</em> negócio. Quanto mais indispensável você se torna, <strong>menos escalável é a operação.</strong> E um negócio não escalável tem teto — de faturamento, de lucro e de qualidade de vida.</div></div>
-      <div><div class="fl">Mudança de Perspectiva</div><div class="ft">Construir um negócio que funciona sem você não é abandono — é o maior nível de competência empresarial. É o que separa quem tem uma clínica de quem tem uma empresa de saúde.</div></div>
-      <div><div class="fl">Encerramento Aberto</div><div class="ft">"Nos próximos vídeos vou mostrar como sair desse ciclo."</div></div>
-      <div class="tip">Tom: provocativo mas empático. Pausa após "funcionário mais caro." Olhar direto para câmera. Sem CTA.</div>
-    </div>
-  </div>
-</div>
-
-<!-- DIA 5 -->
-<div class="day-block">
-  <div class="day-header">
-    <div class="day-n">05</div>
-    <div class="day-info">
-      <div class="day-date">Sexta-feira · Semana 1 · Reel 30–60s ★ Alta prioridade</div>
-      <div class="day-title">O Dia em Que Faturei R$ 1 Milhão</div>
-    </div>
-    <div class="day-badge db-pre">Topo de Funil · Primeiro CTA para live</div>
-  </div>
-  <div class="day-card">
-    <div class="day-body">
-      <div class="meta-row"><span class="meta-pill">Quebra de crença #5</span><span class="meta-pill purple">Receita linear ≠ único modelo</span><span class="meta-pill" style="background:#FFF9C4;color:#F57F17">★ Maior potencial de alcance</span></div>
-      <div><div class="fl">Quebra de Padrão (0–3s)</div><div class="ft">"Existe um modelo de negócio na saúde que permite faturar R$ 1 milhão em um único dia. Eu já fiz isso. Vou te mostrar como funciona."</div></div>
-      <div><div class="fl">Inversão de Crença</div><div class="ft">Não é sorte. É um sistema — posicionamento, audiência, oferta e lançamento concentrados em uma janela. Outros profissionais da saúde estão usando isso agora. <strong>Você já tem o ativo mais valioso que esse modelo exige: conhecimento e credibilidade.</strong> O que falta é a estrutura.</div></div>
-      <div><div class="fl">Primeiro CTA para a Live</div><div class="ft">"Na semana que vem faço uma live gratuita onde vou abrir os bastidores desse sistema completo. Chama Clínica de 7 Dígitos. Link na bio para garantir sua vaga — é gratuito."</div></div>
-      <div class="tip">Tom: autoridade máxima. Postura ereta, dicção precisa. Pausa longa após abertura. Publicar na sexta para maximizar alcance no fim de semana. É o reel de maior impacto do pré-lançamento.</div>
-    </div>
-  </div>
-</div>
-
-<!-- DIA 6 -->
-<div class="day-block">
-  <div class="day-header">
-    <div class="day-n">06</div>
-    <div class="day-info">
-      <div class="day-date">Sábado · Semana 1 · Reel 30–60s</div>
-      <div class="day-title">A Diferença Entre Clínica e Empresa de Saúde</div>
-    </div>
-    <div class="day-badge db-pre">Topo de Funil · CTA para live</div>
-  </div>
-  <div class="day-card">
-    <div class="day-body">
-      <div class="meta-row"><span class="meta-pill">Quebra de crença #6</span><span class="meta-pill purple">Operação ≠ sistema</span></div>
-      <div><div class="fl">Quebra de Padrão (0–3s)</div><div class="ft">"Clínica é operação. Empresa é sistema. E a diferença entre as duas determina quanto você ganha, como você cresce e o que acontece quando você quer parar."</div></div>
-      <div><div class="fl">Conflito</div><div class="ft">O valor patrimonial de uma clínica que depende do dono tende a zero se o dono sair. O valor de uma empresa de saúde estruturada <strong>pode ser vendido, expandido ou franqueado.</strong> São ativos completamente diferentes.</div></div>
-      <div><div class="fl">As 5 Transformações</div><div class="ft">A transição de clínica para empresa passa por cinco áreas: <strong>financeira, jurídica, gestão, marketing e operações.</strong> Cada uma precisa de estrutura — não de improviso.</div></div>
-      <div><div class="fl">CTA para a Live</div><div class="ft">"Na Clínica de 7 Dígitos mostro esse mapa completo ao vivo, gratuitamente. Link na bio."</div></div>
-      <div class="tip">Tom: estratégico e elevado. Maior deslocamento de identidade da semana 1. Aproveitar sábado para engajamento orgânico alto.</div>
-    </div>
-  </div>
-</div>
-
-<!-- DIA 7 -->
-<div class="day-block">
-  <div class="day-header">
-    <div class="day-n">07</div>
-    <div class="day-info">
-      <div class="day-date">Domingo · Semana 1 · Reel 30–60s</div>
-      <div class="day-title">Por Que Vou Fazer Essa Live — e O Que Você Vai Ver</div>
-    </div>
-    <div class="day-badge db-pre">Abertura de Inscrições · CTA direto</div>
-  </div>
-  <div class="day-card">
-    <div class="day-body">
-      <div class="meta-row"><span class="meta-pill">Anúncio da live</span><span class="meta-pill purple">CTA direto · Inscrição gratuita</span></div>
-      <div><div class="fl">Abertura</div><div class="ft">"Na semana que vem faço algo que nunca fiz antes — um evento ao vivo, gratuito, onde vou abrir os bastidores do modelo que me permitiu faturar R$ 1 milhão em 1 dia na saúde."</div></div>
-      <div><div class="fl">O Que Você Vai Ver</div><div class="ft">Vou mostrar os <strong>5 gargalos</strong> que travam o crescimento de qualquer clínica, o <strong>sistema dos 5 pilares</strong> que permite criar uma operação escalável — e como profissionais de saúde com autoridade real podem gerar R$ 1 milhão em uma única janela de lançamento.</div></div>
-      <div><div class="fl">Posicionamento da Live</div><div class="ft">Não é curso. Não é webinar de vendas disfarçado de conteúdo. É o mapa completo — ao vivo, com perguntas, com exemplos reais. <strong>Gratuito.</strong></div></div>
-      <div><div class="fl">CTA Direto</div><div class="ft">"Clínica de 7 Dígitos — dia [DATA], às [HORÁRIO]. Link na bio para garantir sua vaga agora."</div></div>
-      <div class="tip">Tom: próximo e genuíno. Esse vídeo é a ponte entre o pré-lançamento e a semana da live. Publicar domingo para capturar inscrições ao longo de toda a segunda-feira.</div>
-    </div>
-  </div>
-</div>
-
-<hr>
-
-<!-- SEMANA 2 -->
-<div class="sec-head">
-  <div class="sec-head-left">
-    <span class="badge">Semana 2 · Dias 8–14</span>
-    <h2 class="sec-title">Lançamento · Orgânico + Pago</h2>
-    <p class="sec-desc">Dias 8–10: aquecimento final para a live · Dia 11: live · Dias 12–14: pós-live + encerramento de carrinho · Pago ativa no dia 12</p>
-  </div>
-  <div class="sec-head-right"><div class="sec-num">02</div></div>
-</div>
-
-<!-- DIA 8 -->
-<div class="day-block">
-  <div class="day-header">
-    <div class="day-n">08</div>
-    <div class="day-info">
-      <div class="day-date">Segunda-feira · Semana 2 · Vídeo 2–3 min</div>
-      <div class="day-title">O Sistema Que Permite Faturar R$ 1M em 1 Dia</div>
-    </div>
-    <div class="day-badge db-launch">Meio de Funil · CTA para live</div>
-  </div>
-  <div class="day-card green-top">
-    <div class="day-body">
-      <div class="meta-row"><span class="meta-pill green">Aprofundamento do método</span><span class="meta-pill purple">Autoridade técnica</span></div>
-      <div><div class="fl">Abertura</div><div class="ft">"Quando digo que é possível faturar R$ 1 milhão em um único dia na saúde, a primeira reação é ceticismo. Faz sentido — porque esse modelo é completamente diferente do que profissionais de saúde aprendem. Mas eu já fiz isso."</div></div>
-      <div><div class="fl">Os 5 Pilares</div><div class="ft"><strong>1.</strong> Audiência qualificada · <strong>2.</strong> Posicionamento de autoridade · <strong>3.</strong> Oferta de alto valor · <strong>4.</strong> Funil de aquecimento · <strong>5.</strong> Evento de conversão. Quando estão calibrados, o resultado é previsível — não é golpe de sorte.</div></div>
-      <div><div class="fl">Microcompromisso</div><div class="ft">"Se você tem conhecimento e credibilidade — e você tem — o que falta não é talento. É o sistema."</div></div>
-      <div><div class="fl">CTA</div><div class="ft">Na Clínica de 7 Dígitos, <strong>dia [DATA] às [HORÁRIO]</strong>, apresento esse sistema completo ao vivo com exercício prático. Inscrição gratuita — link na bio.</div></div>
-      <div class="tip green-tip">Duração: 2,5–3 min. Tom: autoridade de quem já fez — não teoria. Pode usar quadro ou recurso visual com os 5 pilares. Publicar cedo para gerar engajamento ao longo do dia.</div>
-    </div>
-  </div>
-</div>
-
-<!-- DIA 9 -->
-<div class="day-block">
-  <div class="day-header">
-    <div class="day-n">09</div>
-    <div class="day-info">
-      <div class="day-date">Terça-feira · Semana 2 · Vídeo 2–3 min</div>
-      <div class="day-title">Clínica Lucrativa Não É a Que Mais Atende</div>
-    </div>
-    <div class="day-badge db-launch">Meio de Funil · CTA para live</div>
-  </div>
-  <div class="day-card green-top">
-    <div class="day-body">
-      <div class="meta-row"><span class="meta-pill green">Dados e precisão</span><span class="meta-pill purple">Margem > faturamento</span></div>
-      <div><div class="fl">Abertura</div><div class="ft">Depois de mentorar mais de 150 empresas da saúde, identifiquei um padrão consistente: as clínicas com maior faturamento raramente são as mais lucrativas.</div></div>
-      <div><div class="fl">Conflito com Dados</div><div class="ft">Uma clínica que fatura <strong>R$ 300k com 35% de margem</strong> é mais saudável do que uma que fatura <strong>R$ 700k com 8%.</strong> A diferença está em precificação estratégica, controle de custos e mix de serviços. Sem visibilidade sobre esses três eixos, você toma decisões no escuro.</div></div>
-      <div><div class="fl">Microcompromisso</div><div class="ft">"Você não precisa de mais pacientes. Você precisa de mais clareza sobre o que cada paciente representa para o seu resultado."</div></div>
-      <div><div class="fl">CTA</div><div class="ft">Na live de amanhã mostro como construir esse mapa financeiro com exemplos práticos — inclusive clínicas que reverteram margens negativas com ajuste de precificação. Link na bio.</div></div>
-      <div class="tip green-tip">Duração: 2–2,5 min. Tom: gestor e professor. Pode usar números em papel. Público aprecia precisão. CTA com urgência de "amanhã".</div>
-    </div>
-  </div>
-</div>
-
-<!-- DIA 10 -->
-<div class="day-block">
-  <div class="day-header">
-    <div class="day-n">10</div>
-    <div class="day-info">
-      <div class="day-date">Quarta-feira · Semana 2 · Vídeo 1,5–2 min</div>
-      <div class="day-title">Estou Pronto Para a Live de Amanhã — E Você?</div>
-    </div>
-    <div class="day-badge db-launch">Véspera da Live · Urgência real</div>
-  </div>
-  <div class="day-card green-top">
-    <div class="day-body">
-      <div class="meta-row"><span class="meta-pill green">Véspera da live</span><span class="meta-pill purple">CTA de última chamada</span></div>
-      <div><div class="fl">Abertura</div><div class="ft">"Amanhã acontece a Clínica de 7 Dígitos. Estou preparando o material, os exemplos, os exercícios. Quero que você chegue pronto — não apenas presente."</div></div>
-      <div><div class="fl">O Que Esperar</div><div class="ft">Vou mostrar os <strong>5 gargalos</strong> que travam qualquer clínica, o sistema dos 5 pilares que permite criar uma operação escalável e um exercício guiado para você identificar onde está o seu maior travamento hoje. Com perguntas ao vivo e exemplos reais por especialidade.</div></div>
-      <div><div class="fl">Como Chegar Preparado</div><div class="ft">Assiste aos vídeos dessa semana. Anota o que se aplica ao seu negócio agora. Chega com uma pergunta específica. <strong>Quem chega preparado sai com clareza de ação — não só de conteúdo.</strong></div></div>
-      <div><div class="fl">CTA Final</div><div class="ft">"Se você ainda não garantiu sua vaga — link na bio. É gratuito. É amanhã. Não tem como não ir."</div></div>
-      <div class="tip green-tip">Duração: 1,5–2 min. Tom: energia de véspera — preparado, não ansioso. Urgência genuína de data. Publicar no início da tarde para capturar inscrições de último momento.</div>
-    </div>
-  </div>
-</div>
-
-<!-- DIA 11 — LIVE -->
-<div class="day-block">
-  <div class="day-header">
-    <div class="day-n">11</div>
-    <div class="day-info">
-      <div class="day-date">Quinta-feira · Semana 2 · Live 90–120 min</div>
-      <div class="day-title">Clínica de 7 Dígitos — Ao Vivo</div>
-    </div>
-    <div class="day-badge db-live">⚡ Live + Abertura de Carrinho</div>
-  </div>
-  <div class="day-card live-top">
-    <div class="day-body">
-      <div class="meta-row"><span class="meta-pill" style="background:#E8EAF6;color:#1A237E">Live ao vivo</span><span class="meta-pill" style="background:#E8EAF6;color:#1A237E">90–120 min</span><span class="meta-pill orange">Carrinho abre no bloco 5</span></div>
-      <div class="live-list">
-        <div class="live-item">
-          <div class="live-left"><div class="live-n">01</div><div class="live-t">15 min</div></div>
-          <div class="live-right"><div class="live-title">Abertura e Quebra de Paradigma</div><div class="live-desc">Apresentação do Dr. Ivan e do resultado de R$ 1M em 1 dia com prova social — números reais, clínicas mentoradas. Quebra da crença de que esse resultado é impossível para profissionais de saúde. Diferenciação clara entre a Clínica de 7 Dígitos (evento) e a Mentoria 1 Milhão em 1 Dia (produto que será apresentado no bloco 5).</div></div>
-        </div>
-        <div class="live-item">
-          <div class="live-left"><div class="live-n">02</div><div class="live-t">25 min</div></div>
-          <div class="live-right"><div class="live-title">O Diagnóstico — Por Que Sua Clínica Tem Teto</div><div class="live-desc">Os 5 gargalos que limitam o crescimento: financeiro sem visibilidade, dependência de indicação, equipe sem autonomia, jurídico frágil e ausência de sistema de marketing. Cada gargalo com exemplo prático e custo estimado da inação.</div></div>
-        </div>
-        <div class="live-item">
-          <div class="live-left"><div class="live-n">03</div><div class="live-t">30 min</div></div>
-          <div class="live-right"><div class="live-title">O Sistema dos 5 Pilares</div><div class="live-desc">Apresentação detalhada do método: audiência qualificada, posicionamento de autoridade, oferta de alto valor, funil de aquecimento e evento de conversão. Casos reais com resultados documentados.</div></div>
-        </div>
-        <div class="live-item">
-          <div class="live-left"><div class="live-n">04</div><div class="live-t">20 min</div></div>
-          <div class="live-right"><div class="live-title">Aplicação Prática Ao Vivo</div><div class="live-desc">Exercício guiado: cada participante identifica qual dos 5 pilares é o seu maior gargalo agora. Discussão ao vivo com exemplos por especialidade.</div></div>
-        </div>
-        <div class="live-item">
-          <div class="live-left"><div class="live-n">05</div><div class="live-t">10 min</div></div>
-          <div class="live-right"><div class="live-title">Abertura de Carrinho — Mentoria 1 Milhão em 1 Dia</div><div class="live-desc">Apresentação clara da Mentoria 1 Milhão em 1 Dia — 12 meses, 12 encontros ao vivo de 3h, financeiro, jurídico, gestão, marketing e tecnologia. Oferta de lançamento: <strong>R$ 1.780 à vista (PIX) ou 12x — âncora R$ 5.000.</strong> Garantia de 7 dias, 100% sem risco.</div></div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- DIA 12 -->
-<div class="day-block">
-  <div class="day-header">
-    <div class="day-n">12</div>
-    <div class="day-info">
-      <div class="day-date">Sexta-feira · Semana 2 · Vídeo 1,5–2 min · Pago ativa hoje</div>
-      <div class="day-title">O Que Aconteceu na Clínica de 7 Dígitos</div>
-    </div>
-    <div class="day-badge db-post">Pós-Live · Fundo de Funil</div>
-  </div>
-  <div class="day-card orange-top">
-    <div class="day-body">
-      <div class="meta-row"><span class="meta-pill orange">Pós-live · Dia 1</span><span class="meta-pill orange">Pago ativa hoje</span></div>
-      <div><div class="fl">Abertura</div><div class="ft">"A Clínica de 7 Dígitos aconteceu. [X] profissionais ao vivo. Vou te contar o que rolou — e o que ainda dá para fazer quem não foi."</div></div>
-      <div><div class="fl">Recapitulação</div><div class="ft">Os 3 principais insights da live. Reações reais de participantes — prints, comentários. Reforçar o método e os 5 pilares sem entregar o conteúdo completo.</div></div>
-      <div><div class="fl">Clareza da Solução</div><div class="ft">A <strong>Mentoria 1 Milhão em 1 Dia</strong> está com vagas abertas por mais [X dias]. 12 meses, 12 encontros ao vivo de 3h com o Dr. Ivan. Garantia de 7 dias — você entra, assiste à primeira aula e, se não fizer sentido, devolução de 100%.</div></div>
-      <div><div class="fl">CTA</div><div class="ft">"Link na bio para quem quer o acompanhamento completo."</div></div>
-      <div class="tip orange-tip">Tom: pós-evento, energia de entrega. CTA claro mas sem pressão. Publicar pela manhã. Ativar campanhas pagas simultaneamente a partir desse dia.</div>
-    </div>
-  </div>
-</div>
-
-<!-- DIA 13 -->
-<div class="day-block">
-  <div class="day-header">
-    <div class="day-n">13</div>
-    <div class="day-info">
-      <div class="day-date">Sábado · Semana 2 · Vídeo 1,5–2 min</div>
-      <div class="day-title">Prova Social + Para Quem É a Mentoria</div>
-    </div>
-    <div class="day-badge db-post">Pós-Live · Fundo de Funil</div>
-  </div>
-  <div class="day-card orange-top">
-    <div class="day-body">
-      <div class="meta-row"><span class="meta-pill orange">Pós-live · Dia 2</span><span class="meta-pill purple">Prova social + qualificação</span></div>
-      <div><div class="fl">Abertura — Prova Social</div><div class="ft">"Primeiras horas da Mentoria 1 Milhão em 1 Dia — e já estou recebendo isso." [Mostrar prints/depoimentos reais com permissão — perfis variados: médico, dentista, fisioterapeuta.]</div></div>
-      <div><div class="fl">Para Quem É</div><div class="ft">→ Você tem clínica funcionando e quer crescer com método<br>→ O faturamento não reflete o esforço que coloca<br>→ Quer um sistema de aquisição sem depender de indicação<br>→ Quer saber como faturar R$ 1M em uma janela de lançamento</div></div>
-      <div><div class="fl">Para Quem Não É</div><div class="ft">→ Você busca fórmula mágica sem implementação<br>→ Não está disposto a rever processos<br>→ Quer resultado sem mudança de comportamento</div></div>
-      <div><div class="fl">CTA</div><div class="ft">"Se você se reconheceu no primeiro grupo — o link está na bio. As vagas fecham em [DATA]."</div></div>
-      <div class="tip orange-tip">Tom: genuíno e direto. A clareza sobre "para quem não é" aumenta a conversão de quem é. Sábado tem alto engajamento orgânico — aproveitar.</div>
-    </div>
-  </div>
-</div>
-
-<!-- DIA 14 -->
-<div class="day-block">
-  <div class="day-header">
-    <div class="day-n">14</div>
-    <div class="day-info">
-      <div class="day-date">Domingo · Semana 2 · Vídeo 1,5–2 min · Publicar às 18h</div>
-      <div class="day-title">Últimas Horas — O Carrinho Fecha Hoje</div>
-    </div>
-    <div class="day-badge db-post">Encerramento · Urgência Real</div>
-  </div>
-  <div class="day-card orange-top">
-    <div class="day-body">
-      <div class="meta-row"><span class="meta-pill orange">Último dia</span><span class="meta-pill orange">Urgência real · Não artificial</span></div>
-      <div><div class="fl">Abertura</div><div class="ft">"Em algumas horas, as vagas da Mentoria 1 Milhão em 1 Dia fecham. Não vou reabrir tão cedo — e quando reabrir, o preço será diferente."</div></div>
-      <div><div class="fl">Recapitulação da Oferta</div><div class="ft">12 meses com Dr. Ivan. 12 encontros ao vivo de 3h. Financeiro, jurídico, gestão, marketing e tecnologia. <strong>R$ 1.780 à vista ou 12x. Garantia de 7 dias — você entra, assiste à primeira aula. Se não fizer sentido, devolução de 100%. O risco é meu.</strong></div></div>
-      <div><div class="fl">Elevação de Identidade</div><div class="ft">"Faturar R$ 1 milhão em 1 dia na saúde não é sorte. É sistema. E sistema começa com uma decisão."</div></div>
-      <div><div class="fl">Encerramento</div><div class="ft">"A decisão é sua. O link está na bio. Mas essa condição não estará disponível amanhã."</div></div>
-      <div class="tip orange-tip">Tom: firme, sem pressão artificial. Urgência real de fechamento. Frase final dita devagar — pausa antes de "E sistema começa com uma decisão." Publicar às 18h para capturar o pico de engajamento noturno do domingo.</div>
-    </div>
-  </div>
-</div>
-
-<hr>
-
-<!-- TRÁFEGO PAGO -->
-<div class="sec-head">
-  <div class="sec-head-left">
-    <span class="badge">Tráfego Pago</span>
-    <h2 class="sec-title">Conversão e Remarketing</h2>
-    <p class="sec-desc">Ativar no dia 12 (pós-live) · Exclusivamente para venda da Mentoria 1 Milhão em 1 Dia · Segmentação: audiência quente</p>
-  </div>
-  <div class="sec-head-right"><div class="sec-num">03</div></div>
-</div>
-
-<div style="background:linear-gradient(90deg,#4A1500,#7B2200);border-radius:14px 14px 0 0;padding:20px 28px;display:flex;align-items:center;gap:14px">
-  <div style="font-size:22px">📣</div>
-  <div>
-    <div style="font-family:'Nunito',sans-serif;font-weight:800;font-size:16px;color:white">Lógica do Tráfego Pago</div>
-    <div style="font-size:12.5px;color:rgba(255,255,255,.65);font-weight:600;margin-top:3px;line-height:1.5">O orgânico aqueceu 1M+ de seguidores por 11 dias. O pago entra só quando o público já conhece o Dr. Ivan, assistiu à Clínica de 7 Dígitos e precisa apenas de um empurrão para fechar. Segmentar apenas audiência quente — zero pago para público frio.</div>
-  </div>
-</div>
-
-<div style="background:white;border:1px solid var(--divider);border-top:none;border-radius:0 0 14px 14px;margin-bottom:36px">
-  <div style="display:grid;grid-template-columns:1fr 1fr;gap:0">
-
-    <div style="padding:24px 28px;border-right:1px solid var(--divider)">
-      <div style="font-size:10px;font-weight:800;letter-spacing:.13em;text-transform:uppercase;color:var(--orange);margin-bottom:8px;display:flex;align-items:center;gap:5px">→ Vídeo 01 · Conversão</div>
-      <div style="font-family:'Nunito',sans-serif;font-weight:800;font-size:14px;color:var(--navy);margin-bottom:14px">Carrinho Aberto · Vagas Encerram em [DATA]</div>
-      <div style="display:flex;flex-direction:column;gap:8px">
-        <div style="display:grid;grid-template-columns:80px 1fr;gap:10px"><div style="font-size:10px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--orange)">Hook</div><div style="font-size:13px;color:rgba(0,32,85,.8);line-height:1.5">"A Mentoria 1 Milhão em 1 Dia está com vagas abertas. Elas fecham em [DATA]. Depois disso, a oferta muda."</div></div>
-        <div style="display:grid;grid-template-columns:80px 1fr;gap:10px"><div style="font-size:10px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--orange)">Corpo</div><div style="font-size:13px;color:rgba(0,32,85,.8);line-height:1.5">12 meses com Dr. Ivan. Método de +150 empresas transformadas. Garantia de 7 dias — sem risco.</div></div>
-        <div style="display:grid;grid-template-columns:80px 1fr;gap:10px"><div style="font-size:10px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--orange)">CTA</div><div style="font-size:13px;color:rgba(0,32,85,.8);line-height:1.5"><strong>→ Clique e garanta sua vaga antes do fechamento.</strong></div></div>
-        <div style="display:grid;grid-template-columns:80px 1fr;gap:10px"><div style="font-size:10px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--orange)">Público</div><div style="font-size:13px;color:rgba(0,32,85,.8);line-height:1.5">Visitantes da página de vendas + assistentes da live.</div></div>
-      </div>
-    </div>
-
-    <div style="padding:24px 28px">
-      <div style="font-size:10px;font-weight:800;letter-spacing:.13em;text-transform:uppercase;color:var(--orange);margin-bottom:8px;display:flex;align-items:center;gap:5px">→ Vídeo 02 · Garantia</div>
-      <div style="font-family:'Nunito',sans-serif;font-weight:800;font-size:14px;color:var(--navy);margin-bottom:14px">O Risco É Meu — A Decisão É Sua</div>
-      <div style="display:flex;flex-direction:column;gap:8px">
-        <div style="display:grid;grid-template-columns:80px 1fr;gap:10px"><div style="font-size:10px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--orange)">Hook</div><div style="font-size:13px;color:rgba(0,32,85,.8);line-height:1.5">"Se o que está te segurando é o risco de investir e não funcionar — esse vídeo é pra você."</div></div>
-        <div style="display:grid;grid-template-columns:80px 1fr;gap:10px"><div style="font-size:10px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--orange)">Corpo</div><div style="font-size:13px;color:rgba(0,32,85,.8);line-height:1.5">Garantia de 7 dias. Você entra, assiste à primeira aula. Se não fizer sentido — devolução de 100%, sem burocracia. <strong>O risco é meu. A decisão é sua.</strong></div></div>
-        <div style="display:grid;grid-template-columns:80px 1fr;gap:10px"><div style="font-size:10px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--orange)">CTA</div><div style="font-size:13px;color:rgba(0,32,85,.8);line-height:1.5"><strong>→ Garanta sua vaga sem risco.</strong></div></div>
-        <div style="display:grid;grid-template-columns:80px 1fr;gap:10px"><div style="font-size:10px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--orange)">Público</div><div style="font-size:13px;color:rgba(0,32,85,.8);line-height:1.5">Visitantes da página que não converteram.</div></div>
-      </div>
-    </div>
-
-  </div>
-
-  <div style="border-top:1px solid var(--divider);display:grid;grid-template-columns:1fr 1fr 1fr;gap:0">
-    <div style="padding:22px 26px;border-right:1px solid var(--divider)">
-      <div style="font-size:10px;font-weight:800;letter-spacing:.13em;text-transform:uppercase;color:var(--orange);margin-bottom:6px">→ Estático 01 · Abertura</div>
-      <div style="font-family:'Nunito',sans-serif;font-weight:800;font-size:13px;color:var(--navy);margin-bottom:10px">Mentoria 1 Milhão em 1 Dia — Vagas Abertas</div>
-      <div style="font-size:12.5px;color:rgba(0,32,85,.7);line-height:1.5;margin-bottom:8px">12 meses com Dr. Ivan. Financeiro, jurídico, gestão, marketing e tecnologia. Garantia de 7 dias.</div>
-      <div style="font-size:11px;font-weight:800;color:var(--orange)">CTA: Quero minha vaga</div>
-      <div style="font-size:11px;color:rgba(0,32,85,.5);margin-top:4px">Público: seguidores quentes + visitantes da página</div>
-    </div>
-    <div style="padding:22px 26px;border-right:1px solid var(--divider)">
-      <div style="font-size:10px;font-weight:800;letter-spacing:.13em;text-transform:uppercase;color:var(--orange);margin-bottom:6px">→ Estático 02 · Urgência</div>
-      <div style="font-family:'Nunito',sans-serif;font-weight:800;font-size:13px;color:var(--navy);margin-bottom:10px">Vagas Encerram em [DATA]</div>
-      <div style="font-size:12.5px;color:rgba(0,32,85,.7);line-height:1.5;margin-bottom:8px">R$ 1.780 à vista ou 12x. Garantia de 7 dias. Depois disso, a oferta muda.</div>
-      <div style="font-size:11px;font-weight:800;color:var(--orange)">CTA: Garantir antes do fechamento</div>
-      <div style="font-size:11px;color:rgba(0,32,85,.5);margin-top:4px">Público: remarketing — visitou a página e não comprou</div>
-    </div>
-    <div style="padding:22px 26px">
-      <div style="font-size:10px;font-weight:800;letter-spacing:.13em;text-transform:uppercase;color:var(--orange);margin-bottom:6px">→ Estático 03 · Garantia</div>
-      <div style="font-family:'Nunito',sans-serif;font-weight:800;font-size:13px;color:var(--navy);margin-bottom:10px">7 Dias de Garantia. O Risco É Nosso.</div>
-      <div style="font-size:12.5px;color:rgba(0,32,85,.7);line-height:1.5;margin-bottom:8px">Entra, assiste à primeira aula. Se não fizer sentido — devolvemos 100%, sem burocracia.</div>
-      <div style="font-size:11px;font-weight:800;color:var(--orange)">CTA: Entrar sem risco</div>
-      <div style="font-size:11px;color:rgba(0,32,85,.5);margin-top:4px">Público: visitou a página 2+ vezes sem converter</div>
-    </div>
-  </div>
-
-  <div style="padding:14px 26px;border-top:1px solid var(--divider);font-size:12.5px;color:rgba(0,32,85,.5);font-weight:600">
-    ⚡ Todos os criativos pagos veicular apenas a partir do dia 12 · Nunca para público frio · Desativar automaticamente após o fechamento do carrinho no dia 14
-  </div>
-</div>
-
-<hr>
-
-<!-- ERROS -->
-<div class="sec-head">
-  <div class="sec-head-left">
-    <span class="badge">Atenção</span>
-    <h2 class="sec-title">Erros Graves a Evitar</h2>
-    <p class="sec-desc">Diretrizes inegociáveis de produção, tom e posicionamento para os 14 dias</p>
-  </div>
-  <div class="sec-head-right"><div class="sec-num">04</div></div>
-</div>
-
-<table class="err-table">
-  <thead><tr><th>Erro</th><th>Por Que Destrói</th><th>O Que Fazer</th></tr></thead>
-  <tbody>
-    <tr>
-      <td>Confundir os dois produtos</td>
-      <td>Clínica de 7 Dígitos é o evento gratuito. Mentoria 1 Milhão em 1 Dia é o produto pago. Misturar os nomes em qualquer peça destrói a arquitetura de funil e gera confusão — especialmente com audiências em estágios diferentes.</td>
-      <td>Dias 1–7: nunca mencionar a mentoria. Dia 7: CTA apenas para inscrição na live gratuita. Produto pago só entra a partir do dia 11 (live).</td>
-    </tr>
-    <tr>
-      <td>CTA de produto nos dias 1–4</td>
-      <td>Nos primeiros quatro dias, o público está sendo educado — não preparado para comprar. Qualquer menção ao produto pago nessa fase destrói a percepção de conteúdo e acelera o unfollow.</td>
-      <td>Dias 1–4: encerramento aberto, sem CTA de nenhuma natureza. Dia 5: primeiro CTA, apenas para inscrição na live gratuita.</td>
-    </tr>
-    <tr>
-      <td>Ativar tráfego pago antes da live</td>
-      <td>Pago para público frio antes da live tem CPL alto e conversão baixa. O pago só performa quando a audiência já conhece o Dr. Ivan e passou pela Clínica de 7 Dígitos.</td>
-      <td>Ativar campanhas pagas apenas no dia 12. Segmentar exclusivamente visitantes da página de vendas, engajamento na live e seguidores com alto engajamento recente.</td>
-    </tr>
-    <tr>
-      <td>Urgência artificial</td>
-      <td>Timers falsos e "últimas vagas" sem fundamento real destroem credibilidade com um público sofisticado que se comunica entre si — médicos e dentistas se conhecem e compartilham percepções.</td>
-      <td>Usar apenas urgência real: data real de fechamento, preço real de lançamento, capacidade real de atendimento na mentoria.</td>
-    </tr>
-    <tr>
-      <td>Falar rápido demais</td>
-      <td>Público de empresários e profissionais de saúde processa conteúdo técnico em ritmo moderado. Velocidade excessiva transmite ansiedade, não autoridade — e esse público detecta isso imediatamente.</td>
-      <td>Manter ritmo deliberado em todos os vídeos. Pausas após afirmações-chave. A pausa é parte do conteúdo — não silêncio a preencher.</td>
-    </tr>
-    <tr>
-      <td>Posição de instrutor</td>
-      <td>Dr. Ivan não é professor — é empresário que também ensina. Postura de "vou te ensinar" reduz a autoridade que vem de "eu já fiz, aplico e tenho resultado."</td>
-      <td>Todo conteúdo parte da prática e da experiência real. Nunca "hoje vou te ensinar X" — sempre "aqui está o que funciona no mundo real."</td>
-    </tr>
-    <tr>
-      <td>Linguagem genérica</td>
-      <td>"Transforme sua clínica", "próximo nível", "sucesso garantido" — frases que qualquer concorrente usa e que não ativam o padrão de pensamento do empresário da saúde.</td>
-      <td>O diferencial é especificidade: margem real, ponto de equilíbrio, modelo tributário, pró-labore, sistema de aquisição, janela de lançamento.</td>
-    </tr>
-  </tbody>
-</table>
-
-<!-- FOOTER -->
-<div class="footer">
-  <div class="footer-left">
-    <div>
-      <div class="footer-name">Dr. Ivan Rollemberg · Mentoria 1 Milhão em 1 Dia · Clínica de 7 Dígitos</div>
-      <div class="footer-sub">14 Dias · 1 Roteiro Por Dia · Orgânico + Pago (Conversão)</div>
-    </div>
-  </div>
-  <div class="footer-right">
-    <div class="footer-conf">Documento Confidencial · Uso Interno</div>
-  </div>
-</div>
 
 </div>
+</div>
+
+<!-- ═══ TRÁFEGO PAGO ═══ -->
+<div id="p-pago" class="panel">
+<div class="w">
+  <div class="sh"><div class="shl"><span class="badge">Tráfego Pago</span><h2 class="stitle">Conversão e Remarketing</h2><p class="sdesc">Ativar somente após a live (22/05) · Exclusivamente para venda da Mentoria 1 Milhão em 1 Dia · Audiência quente</p></div><div class="shr"><div class="sn">06</div></div></div>
+
+  <div class="callout oc">
+    <div class="clic">📣</div>
+    <div class="cltxt">
+      <div class="clti">Lógica do Tráfego Pago</div>
+      <div class="clde">O orgânico aqueceu 1M+ de seguidores por 11 dias. O pago entra só quando o público já conhece o Dr. Ivan, assistiu à Clínica de 7 Dígitos e precisa apenas de um empurrão para fechar. Segmentar exclusivamente audiência quente — zero pago para público frio. Ativar 22/05, desativar 27/05 à meia-noite.</div>
+    </div>
+  </div>
+
+  <div class="agrp">
+    <div class="agtitle">Criativos de Vídeo · Talking head 30–60s · Audiência quente · Ativar 22/05</div>
+
+    <div class="pcard"><div class="phead" onclick="paid(this)"><span class="plabel">Vídeo 01</span><span class="ptitle">Carrinho Aberto — Vagas Encerram em 27/05</span><span class="parr">▼</span></div><div class="pbody"><div class="pr"><div class="prl">Hook 0–3s</div><div class="prv">"A Mentoria 1 Milhão em 1 Dia está com vagas abertas. Elas fecham em 27/05. Depois disso, a oferta muda."</div></div><div class="pr"><div class="prl">Corpo</div><div class="prv">12 meses de acompanhamento direto com Dr. Ivan Rollemberg. O método que já gerou R$ 1M em 1 dia e transformou +150 empresas da saúde. Financeiro, jurídico, gestão, marketing e tecnologia. Garantia de 7 dias — sem risco.</div></div><div class="pr"><div class="prl">CTA</div><div class="prv"><strong>→ Clique e garanta sua vaga antes do fechamento.</strong></div></div><div class="pr"><div class="prl">Público</div><div class="prv">Visitantes da página de vendas + assistentes da live.</div></div></div></div>
+
+    <div class="pcard"><div class="phead" onclick="paid(this)"><span class="plabel">Vídeo 02</span><span class="ptitle">O Risco É Meu — A Decisão É Sua</span><span class="parr">▼</span></div><div class="pbody"><div class="pr"><div class="prl">Hook 0–3s</div><div class="prv">"Se o que está te segurando é o risco de investir e não funcionar — esse vídeo é pra você."</div></div><div class="pr"><div class="prl">Corpo</div><div class="prv">A Mentoria 1 Milhão em 1 Dia tem garantia de 7 dias. Você entra, assiste à primeira aula ao vivo. Se não fizer sentido — devolução de 100%, sem burocracia. <strong>O risco é meu. A decisão é sua.</strong></div></div><div class="pr"><div class="prl">CTA</div><div class="prv"><strong>→ Garanta sua vaga sem risco.</strong></div></div><div class="pr"><div class="prl">Público</div><div class="prv">Visitantes da página de vendas que não converteram.</div></div></div></div>
+
+    <div class="pcard"><div class="phead" onclick="paid(this)"><span class="plabel">Vídeo 03 · Remarketing</span><span class="ptitle">Você Esteve na Live — Ainda Dá Tempo</span><span class="parr">▼</span></div><div class="pbody"><div class="pr"><div class="prl">Hook 0–3s</div><div class="prv">"Você esteve na Clínica de 7 Dígitos. Você viu o sistema. A pergunta que fica é: por que ainda não entrou?"</div></div><div class="pr"><div class="prl">Corpo</div><div class="prv">As vagas da Mentoria 1 Milhão em 1 Dia fecham em 27/05. Garantia de 7 dias — você entra, assiste à primeira aula. Se não fizer sentido, devolução de 100%.</div></div><div class="pr"><div class="prl">CTA</div><div class="prv"><strong>→ Link no botão. Decisão sem risco.</strong></div></div><div class="pr"><div class="prl">Público</div><div class="prv">Engajamento na live + visitantes da página. Não veicular para público frio.</div></div></div></div>
+  </div>
+
+  <div class="agrp">
+    <div class="agtitle">Criativos Estáticos · Imagem + copy · Feed e Stories</div>
+
+    <div class="scard"><div class="ss"></div><div class="sc"><div class="stname">Estático 01 — Abertura de Carrinho</div><div class="pr"><div class="prl">Headline</div><div class="prv"><strong>Mentoria 1 Milhão em 1 Dia — Vagas Abertas</strong></div></div><div class="pr"><div class="prl">Copy</div><div class="prv">12 meses com Dr. Ivan. Financeiro, jurídico, gestão, marketing e tecnologia. Garantia de 7 dias.</div></div><div class="pr"><div class="prl">CTA</div><div class="prv"><strong>Quero minha vaga</strong></div></div><div class="pr"><div class="prl">Público</div><div class="prv">Seguidores quentes + visitantes da página de vendas.</div></div></div></div>
+
+    <div class="scard"><div class="ss"></div><div class="sc"><div class="stname">Estático 02 — Urgência de Encerramento</div><div class="pr"><div class="prl">Headline</div><div class="prv"><strong>Vagas Encerram em 27/05 à Meia-Noite</strong></div></div><div class="pr"><div class="prl">Copy</div><div class="prv">R$ 1.780 à vista ou 12x. Garantia de 7 dias. Depois disso, a oferta muda.</div></div><div class="pr"><div class="prl">CTA</div><div class="prv"><strong>Garantir antes do fechamento</strong></div></div><div class="pr"><div class="prl">Público</div><div class="prv">Remarketing — visitou a página e não comprou.</div></div></div></div>
+
+    <div class="scard"><div class="ss"></div><div class="sc"><div class="stname">Estático 03 — Garantia em Destaque</div><div class="pr"><div class="prl">Headline</div><div class="prv"><strong>7 Dias de Garantia. O Risco É Nosso.</strong></div></div><div class="pr"><div class="prl">Copy</div><div class="prv">Entra na Mentoria 1 Milhão em 1 Dia. Assiste à primeira aula. Se não fizer sentido — devolvemos 100%, sem burocracia.</div></div><div class="pr"><div class="prl">CTA</div><div class="prv"><strong>Entrar sem risco</strong></div></div><div class="pr"><div class="prl">Público</div><div class="prv">Visitou a página 2+ vezes sem converter.</div></div></div></div>
+
+    <div class="scard"><div class="ss"></div><div class="sc"><div class="stname">Estático 04 — Prova Social</div><div class="pr"><div class="prl">Headline</div><div class="prv"><strong>+150 Empresas da Saúde Transformadas. A Sua Pode Ser a Próxima.</strong></div></div><div class="pr"><div class="prl">Copy</div><div class="prv">Dr. Ivan Rollemberg abre vagas da Mentoria 1 Milhão em 1 Dia — método que já gerou +R$ 250M para empresas da saúde. Por tempo limitado.</div></div><div class="pr"><div class="prl">CTA</div><div class="prv"><strong>Garantir minha vaga</strong></div></div><div class="pr"><div class="prl">Público</div><div class="prv">Seguidores do Instagram que ainda não visitaram a página de vendas.</div></div></div></div>
+  </div>
+
+</div>
+</div>
+
+<!-- ═══ ERROS ═══ -->
+<div id="p-erros" class="panel">
+<div class="w">
+  <div class="sh"><div class="shl"><span class="badge">Atenção</span><h2 class="stitle">Erros Graves a Evitar</h2><p class="sdesc">Diretrizes inegociáveis de produção, tom e posicionamento para os 14 dias</p></div><div class="shr"><div class="sn">07</div></div></div>
+
+  <table class="etable">
+    <thead><tr><th>Erro</th><th>Por Que Destrói</th><th>O Que Fazer</th></tr></thead>
+    <tbody>
+      <tr><td>Confundir os dois produtos</td><td>Clínica de 7 Dígitos é o evento gratuito. Mentoria 1 Milhão em 1 Dia é o produto pago. Misturar destrói a arquitetura de funil — especialmente com audiências em estágios diferentes.</td><td>Dias 1–7: nunca mencionar a mentoria. Produto pago só entra na live (bloco 5) e nos roteiros de fundo de funil.</td></tr>
+      <tr><td>CTA de produto nos dias 1–4</td><td>O público está sendo educado — não preparado para comprar. Qualquer menção ao produto destrói a percepção de conteúdo e acelera o unfollow.</td><td>Dias 1–4: encerramento aberto, sem CTA. Dia 5: primeiro CTA, apenas para inscrição na live gratuita.</td></tr>
+      <tr><td>Ativar tráfego pago antes da live</td><td>Pago para público frio antes da live tem CPL alto e conversão baixa. O pago só performa quando a audiência já conhece o Dr. Ivan e passou pela Clínica de 7 Dígitos.</td><td>Ativar campanhas pagas apenas no dia 12 (22/05). Segmentar exclusivamente visitantes da página de vendas, engajamento na live e seguidores quentes.</td></tr>
+      <tr><td>Urgência artificial</td><td>Timers falsos e "últimas vagas" sem fundamento destroem credibilidade com um público sofisticado que se comunica entre si — médicos e dentistas se conhecem e compartilham percepções.</td><td>Usar apenas urgência real: data real de fechamento (27/05), preço real de lançamento, capacidade real de atendimento.</td></tr>
+      <tr><td>Falar rápido demais</td><td>Público de empresários e profissionais de saúde processa conteúdo técnico em ritmo moderado. Velocidade excessiva transmite ansiedade, não autoridade.</td><td>Manter ritmo deliberado em todos os vídeos. Pausas após afirmações-chave. A pausa é parte do conteúdo — não silêncio a preencher.</td></tr>
+      <tr><td>Posição de instrutor</td><td>Dr. Ivan não é professor — é empresário que também ensina. Postura de "vou te ensinar" reduz a autoridade que vem de "eu já fiz."</td><td>Todo conteúdo parte da prática e da experiência real. Nunca "hoje vou te ensinar X" — sempre "aqui está o que funciona no mundo real."</td></tr>
+      <tr><td>Linguagem genérica</td><td>"Transforme sua clínica", "próximo nível", "sucesso garantido" — frases que qualquer concorrente usa e que não ativam o raciocínio do empresário da saúde.</td><td>Especificidade é o diferencial: margem real, ponto de equilíbrio, modelo tributário, pró-labore, janela de lançamento.</td></tr>
+    </tbody>
+  </table>
+
+  <div class="footer">
+    <div class="fl2"><div><div class="fn">Dr. Ivan Rollemberg · Mentoria 1 Milhão em 1 Dia · Clínica de 7 Dígitos</div><div class="fs">14 Dias · 1 Roteiro Por Dia · 11/05–27/05/2026 · Live 21/05</div></div></div>
+    <div class="fr"><div class="fc">Documento Confidencial · Uso Interno</div></div>
+  </div>
+
+</div>
+</div>
+
+<script>
+function goTab(id,btn){
+  document.querySelectorAll('.panel').forEach(p=>p.classList.remove('on'));
+  document.querySelectorAll('.tab').forEach(b=>b.classList.remove('on'));
+  document.getElementById('p-'+id).classList.add('on');
+  btn.classList.add('on');
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+function acc(h){
+  const b=h.nextElementSibling;
+  const o=h.classList.contains('on');
+  h.classList.toggle('on',!o);
+  b.classList.toggle('on',!o);
+}
+function wpp(h){
+  const b=h.nextElementSibling;
+  const n=b.nextElementSibling;
+  const o=h.classList.contains('on');
+  h.classList.toggle('on',!o);
+  b.classList.toggle('on',!o);
+  if(n&&n.classList.contains('wnote'))n.style.display=o?'none':'block';
+}
+function paid(h){
+  const b=h.nextElementSibling;
+  const o=h.classList.contains('on');
+  h.classList.toggle('on',!o);
+  b.classList.toggle('on',!o);
+}
+document.querySelectorAll('.wnote').forEach(n=>n.style.display='none');
+</script>
 </body>
 </html>
