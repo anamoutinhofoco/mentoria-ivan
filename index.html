@@ -98,3 +98,414 @@ body{font-family:'Nunito Sans',sans-serif;background:var(--bg);color:var(--navy)
 .lt{font-size:9.5px;font-weight:700;color:var(--blue3);letter-spacing:.06em}
 .lr{background:var(--white);padding:14px 18px}
 .ltitle{font-family:'Nunito',sans-serif;font-weight:800;font-size:13px;color:var(--navy);margin-bottom:3px}
+.ldesc{font-size:12px;color:rgba(0,32,85,.68);line-height:1.5}
+
+.agrp{margin-bottom:36px}
+.agtitle{font-family:'Nunito',sans-serif;font-weight:900;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:rgba(0,32,85,.38);margin-bottom:10px;display:flex;align-items:center;gap:10px}
+.agtitle::after{content:'';flex:1;height:1px;background:var(--div)}
+
+.aitem{background:var(--white);border-radius:12px;box-shadow:var(--sh);border:1px solid var(--div);overflow:hidden;margin-bottom:8px}
+.ahead{display:flex;align-items:center;gap:12px;padding:14px 20px;cursor:pointer;user-select:none;transition:background .15s}
+.ahead:hover{background:#F5F8FF}
+.ahead.on{background:var(--bb)}
+.anum{font-family:'Nunito',sans-serif;font-weight:900;font-size:24px;line-height:1;min-width:36px;color:var(--blue)}
+.anum.g{color:#2E7D32}.anum.o{color:var(--or)}.anum.lv{color:#3949AB}
+.ainfo{flex:1}
+.adate{font-size:9.5px;font-weight:800;letter-spacing:.11em;text-transform:uppercase;color:rgba(0,32,85,.38);margin-bottom:2px}
+.atitle{font-family:'Nunito',sans-serif;font-weight:800;font-size:14.5px;color:var(--navy);line-height:1.25}
+.abadges{display:flex;gap:5px;flex-wrap:wrap}
+.ab{font-size:9px;font-weight:800;letter-spacing:.09em;text-transform:uppercase;padding:3px 8px;border-radius:4px}
+.abp{background:#E3F2FD;color:#0D47A1}.abl{background:var(--grb);color:var(--gr)}
+.ablv{background:#E8EAF6;color:#1A237E}.abo{background:var(--orb);color:var(--or)}
+.aarr{font-size:13px;color:rgba(0,32,85,.28);transition:transform .22s;flex-shrink:0}
+.ahead.on .aarr{transform:rotate(180deg)}
+.abody{display:none;border-top:1px solid var(--div)}
+.abody.on{display:block}
+.ain{padding:20px 24px;display:flex;flex-direction:column;gap:13px}
+
+.fl{font-size:9.5px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--blue);display:flex;align-items:center;gap:5px;margin-bottom:4px}
+.fl::before{content:'→';font-weight:800;font-size:10px}
+.fl.g{color:var(--gr)}.fl.o{color:var(--or)}
+.ft{font-size:13.5px;color:rgba(0,32,85,.8);line-height:1.6}
+.ft strong{font-weight:700;color:var(--navy)}
+.tip{background:var(--bb);border-left:3px solid var(--blue);border-radius:0 8px 8px 0;padding:8px 13px;font-size:12px;font-weight:600;color:var(--blue);line-height:1.5}
+.tip::before{content:'🎯  '}
+.tip.g{background:var(--grb);border-left-color:#2E7D32;color:var(--gr)}
+.tip.o{background:var(--orb);border-left-color:var(--or);color:var(--or)}
+.tip.o::before,.tip.g::before{content:''}
+.mr{display:flex;gap:7px;flex-wrap:wrap;margin-bottom:2px}
+.mp{font-size:9.5px;font-weight:800;letter-spacing:.09em;text-transform:uppercase;padding:2px 7px;border-radius:4px;background:var(--bb);color:var(--bt)}
+.mp.g{background:var(--grb);color:var(--gr)}.mp.o{background:var(--orb);color:var(--or)}
+.mp.p{background:var(--pub);color:var(--pu)}.mp.y{background:#FFF9C4;color:#F57F17}
+
+.wsec{margin-bottom:32px}
+.wsec-title{font-family:'Nunito',sans-serif;font-weight:900;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:rgba(0,32,85,.38);margin-bottom:10px;display:flex;align-items:center;gap:10px}
+.wsec-title::after{content:'';flex:1;height:1px;background:var(--div)}
+
+.witem{background:var(--white);border-radius:12px;box-shadow:var(--sh);border:1px solid var(--div);overflow:hidden;margin-bottom:8px}
+.whead{display:flex;align-items:center;gap:10px;padding:12px 18px;cursor:pointer;user-select:none;transition:background .15s}
+.whead:hover{background:#F5F8FF}
+.whead.on{background:#F0FDF4}
+.whead.on.wa{background:#FFFBEB}
+.whead.on.wh{background:#FFF0F0}
+.wtime{font-family:'Nunito',sans-serif;font-weight:900;font-size:12.5px;color:#15803D;min-width:90px}
+.wtime.wa{color:#92400E}.wtime.wh{color:#991B1B}
+.wdl{font-family:'Nunito',sans-serif;font-weight:800;font-size:13px;color:var(--navy);flex:1}
+.wdesc{font-size:11.5px;color:rgba(0,32,85,.45);font-weight:600}
+.wtag{font-size:9px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;padding:3px 8px;border-radius:4px;white-space:nowrap}
+.wt1{background:#DCFCE7;color:#166534}.wt2{background:#FEF9C3;color:#854D0E}
+.wt3{background:#FEE2E2;color:#991B1B}.wt4{background:#EDE9FE;color:#5B21B6}
+.warr{font-size:12px;color:rgba(0,32,85,.26);transition:transform .22s;flex-shrink:0}
+.whead.on .warr{transform:rotate(180deg)}
+.wbody{display:none;border-top:1px solid var(--div);padding:16px 18px;font-size:13.5px;color:rgba(0,32,85,.82);line-height:1.75;white-space:pre-line;background:#FAFFFE}
+.wbody.on{display:block}
+.wbody.wa{background:#FFFEF5}.wbody.wh{background:#FFF9F9}
+.wnote{padding:8px 18px;background:var(--bb);font-size:11px;font-weight:600;color:var(--blue);border-top:1px solid var(--div)}
+.wnote::before{content:'💡 '}
+
+.pcard{background:var(--white);border-radius:12px;box-shadow:var(--sh);border:1px solid var(--div);overflow:hidden;margin-bottom:8px}
+.phead{display:flex;align-items:center;gap:11px;padding:13px 20px;cursor:pointer;background:linear-gradient(90deg,#4A1500,#7B2200);transition:opacity .15s}
+.phead:hover{opacity:.9}
+.plabel{font-size:9.5px;font-weight:800;letter-spacing:.11em;text-transform:uppercase;color:rgba(255,255,255,.5);flex-shrink:0}
+.ptitle{font-family:'Nunito',sans-serif;font-weight:800;font-size:14px;color:#fff;flex:1}
+.parr{font-size:12px;color:rgba(255,255,255,.38);transition:transform .22s}
+.phead.on .parr{transform:rotate(180deg)}
+.pbody{display:none;padding:18px 22px;flex-direction:column;gap:10px}
+.pbody.on{display:flex}
+.pr{display:grid;grid-template-columns:110px 1fr;gap:10px}
+.prl{font-size:9.5px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--or);padding-top:2px}
+.prv{font-size:13.5px;color:rgba(0,32,85,.8);line-height:1.55}
+
+.callout{background:var(--navy2);border-radius:12px;padding:18px 26px;margin-bottom:24px;display:flex;align-items:center;gap:14px;position:relative;overflow:hidden}
+.callout::after{content:'';position:absolute;right:-28px;top:-28px;width:90px;height:90px;border-radius:50%;background:linear-gradient(135deg,var(--blue2),var(--blue4));opacity:.3}
+.clic{font-size:22px;flex-shrink:0;position:relative;z-index:1}
+.cltxt{position:relative;z-index:1}
+.clti{font-family:'Nunito',sans-serif;font-weight:800;font-size:14.5px;color:#fff;margin-bottom:3px}
+.clde{font-size:12.5px;color:rgba(255,255,255,.68);font-weight:600;line-height:1.5}
+.callout.oc{background:linear-gradient(90deg,#4A1500,#7B2200)}
+
+.etable{width:100%;border-collapse:collapse;border-radius:12px;overflow:hidden;box-shadow:var(--sh);margin-bottom:28px}
+.etable thead tr{background:var(--blue)}
+.etable thead th{padding:11px 18px;text-align:left;font-size:10px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:#fff}
+.etable tbody tr:nth-child(odd){background:var(--white)}
+.etable tbody tr:nth-child(even){background:#F4F7FB}
+.etable td{padding:11px 18px;font-size:13px;color:rgba(0,32,85,.8);border-bottom:1px solid var(--div);line-height:1.5;vertical-align:top}
+.etable td:first-child{font-weight:700;color:var(--navy);font-size:12.5px}
+
+.footer{display:grid;grid-template-columns:62% 38%;border-radius:14px;overflow:hidden;box-shadow:var(--shm);margin-top:52px}
+.fl2{background:var(--white);padding:22px 44px;display:flex;align-items:center}
+.fn{font-family:'Nunito',sans-serif;font-weight:900;font-size:14px;color:var(--navy)}
+.fs{font-size:11.5px;color:rgba(0,32,85,.48);font-weight:600;margin-top:2px}
+.fr{background:var(--navy2);padding:22px 36px;display:flex;align-items:center;justify-content:center}
+.fc{font-size:10px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.36)}
+
+hr{border:none;border-top:1px solid var(--div);margin:40px 0}
+
+@media(max-width:780px){
+  .pageheader-inner{flex-direction:column;gap:18px;padding:24px 20px}
+  .pageheader-right{flex-direction:column;gap:8px;width:100%}
+  .pageheader-pill{min-width:0}
+  .sh,.footer,.cal{grid-template-columns:1fr}
+  .tabs-wrap,.w{padding:0 16px}
+  .tab{font-size:9.5px;padding:12px 4px}
+  .tc{grid-template-columns:1fr;gap:5px}
+  .cdays{grid-template-columns:repeat(4,1fr)}
+  .litem{grid-template-columns:1fr}
+  .pr{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<div class="pageheader">
+  <div class="pageheader-inner">
+    <div class="pageheader-left">
+      <div class="pageheader-eyebrow">Dr. Ivan Rollemberg · Confidencial</div>
+      <h1 class="pageheader-title">Health Business — <span>Cronograma de Implantação</span></h1>
+      <div class="pageheader-meta">
+        <span>11/08 → 28/08/2026</span>
+        <span class="phsep">·</span>
+        <span>Live piloto: Quinta-feira, 20/08</span>
+        <span class="phsep">·</span>
+        <span style="color:#FFCDD2">Projeto em atraso — cronograma acelerado</span>
+      </div>
+    </div>
+    <div class="pageheader-right">
+      <div class="pageheader-pill">
+        <span class="php-label">Programa</span>
+        <span class="php-name">Health Business — Mentoria de Negócios</span>
+      </div>
+      <div class="pageheader-pill">
+        <span class="php-label">Ecossistema</span>
+        <span class="php-name">Conteúdo · Comunidade · Lives · Comunidade Paga</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- TABS -->
+<div class="tabwrap">
+  <div class="tabs">
+    <button class="tab on" onclick="goTab('tarefas',this)"><span class="ti">📋</span>Tarefas</button>
+    <button class="tab" onclick="goTab('calendario',this)"><span class="ti">📅</span>Cronograma</button>
+    <button class="tab" onclick="goTab('operacao',this)"><span class="ti">🔁</span>Operação Mensal</button>
+    <button class="tab" onclick="goTab('wpp',this)"><span class="ti">💬</span>WhatsApp</button>
+    <button class="tab" onclick="goTab('pendencias',this)"><span class="ti">⚠️</span>Pendências</button>
+  </div>
+</div>
+
+<!-- ═══ TAREFAS ═══ -->
+<div id="p-tarefas" class="panel on">
+<div class="w">
+  <div class="sh"><div class="shl"><span class="badge">Tela Inicial</span><h2 class="stitle">Painel de Tarefas</h2><p class="sdesc">Hoje é 11/08 · Projeto em atraso — ritmo acelerado até a live piloto de 20/08</p></div><div class="shr"><div class="sn">01</div></div></div>
+
+  <div class="callout" style="background:linear-gradient(90deg,#7B1E1E,#B71C1C)">
+    <div class="clic">⏱️</div>
+    <div class="cltxt">
+      <div class="clti">Estamos atrasados — todas as frentes abaixo rodam em paralelo</div>
+      <div class="clde">Oferta e acessos já foram resolvidos. A partir de agora, roteiros, WhatsApp, LP/Kiwify e calendário da live precisam avançar simultaneamente, sem depender uns dos outros, para não perder a data de 20/08.</div>
+    </div>
+  </div>
+
+  <div class="tleg">
+    <div class="li"><div class="ld" style="background:#A5D6A7"></div>Concluído</div>
+    <div class="li"><div class="ld" style="background:#EF9A9A"></div>Urgente · até 12–13/08</div>
+    <div class="li"><div class="ld" style="background:#FFCC80"></div>Até 14/08</div>
+    <div class="li"><div class="ld" style="background:#90CAF9"></div>Até 19/08 · véspera</div>
+  </div>
+
+  <div class="trow"><div class="tord"><span>✓</span></div><div class="tc"><div><div class="tn">Confirmar Oferta e Modelo Comercial</div><div class="td">Preço, parcelamento, duração de acesso, garantia, bônus, política de renovação e cancelamento alinhados com o Dr. Ivan.</div><span class="tp p4">Concluído · 08/08</span></div><div><div class="tcl">Responsável</div><div class="tcv b">Thaína Magalhães (com Dr. Ivan) + Felipe Meireles</div></div><div><div class="tcl">Como Fazer</div><div class="tcv">Reunião de alinhamento comercial</div></div><div><div class="tcl">Prazo</div><div class="tcv">Concluído</div></div></div></div>
+
+  <div class="trow"><div class="tord"><span>✓</span></div><div class="tc"><div><div class="tn">Liberar Acessos Críticos</div><div class="td">Kiwify da Human, HeyGen, ElevenLabs, plataforma de live e número de WhatsApp para as comunidades.</div><span class="tp p4">Concluído · 08/08</span></div><div><div class="tcl">Responsável</div><div class="tcv b">Daniele + Thaína Magalhães</div></div><div><div class="tcl">Como Fazer</div><div class="tcv">Acessos liberados</div></div><div><div class="tcl">Prazo</div><div class="tcv">Concluído</div></div></div></div>
+
+  <div class="trow"><div class="tord"><span>1</span></div><div class="tc"><div><div class="tn">Definir e Travar a Data da Live Piloto</div><div class="td">Confirmar com o Dr. Ivan a data, horário e duração da primeira live gratuita do Health Business. Preferência por quarta ou quinta-feira.</div><span class="tp p1">Urgente · Hoje 11/08</span></div><div><div class="tcl">Responsável</div><div class="tcv b">Thaína Magalhães (com Dr. Ivan)</div></div><div><div class="tcl">Como Fazer</div><div class="tcv">Confirmar hoje: Quinta, 20/08</div></div><div><div class="tcl">Prazo</div><div class="tcv b">11/08 (Ter)</div></div></div></div>
+
+  <div class="trow"><div class="tord"><span>2</span></div><div class="tc"><div><div class="tn">Atualizar Roteiros e Materiais Existentes</div><div class="td">Remover a promessa "1 milhão em 1 dia". Atualizar nome do produto, headline, promessa, CTA, pitch, datas e oferta. Identidade visual será mantida.</div><span class="tp p1">Urgente</span></div><div><div class="tcl">Responsável</div><div class="tcv b">Ana Moutinho · Marcos · Gustavo</div></div><div><div class="tcl">Como Fazer</div><div class="tcv">Usar o escopo final como base</div></div><div><div class="tcl">Prazo</div><div class="tcv b">13/08 (Qui)</div></div></div></div>
+
+  <div class="trow"><div class="tord"><span>2</span></div><div class="tc"><div><div class="tn">Estruturar as Duas Comunidades no WhatsApp</div><div class="td">Comunidade gratuita de captação e comunidade paga: nome, imagem, descrição, regras, administradores, fluxo de entrada e automações.</div><span class="tp p1">Urgente</span></div><div><div class="tcl">Responsável</div><div class="tcv b">Marcos</div></div><div><div class="tcl">Como Fazer</div><div class="tcv">Comunidade WhatsApp</div></div><div><div class="tcl">Prazo</div><div class="tcv b">13/08 (Qui)</div></div></div></div>
+
+  <div class="trow"><div class="tord"><span>3</span></div><div class="tc"><div><div class="tn">Publicar Landing Page e Configurar Kiwify</div><div class="td">Validar e publicar a LP de captação. Configurar produto, checkout, garantia, termos e integrações na Kiwify.</div><span class="tp p2">Até 14/08</span></div><div><div class="tcl">Responsável</div><div class="tcv b">Ana M. · Marcos</div></div><div><div class="tcl">Como Fazer</div><div class="tcv">Kiwify · lp.agenciafocomkt.com.br/mentoria-ivan</div></div><div><div class="tcl">Prazo</div><div class="tcv b">14/08 (Sex)</div></div></div></div>
+
+  <div class="trow"><div class="tord"><span>3</span></div><div class="tc"><div><div class="tn">Abrir Captação e Iniciar Aquecimento</div><div class="td">Abrir a comunidade gratuita para entrada de leads e começar a sequência de conteúdo de aquecimento nas redes e no WhatsApp.</div><span class="tp p2">Até 17/08</span></div><div><div class="tcl">Responsável</div><div class="tcv b">Ana Moutinho (conteúdo) · Marcos (disparos)</div></div><div><div class="tcl">Como Fazer</div><div class="tcv">Conteúdo + disparos WhatsApp</div></div><div><div class="tcl">Prazo</div><div class="tcv b">17/08 (Seg)</div></div></div></div>
+
+  <div class="trow"><div class="tord"><span>4</span></div><div class="tc"><div><div class="tn">Suporte Operacional e Testes Técnicos da Live</div><div class="td">Setup de gravação da live, teste da plataforma, automação de mensagens pós-inscrição e organização do suporte durante o evento.</div><span class="tp p3">Véspera</span></div><div><div class="tcl">Responsável</div><div class="tcv b">Marcos</div></div><div><div class="tcl">Como Fazer</div><div class="tcv">—</div></div><div><div class="tcl">Prazo</div><div class="tcv b">19/08 (Qua)</div></div></div></div>
+</div>
+</div>
+
+<!-- ═══ CRONOGRAMA ═══ -->
+<div id="p-calendario" class="panel">
+<div class="w">
+  <div class="sh"><div class="shl"><span class="badge">Cronograma</span><h2 class="stitle">Reta Final Acelerada até a Live</h2><p class="sdesc">Hoje é 11/08 (terça) · Live piloto marcada para quinta-feira, 20/08 · 9 dias de execução para recuperar o atraso</p></div><div class="shr"><div class="sn">02</div></div></div>
+
+  <div class="cal">
+    <div class="cw">
+      <div class="cwh w1"><div class="cwn">S1</div><div class="cwt">Recuperação do Atraso · 11–17/08</div><div class="cws">Todas as frentes em paralelo — roteiros, WhatsApp, LP e Kiwify</div></div>
+      <div class="cdays">
+        <div class="cday ld"><div class="cdl">Ter 11/08</div><div class="cdn">Hoje</div><div class="cdt tlive">Data live</div><div class="cdtxt">Travar 20/08 com o Dr. Ivan</div></div>
+        <div class="cday"><div class="cdl">Qua 12/08</div><div class="cdn">—</div><div class="cdt tpre">Roteiros</div><div class="cdtxt">Iniciar atualização de materiais</div></div>
+        <div class="cday"><div class="cdl">Qui 13/08</div><div class="cdn">—</div><div class="cdt tpre">Entrega</div><div class="cdtxt">Roteiros prontos · Comunidades criadas</div></div>
+        <div class="cday"><div class="cdl">Sex 14/08</div><div class="cdn">—</div><div class="cdt tpre">Entrega</div><div class="cdtxt">LP publicada · Kiwify configurada</div></div>
+        <div class="cday"><div class="cdl">Sáb 15/08</div><div class="cdn">—</div><div class="cdt tpre">Ajustes</div><div class="cdtxt">Revisão e correções</div></div>
+        <div class="cday"><div class="cdl">Dom 16/08</div><div class="cdn">—</div><div class="cdt tpre">Buffer</div><div class="cdtxt">Folga de segurança do atraso</div></div>
+        <div class="cday"><div class="cdl">Seg 17/08</div><div class="cdn">—</div><div class="cdt tlaunch">Captação</div><div class="cdtxt">Abertura da comunidade gratuita</div></div>
+      </div>
+    </div>
+    <div class="cw">
+      <div class="cwh w2"><div class="cwn">S2</div><div class="cwt">Pré-Live e Live Piloto · 18–24/08</div><div class="cws">Aquecimento, testes técnicos e live no dia 20</div></div>
+      <div class="cdays">
+        <div class="cday"><div class="cdl">Ter 18/08</div><div class="cdn">—</div><div class="cdt tlaunch">Conteúdo</div><div class="cdtxt">Aquecimento nas redes e WhatsApp</div></div>
+        <div class="cday"><div class="cdl">Qua 19/08</div><div class="cdn">—</div><div class="cdt tlaunch">Técnico</div><div class="cdtxt">Teste da plataforma · véspera</div></div>
+        <div class="cday ld"><div class="cdl">Qui 20/08</div><div class="cdn">★</div><div class="cdt tlive">⚡ Live</div><div class="cdtxt">Live Piloto Health Business</div></div>
+        <div class="cday pd"><div class="cdl">Sex 21/08</div><div class="cdn">—</div><div class="cdt tpost">Pós</div><div class="cdtxt">Follow-up · abertura da oferta</div></div>
+        <div class="cday pd"><div class="cdl">Sáb 22/08</div><div class="cdn">—</div><div class="cdt tpost">Pós</div><div class="cdtxt">Prova social</div></div>
+        <div class="cday pd"><div class="cdl">Dom 23/08</div><div class="cdn">—</div><div class="cdt tpost">Pós</div><div class="cdtxt">Quebra de objeções</div></div>
+        <div class="cday pd"><div class="cdl">Seg 24/08</div><div class="cdn">—</div><div class="cdt tpost">Encerra</div><div class="cdtxt">Fim da condição especial (sugerido)</div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="agtitle">Pós-Live e Início da Operação Recorrente · 25–28/08</div>
+  <div class="llist">
+    <div class="litem"><div class="ll"><div class="ln">01</div><div class="lt">QUI 20/08</div></div><div class="lr"><div class="ltitle">Live Gratuita Piloto — Health Business (horário a confirmar)</div><div class="ldesc">Estrutura sugerida no escopo: abertura, diagnóstico das dores, método, exemplos, quebra de objeções, apresentação do Health Business, condição especial, Q&A e orientação de inscrição.</div></div></div>
+    <div class="litem"><div class="ll"><div class="ln">02</div><div class="lt">SEX 21/08</div></div><div class="lr"><div class="ltitle">Pós-Live · Follow-up na Comunidade Gratuita</div><div class="ldesc">Resumo da live, quebra de objeções, provas sociais e reforço da condição especial de adesão.</div></div></div>
+    <div class="litem"><div class="ll"><div class="ln">03</div><div class="lt">21–24/08</div></div><div class="lr"><div class="ltitle">Janela de Oferta e Encerramento</div><div class="ldesc">Prazo sugerido de 3 dias para a condição especial (confirmar com o Dr. Ivan). Encerramento com aviso de valor cheio ou retirada de bônus.</div></div></div>
+    <div class="litem"><div class="ll"><div class="ln">04</div><div class="lt">A partir de 25/08</div></div><div class="lr"><div class="ltitle">Onboarding dos Primeiros Alunos</div><div class="ldesc">Entrada na comunidade paga, mensagem de boas-vindas, calendário de encontros e início da operação mensal recorrente.</div></div></div>
+  </div>
+</div>
+</div>
+
+<!-- ═══ OPERAÇÃO MENSAL ═══ -->
+<div id="p-operacao" class="panel">
+<div class="w">
+  <div class="sh"><div class="shl"><span class="badge">Recorrente</span><h2 class="stitle">Operação Mensal · 5 Frentes</h2><p class="sdesc">Cadência que se repete a cada ciclo, após a implantação inicial · Clique para expandir cada frente</p></div><div class="shr"><div class="sn">03</div></div></div>
+
+  <div class="agrp">
+    <div class="aitem"><div class="ahead" onclick="acc(this)"><div class="anum">01</div><div class="ainfo"><div class="adate">Frente 1 · Mensal</div><div class="atitle">Conteúdo nas Redes Sociais</div></div><div class="abadges"><span class="ab abp">Atrair e educar</span></div><div class="aarr">▼</div></div><div class="abody"><div class="ain"><div><div class="fl">Entregas Mensais</div><div class="ft">5 vídeos para o feed, roteiros completos, desdobramentos para stories, chamadas para a comunidade gratuita e para as lives, conteúdos de autoridade/gestão/posicionamento/alta performance e reaproveitamento de trechos das lives.</div></div><div><div class="fl">Produção</div><div class="ft">O Dr. Ivan participa apenas das lives. Os demais vídeos são produzidos com avatar e voz clonados (HeyGen + ElevenLabs, após liberação de acesso e autorização), recortes das lives e reaproveitamento de gravações — sem exigir novas gravações do mentor.</div></div><div class="tip">Qualquer gravação adicional do Dr. Ivan precisa ser previamente alinhada com a equipe.</div></div></div></div>
+
+    <div class="aitem"><div class="ahead" onclick="acc(this)"><div class="anum">02</div><div class="ainfo"><div class="adate">Frente 2 · Contínua</div><div class="atitle">Comunidade Gratuita (WhatsApp)</div></div><div class="abadges"><span class="ab abp">Base de captação</span></div><div class="aarr">▼</div></div><div class="abody"><div class="ain"><div><div class="fl">Objetivos</div><div class="ft">Receber os leads captados, gerar relacionamento, preparar os membros para as lives, distribuir conteúdo de valor, fortalecer a autoridade do Dr. Ivan e apresentar a mentoria de forma recorrente.</div></div><div><div class="fl">Conteúdos</div><div class="ft">Vídeos curtos, reflexões estratégicas, provocações sobre as dores do público, conteúdos preparatórios para as lives, avisos, resumos de lives anteriores, cases, provas sociais e respostas a objeções.</div></div><div class="tip">A frequência aumenta perto das lives, sem virar spam — alternar conteúdo, relacionamento, lembrete e oferta.</div></div></div></div>
+
+    <div class="aitem"><div class="ahead" onclick="acc(this)"><div class="anum">03</div><div class="ainfo"><div class="adate">Frente 3 · 2x por mês + 1 exclusiva</div><div class="atitle">Lives Gratuitas e Live Exclusiva de Alunos</div></div><div class="abadges"><span class="ab abp">Aquisição e conversão</span></div><div class="aarr">▼</div></div><div class="abody"><div class="ain"><div><div class="fl">Cadência Proposta (a validar)</div><div class="ft">Duas lives gratuitas por mês + uma live exclusiva por mês para alunos (3h). Quantidade ainda depende de validação final do Dr. Ivan e da gestão do projeto.</div></div><div><div class="fl">Estrutura Sugerida</div><div class="ft">Abertura e contextualização → identificação do problema → conteúdo estratégico → método → exemplos → quebra de objeções → apresentação do Health Business → condição especial → perguntas e respostas → orientação de inscrição.</div></div><div class="tip">Duração ainda precisa ser validada antes do calendário definitivo de cada ciclo.</div></div></div></div>
+
+    <div class="aitem"><div class="ahead" onclick="acc(this)"><div class="anum">04</div><div class="ainfo"><div class="adate">Frente 4 · Produto Pago</div><div class="atitle">Health Business — Mentoria + Comunidade Privada</div></div><div class="abadges"><span class="ab abl">R$ 5.000/ano · a confirmar</span></div><div class="aarr">▼</div></div><div class="abody"><div class="ain"><div><div class="fl g">Entregas Previstas</div><div class="ft">Acesso à comunidade privada, lives exclusivas com o Dr. Ivan, conteúdos mensais de aprofundamento, 5 vídeos mensais para a comunidade, materiais complementares, gravações das lives (se aprovadas), participações de convidados, comunicação de acompanhamento, suporte, calendário de encontros e onboarding.</div></div><div><div class="fl g">Temas Possíveis</div><div class="ft">Excelência profissional → visão empresarial · gestão e crescimento de clínicas · construção de autoridade · mentalidade de alta performance · finanças e patrimônio · liderança e equipe · posicionamento digital · propósito e legado.</div></div><div class="tip g">Preço de referência R$ 5.000/ano ainda precisa de confirmação formal antes da configuração do checkout.</div></div></div></div>
+
+    <div class="aitem"><div class="ahead" onclick="acc(this)"><div class="anum">05</div><div class="ainfo"><div class="adate">Frente 5 · Contínua</div><div class="atitle">Comunidade Paga</div></div><div class="abadges"><span class="ab abl">Entrega e retenção</span></div><div class="aarr">▼</div></div><div class="abody"><div class="ain"><div><div class="fl g">Objetivos</div><div class="ft">Realizar a entrega contínua da mentoria, aumentar a percepção de valor, organizar conteúdos e encontros, criar relacionamento entre os membros, melhorar retenção/renovação e centralizar suporte.</div></div><div><div class="fl g">Operação</div><div class="ft">Mensagem de boas-vindas, orientação de acesso, calendário, regras da comunidade, avisos de lives, conteúdos exclusivos, materiais de apoio, gravações (se incluídas), pesquisa de satisfação e comunicação sobre renovação.</div></div></div></div></div>
+  </div>
+</div>
+</div>
+
+<!-- ═══ WHATSAPP ═══ -->
+<div id="p-wpp" class="panel">
+<div class="w">
+  <div class="sh"><div class="shl"><span class="badge">Estrutura · WhatsApp</span><h2 class="stitle">Comunidades Gratuita e Paga</h2><p class="sdesc">Fluxo de mensagens por etapa · Pendência: número de WhatsApp e acesso administrativo ainda não definidos</p></div><div class="shr"><div class="sn">04</div></div></div>
+
+  <div class="callout">
+    <div class="clic">⚙️</div>
+    <div class="cltxt">
+      <div class="clti">Responsável por disparos e automação</div>
+      <div class="clde">Todos os disparos de mensagem e as automações das comunidades (boas-vindas, aquecimento, lembretes, pós-live, onboarding) são de responsabilidade do Marcos.</div>
+    </div>
+  </div>
+
+  <div class="wsec">
+    <div class="wsec-title">Comunidade Gratuita de Captação</div>
+
+    <div class="witem"><div class="whead" onclick="wpp(this)"><span class="wtime">Entrada</span><div class="wdl">Mensagem de Boas-Vindas</div><span class="wdesc">Disparada assim que o lead entra na comunidade</span><span class="wtag wt1">Boas-vindas</span><span class="warr">▼</span></div><div class="wbody">👋 Bem-vindo à comunidade gratuita do *Health Business*.
+
+Aqui você vai receber conteúdo sobre gestão, posicionamento e crescimento para médicos e profissionais da saúde — direto do Dr. Ivan.
+
+Em breve vou avisar aqui sobre a próxima live gratuita. Fique de olho nas mensagens.
+
+— Equipe Health Business</div><div class="wnote">Tom acolhedor, sem qualquer menção a preço ou produto pago.</div></div>
+
+    <div class="witem"><div class="whead" onclick="wpp(this)"><span class="wtime">Recorrente</span><div class="wdl">Sequência de Aquecimento</div><span class="wdesc">Conteúdo, reflexão e provocação sobre as dores do público</span><span class="wtag wt1">Conteúdo</span><span class="warr">▼</span></div><div class="wbody">💡 Mensagens recorrentes de valor — sem venda direta.
+
+Alternar entre: reflexões estratégicas, provocações sobre dependência da agenda / falta de gestão / ausência de posicionamento, resumos de lives anteriores e cases reais de médicos que estruturaram o próprio negócio.
+
+Objetivo: manter relacionamento vivo entre um ciclo de live e outro, sem gerar sensação de spam.</div><div class="wnote">Aumentar a frequência apenas nos dias que antecedem uma live.</div></div>
+
+    <div class="witem"><div class="whead" onclick="wpp(this)"><span class="wtime">Pré-live</span><div class="wdl">Lembretes de Inscrição e Véspera</div><span class="wdesc">Reforço de data, horário e link da live gratuita</span><span class="wtag wt2">CTA · Live</span><span class="warr">▼</span></div><div class="wbody">🔔 Sequência de lembretes conforme a data da live se aproxima:
+
+→ Anúncio oficial com data e horário
+→ Lembrete "faltam X dias"
+→ Véspera — como chegar preparado
+→ Dia da live — lembrete de manhã + 1h antes
+
+Todos com CTA de inscrição, sem mencionar o produto pago.</div><div class="wnote">Modelo replicável a cada novo ciclo de live gratuita.</div></div>
+  </div>
+
+  <div class="wsec">
+    <div class="wsec-title">Live Piloto · Abertura da Oferta</div>
+
+    <div class="witem"><div class="whead wh" onclick="wpp(this)"><span class="wtime wh">Pós-live</span><div class="wdl">Abertura da Condição Especial</div><span class="wdesc">Enviar imediatamente ao encerrar a live</span><span class="wtag wt3">Oferta</span><span class="warr">▼</span></div><div class="wbody wh">✅ A live do *Health Business* acabou.
+
+As inscrições para a mentoria estão abertas a partir de agora, com condição especial válida por [PRAZO A DEFINIR].
+
+*O que está incluído:* acesso à comunidade privada, lives exclusivas, conteúdos mensais e calendário de encontros com o Dr. Ivan.
+
+Link para garantir sua vaga: 👉 [LINK DE VENDAS]
+
+— Equipe Health Business</div><div class="wnote">Depende da confirmação final de preço, parcelamento, garantia e prazo da condição especial.</div></div>
+
+    <div class="witem"><div class="whead wa" onclick="wpp(this)"><span class="wtime wa">Follow-up</span><div class="wdl">Quebra de Objeções e Encerramento</div><span class="wdesc">Mensagens de follow-up até o fim do prazo da oferta</span><span class="wtag wt2">Follow-up</span><span class="warr">▼</span></div><div class="wbody wa">🤔 Sequência de follow-up nos dias seguintes à live:
+
+→ Resumo da oportunidade
+→ Provas sociais
+→ Quebra de objeções específicas do público médico
+→ Aviso de encerramento — retirada de bônus ou aumento de valor
+
+— Equipe Health Business</div><div class="wnote">Estrutura de venda sugerida no escopo — pendente de validação da oferta comercial final.</div></div>
+  </div>
+
+  <div class="wsec">
+    <div class="wsec-title">Comunidade Paga do Health Business</div>
+
+    <div class="witem"><div class="whead" onclick="wpp(this)"><span class="wtime">Entrada</span><div class="wdl">Onboarding dos Novos Membros</div><span class="wdesc">Boas-vindas, acesso e apresentação do calendário</span><span class="wtag wt4">Onboarding</span><span class="warr">▼</span></div><div class="wbody">🎉 Bem-vindo ao *Health Business*.
+
+Aqui você vai encontrar: calendário de encontros, regras da comunidade, conteúdos exclusivos, materiais de apoio e avisos das lives com o Dr. Ivan.
+
+Qualquer dúvida sobre acesso, é só chamar o suporte.
+
+— Equipe Health Business</div><div class="wnote">Inclui orientação de acesso e apresentação do calendário, conforme escopo.</div></div>
+
+    <div class="witem"><div class="whead" onclick="wpp(this)"><span class="wtime">Recorrente</span><div class="wdl">Conteúdos, Avisos e Renovação</div><span class="wdesc">Comunicação contínua da comunidade paga</span><span class="wtag wt4">Recorrente</span><span class="warr">▼</span></div><div class="wbody">📅 Comunicação recorrente da comunidade paga:
+
+→ Avisos de lives exclusivas
+→ Conteúdos e materiais de apoio
+→ Pesquisa de satisfação
+→ Comunicação sobre renovação (automática ou manual — a definir)
+
+— Equipe Health Business</div><div class="wnote">Renovação automática ou manual ainda é uma definição comercial pendente.</div></div>
+  </div>
+</div>
+</div>
+
+<!-- ═══ PENDÊNCIAS ═══ -->
+<div id="p-pendencias" class="panel">
+<div class="w">
+  <div class="sh"><div class="shl"><span class="badge">Atenção</span><h2 class="stitle">Pendências e Limites do Projeto</h2><p class="sdesc">Definições que ainda precisam ser confirmadas para não travar a live de 20/08</p></div><div class="shr"><div class="sn">05</div></div></div>
+
+  <table class="etable">
+    <thead><tr><th>Pendência</th><th>Por Que Importa</th><th>Responsável</th></tr></thead>
+    <tbody>
+      <tr><td>Confirmar bônus, quantidade de lives e convidados</td><td>Define o que pode ser prometido nos roteiros e no script da live piloto.</td><td>Thaína Magalhães (com Dr. Ivan)</td></tr>
+      <tr><td>Definir número de WhatsApp e administradores das comunidades</td><td>Bloqueia a criação das duas comunidades (gratuita e paga) e todas as automações de mensagem.</td><td>Thaína Magalhães</td></tr>
+      <tr><td>Confirmar horário da live de 20/08</td><td>Data já travada (quinta-feira, preferência do Dr. Ivan) — falta apenas o horário para fechar os lembretes e o roteiro da live.</td><td>Thaína Magalhães (com Dr. Ivan)</td></tr>
+      <tr><td>Formalizar prazo da condição especial pós-live</td><td>Define quando a oferta encerra (sugestão: 3 dias após a live, até 24/08) e o texto das mensagens de encerramento.</td><td>Thaína Magalhães (com Dr. Ivan) + Felipe Meireles</td></tr>
+      <tr><td>Formalizar horários, canais e prazos de suporte</td><td>Necessário antes de abrir a comunidade paga e iniciar o onboarding dos primeiros alunos.</td><td>Marcos</td></tr>
+    </tbody>
+  </table>
+  <p style="font-size:12px;color:rgba(0,32,85,.5);font-weight:600;margin:-12px 0 20px">✓ Oferta comercial e acessos críticos (Kiwify, HeyGen, ElevenLabs) já foram confirmados e liberados em 08/08.</p>
+
+  <div class="sh" style="margin-bottom:20px"></div>
+  <table class="etable">
+    <thead><tr><th>Limite / Ponto de Atenção</th><th>Diretriz</th></tr></thead>
+    <tbody>
+      <tr><td>Participação do Dr. Ivan</td><td>Participa diretamente apenas das lives. Todo conteúdo técnico ou clínico precisa ser aprovado por ele antes de publicar.</td></tr>
+      <tr><td>Promessa financeira antiga</td><td>"1 milhão em 1 dia" foi descontinuada — não deve aparecer em páginas, anúncios, roteiros, comunidades ou materiais comerciais.</td></tr>
+      <tr><td>Resultados financeiros</td><td>A FOCO é responsável pela gestão da operação, não por garantir resultados financeiros. A comunicação não deve usar promessas absolutas de faturamento.</td></tr>
+      <tr><td>Uso de avatar e voz</td><td>Só podem ser usados com autorização expressa e acesso formal liberado nas duas plataformas (HeyGen e ElevenLabs).</td></tr>
+      <tr><td>Suporte</td><td>Horários, canais e prazo de resposta ainda precisam ser formalizados antes do lançamento da comunidade paga.</td></tr>
+      <tr><td>Escopo</td><td>Qualquer aumento na quantidade mensal de vídeos, lives ou materiais deve passar por revisão formal de escopo.</td></tr>
+    </tbody>
+  </table>
+
+  <div class="footer">
+    <div class="fl2"><div><div class="fn">Dr. Ivan Rollemberg · Health Business</div><div class="fs">Mentoria de negócios e alta performance para profissionais da saúde · Live piloto 20/08 · Cronograma 11–28/08/2026</div></div></div>
+    <div class="fr"><div class="fc">Documento Confidencial · Uso Interno</div></div>
+  </div>
+</div>
+</div>
+
+<script>
+function goTab(id,btn){
+  document.querySelectorAll('.panel').forEach(p=>p.classList.remove('on'));
+  document.querySelectorAll('.tab').forEach(b=>b.classList.remove('on'));
+  document.getElementById('p-'+id).classList.add('on');
+  btn.classList.add('on');
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+function acc(h){
+  const b=h.nextElementSibling;
+  const o=h.classList.contains('on');
+  h.classList.toggle('on',!o);
+  b.classList.toggle('on',!o);
+}
+function wpp(h){
+  const b=h.nextElementSibling;
+  const n=b.nextElementSibling;
+  const o=h.classList.contains('on');
+  h.classList.toggle('on',!o);
+  b.classList.toggle('on',!o);
+  if(n&&n.classList.contains('wnote'))n.style.display=o?'none':'block';
+}
+function paid(h){
+  const b=h.nextElementSibling;
+  const o=h.classList.contains('on');
+  h.classList.toggle('on',!o);
+  b.classList.toggle('on',!o);
+}
+document.querySelectorAll('.wnote').forEach(n=>n.style.display='none');
+</script>
+</body>
+</html>
